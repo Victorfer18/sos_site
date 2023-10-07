@@ -45,7 +45,7 @@ export default function Header() {
             className="md:hidden"
           />
         </NavbarContent>
-        <NavbarContent justify="center">
+        <NavbarContent justify={`${isMenuOpen ? "start" : "center"}`}>
           <NavbarBrand>
             <Link href="https://www.sos-service.com.br/">
               <Image
@@ -58,7 +58,7 @@ export default function Header() {
             </Link>
           </NavbarBrand>
         </NavbarContent>
-        <NavbarContent className="hidden md:flex gap-10">
+        <NavbarContent className="hidden md:flex gap-10" justify="end">
           {navigationItems.map((item, index) => {
             if (item.children) {
               return (
