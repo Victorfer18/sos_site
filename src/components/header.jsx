@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import {
   Button,
   Dropdown,
@@ -14,228 +14,177 @@ import {
   NavbarItem,
   NavbarMenu,
   NavbarMenuItem,
+  NavbarMenuToggle,
 } from "@nextui-org/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import "./header/itemsToHeader";
+import { ItemsHeader } from "./header/itemsToHeader";
+import { motion } from "framer-motion";
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navigationItems = useMemo(() => ItemsHeader(), []);
+
   const logo = {
     src: "https://www.sos-service.com.br/images/logo.png",
     alt: "Logotipo da SOS",
   };
 
-  const navigationItems = [
-    {
-      label: "Início",
-      href: "#",
-    },
-    {
-      label: "Serviços",
-      href: "#",
-      children: [
-        {
-          label: "Manutenção de Ar Condicionado",
-          href: "#",
-          children: [
-            {
-              label: "Manutenção de Ar Condicionado",
-              href: "#",
-            },
-            {
-              label: "Manutenção de Geladeira",
-              href: "#",
-            },
-            {
-              label: "Manutenção de Lavadora de Roupas",
-              href: "#",
-            },
-          ],
-        },
-        {
-          label: "Manutenção de Geladeira",
-          href: "#",
-          children: [
-            {
-              label: "Manutenção de Ar Condicionado2",
-              href: "#",
-            },
-            {
-              label: "Manutenção de Geladeira",
-              href: "#",
-            },
-            {
-              label: "Manutenção de Lavadora de Roupas",
-              href: "#",
-            },
-          ],
-        },
-        {
-          label: "Manutenção de Lavadora de Roupas",
-          href: "#",
-        },
-      ],
-    },
-    {
-      label: "Certificações",
-      href: "#",
-      children: [
-        {
-          label: "Manutenção de Ar Condicionadossss",
-          href: "#",
-        },
-        {
-          label: "Manutenção de Geladeirassss",
-          href: "#",
-        },
-        {
-          label: "Manutenção de Lavadora de Roupasssss",
-          href: "#",
-        },
-      ],
-    },
-    {
-      label: "Filiais",
-      href: "#",
-    },
-    {
-      label: "Blog",
-      href: "#",
-    },
-    {
-      label: "Contato",
-      href: "#",
-    },
-  ];
-
   return (
-    <Navbar>
-      <NavbarBrand>
-        <Link href="https://www.sos-service.com.br/">
-          <Image
-            src={logo.src}
-            alt={logo.alt}
-            width={80}
-            className="rounded-none"
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      <Navbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
+        <NavbarContent className="md:hidden" justify="start">
+          <NavbarMenuToggle
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            className="md:hidden"
           />
-        </Link>
-      </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-10">
-        {navigationItems.map((item) => {
-          if (item.children) {
-            return (
-              <>
-                <Dropdown key={item.label}>
+        </NavbarContent>
+        <NavbarContent justify="center">
+          <NavbarBrand>
+            <Link href="https://www.sos-service.com.br/">
+              <Image
+                loading="lazy"
+                src={logo.src}
+                alt={logo.alt}
+                width={80}
+                className="rounded-none min-w-unit-5"
+              />
+            </Link>
+          </NavbarBrand>
+        </NavbarContent>
+        <NavbarContent className="hidden md:flex gap-10">
+          {navigationItems.map((item, index) => {
+            if (item.children) {
+              return (
+                <div key={index}>
+                  <Dropdown>
+                    <NavbarItem>
+                      <DropdownTrigger>
+                        <Button
+                          disableRipple
+                          className="p-0 bg-transparent data-[hover=true]:bg-transparent"
+                          radius="sm"
+                          variant="light"
+                        >
+                          {item.label}
+                        </Button>
+                      </DropdownTrigger>
+                    </NavbarItem>
+                    <DropdownMenu
+                      closeOnSelect={false}
+                      aria-label={item.label}
+                      className="w-[340px]"
+                      itemClasses={{
+                        base: "gap-4",
+                      }}
+                      variant="flat"
+                      items={item.children}
+                    >
+                      {(item) => (
+                        <DropdownItem textValue={item.label} key={item.label}>
+                          <div>
+                            {!item.href && (
+                              <Dropdown placement="right">
+                                <DropdownTrigger>
+                                  <Link
+                                    radius="sm"
+                                    color="foreground"
+                                    variant="flat"
+                                    className="text-sm flex items-center justify-between"
+                                  >
+                                    {item.label}
+                                    <FontAwesomeIcon
+                                      icon={faChevronDown}
+                                      size="2xs"
+                                    />
+                                  </Link>
+                                </DropdownTrigger>
+                                <DropdownMenu
+                                  aria-label={item.label}
+                                  className="w-[340px]"
+                                  itemClasses={{
+                                    base: "gap-4",
+                                  }}
+                                  variant="flat"
+                                  items={item.children}
+                                >
+                                  {(item) => (
+                                    <DropdownItem
+                                      textValue={item.label}
+                                      key={item.label}
+                                    >
+                                      <Link
+                                        color="foreground"
+                                        href={item.href}
+                                        className="text-sm"
+                                      >
+                                        {item.label}
+                                      </Link>
+                                    </DropdownItem>
+                                  )}
+                                </DropdownMenu>
+                              </Dropdown>
+                            )}
+                            {item.href && (
+                              <Link
+                                color="foreground"
+                                href={item.href}
+                                className="text-sm"
+                              >
+                                {item.label}
+                              </Link>
+                            )}
+                          </div>
+                        </DropdownItem>
+                      )}
+                    </DropdownMenu>
+                  </Dropdown>
+                </div>
+              );
+            } else {
+              return (
+                <div key={index}>
                   <NavbarItem>
-                    <DropdownTrigger>
-                      <Button
-                        disableRipple
-                        className="p-0 bg-transparent data-[hover=true]:bg-transparent"
-                        radius="sm"
-                        variant="light"
-                      >
-                        {item.label}
-                        <FontAwesomeIcon icon={faChevronDown} size="2xs" />
-                      </Button>
-                    </DropdownTrigger>
+                    <Link color="foreground" href={item.href}>
+                      {item.label}
+                    </Link>
                   </NavbarItem>
-                  <DropdownMenu
-                    aria-label="ACME features"
-                    className="w-[340px]"
-                    itemClasses={{
-                      base: "gap-4",
-                    }}
-                  >
-                    {item.children.map((child) => (
-                      <DropdownItem key={child.label}>
-                        {child.label}
-                      </DropdownItem>
-                    ))}
-                  </DropdownMenu>
-                </Dropdown>
-              </>
-            );
-          } else {
-            return (
-              <NavbarItem key={item.label}>
-                <Link color="foreground" href={item.href}>
-                  {item.label}
-                </Link>
-              </NavbarItem>
-            );
-          }
-        })}
-        <NavbarContent justify="end">
+                </div>
+              );
+            }
+          })}
+
           <NavbarItem>
-            <Button href="#" className="bg-redTheme text-white" variant="ghost">
-              Sign Up
-            </Button>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="bg-redTheme p-2 rounded-xl hover:bg-redLightTheme transition-all text-white"
+            >
+              Área cliente
+            </motion.button>
           </NavbarItem>
         </NavbarContent>
-      </NavbarContent>
-    </Navbar>
-    // <Navbar>
-    //   <NavbarContent className="hidden sm:flex gap-4" justify="center">
-    //     <div className="flex justify-center">
-    //       <div className="container mx-auto grid grid-cols-4 fixed w-full">
-    //         <div className="logo">
-    //           <div>
-    //             <a href="https://www.sos-service.com.br/">
-    //               <Image
-    //                 src={logo.src}
-    //                 alt={logo.alt}
-    //                 width={100}
-    //                 height={100}
-    //                 className="rounded-none"
-    //               />
-    //             </a>
-    //           </div>
-    //         </div>
-    //         <nav className="col-span-3">
-    //           <ul className="flex justify-between items-center h-full text-center font-semibold text-lg">
-    //             {navigationItems.map((item) => {
-    //               if (item.children) {
-    //                 return (
-    //                   <NavbarItem>
-    //                     <Dropdown key={item.label}>
-    //                       <DropdownTrigger>
-    //                         <Link
-    //                           color="foreground"
-    //                           href={item.href}
-    //                           disableRipple
-    //                           className="p-0 bg-transparent data-[hover=true]:bg-transparent"
-    //                           radius="sm"
-    //                         >
-    //                           {item.label}
-    //                         </Link>
-    //                       </DropdownTrigger>
-    //                       <DropdownMenu>
-    //                         {item.children.map((child) => (
-    //                           <DropdownItem key={child.label}>
-    //                             <a href={child.href}>{child.label}</a>
-    //                           </DropdownItem>
-    //                         ))}
-    //                       </DropdownMenu>
-    //                     </Dropdown>
-    //                   </NavbarItem>
-    //                 );
-    //               } else {
-    //                 return (
-    //                   <NavbarItem key={item.label}>
-    //                     <Link color="foreground" href={item.href}>
-    //                       {item.label}
-    //                     </Link>
-    //                   </NavbarItem>
-    //                 );
-    //               }
-    //             })}
-    //             <Button className={`bg-redTheme text-white px-3 py-1`}>
-    //               Área Cliente
-    //             </Button>
-    //           </ul>
-    //         </nav>
-    //       </div>
-    //     </div>
-    //   </NavbarContent>
-    // </Navbar>
+        <NavbarMenu className="bg-white">
+          {navigationItems.map((item, index) => (
+            <NavbarMenuItem key={`${item.label}-${index}`}>
+              <Link
+                color={"foreground"}
+                className="w-full text-2xl"
+                href="#"
+                size="lg"
+              >
+                {item.label}
+              </Link>
+            </NavbarMenuItem>
+          ))}
+        </NavbarMenu>
+      </Navbar>
+    </motion.div>
   );
 }
