@@ -45,7 +45,7 @@ export default function Header() {
             className="md:hidden"
           />
         </NavbarContent>
-        <NavbarContent justify={`${isMenuOpen ? "start" : "center"}`}>
+        <NavbarContent justify={`center`}>
           <NavbarBrand>
             <Link href="https://www.sos-service.com.br/">
               <Image
