@@ -2,19 +2,14 @@
 import {
   Accordion,
   AccordionItem,
-  Button,
   Card,
   CardBody,
   CardFooter,
   Divider,
   Image,
   Link,
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
 } from "@nextui-org/react";
 import { contentCardsCollaborator } from "./contentOurCollaborator.jsx";
-import { motion } from "framer-motion";
 import { useMemo } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
@@ -34,12 +29,6 @@ const useCardsComponent = () => {
         </CardBody>
         <CardFooter className="absolute bg-black/40 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between p-0">
           <div className="grid gap-1 place-items-start text-white w-full">
-            {/* <small className=" font-semibold text-tiny md:text-small lg:text-medium xl:text-large">
-              {card.nome}
-            </small> */}
-            {/* <span className=" text-tiny lg:text-small xl:text-medium">
-              {card.funcao}
-            </span> */}
             <Accordion isCompact className="text-white">
               <AccordionItem
                 key="1"
