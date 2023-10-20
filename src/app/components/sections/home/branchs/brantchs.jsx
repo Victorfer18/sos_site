@@ -21,7 +21,7 @@ export default function Branchs() {
           <h2>
             <FontAwesomeIcon
               icon={faCircle}
-              className="text-redTheme text-[10px]"
+              className="text-redTheme text-[7px] md:text-[10px]"
             />
             Filiais
           </h2>
@@ -35,18 +35,20 @@ export default function Branchs() {
         >
           {(item) => (
             <Tab key={item.id} title={item.label} className="">
-              <Card className="grid grid-rows-2 lg:grid-rows-1 min-h-[850px] lg:min-h-[530px] lg:grid-cols-2  gap-5">
+              <Card className="grid grid-rows-3 sm:grid-rows-2 lg:grid-rows-1 min-h-[850px] lg:min-h-[550px] lg:grid-cols-2  gap-5">
                 <Image
                   loading="lazy"
                   src={item.src}
                   alt={item.label}
-                  className=" w-full h-full object-cover order-2 rounded-none"
+                  className=" w-full h-full object-cover rounded-none min-h-[320px] md:min-h-[430px] lg:min-h-[530px]"
                 />
-                <CardBody className="grid place-content-between gap-5">
+                <CardBody className="grid place-content-between gap-5 row-span-2 sm:row-span-1">
                   <h3 className="text-3xl font-bold leading-10 tracking-widest font-mono text-start">
                     {item.title}
                   </h3>
-                  <p className="text-base leading-7">{item.description}</p>
+                  <p className="text-base md:text-lg xl:text-xl leading-8 ">
+                    {item.description}
+                  </p>
                   <div className="flex justify-end items-center">
                     <Button>Fale Conosco</Button>
                   </div>
