@@ -42,6 +42,7 @@ export default function Header() {
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
         style={{ position: "sticky", top: 0, zIndex: 1 }}
+        className="py-2"
       >
         <NavbarContent className="md:hidden" justify="start">
           <NavbarMenuToggle
