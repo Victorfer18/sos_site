@@ -45,7 +45,7 @@ export default function Branchs() {
                 <CardBody className="grid gap-5">
                   <h3 className="text-3xl font-bold">{item.title}</h3>
                   <p className="text-base">{item.description}</p>
-                  <div className="flex justify-end">
+                  <div className="flex justify-end items-center">
                     <Button>Fale Conosco</Button>
                   </div>
                 </CardBody>
