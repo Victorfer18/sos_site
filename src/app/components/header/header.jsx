@@ -28,7 +28,7 @@ export default function Header() {
   const navigationItems = useMemo(() => ItemsHeader(), []);
 
   const logo = {
-    src: "https://www.sos-service.com.br/images/logo.png",
+    src: "./images/logo/logo_sos.png",
     alt: "Logotipo da SOS",
   };
 
