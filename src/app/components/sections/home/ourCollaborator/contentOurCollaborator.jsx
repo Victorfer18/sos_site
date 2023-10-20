@@ -82,12 +82,12 @@ const contentCardsCollaborator = [
   {
     id: 9,
     photo: "./images/collaborators/image9.png",
-    nome: "Nilton Cesar",
-    funcao: "Vendedor",
-    descricao: "Vendedor.",
-    email: "nilton@sos-service.com.br",
-    telephone: "011 94290-3882",
-    telephoneMessage: "011942903882",
+    nome: "Bianca Ferrari",
+    funcao: "Comercial",
+    descricao: "Departamento comercial.",
+    email: "bid@sos-service.com.br",
+    telephone: "011 99614-8863",
+    telephoneMessage: "11996148863",
   },
 ];
 export { contentCardsCollaborator };
