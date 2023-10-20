@@ -13,6 +13,7 @@ module.exports = {
       colors: {
         redTheme: "#C20000",
         redLightTheme: "#ffdada",
+        danger: "#C20000",
       },
     },
   },

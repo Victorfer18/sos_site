@@ -10,7 +10,7 @@ export default function OurServices() {
         <div className="flex justify-center">
           <div className="grid gap-3 text-center">
             <div className="flex items-center gap-1 font-bold text-3xl">
-              Conheça nossos serviços
+              <h2>Conheça nossos serviços</h2>
             </div>
             <span className="text-slate-500 text-sm">
               Confira todos os serviços que a SOS Service presta.

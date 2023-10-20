@@ -22,7 +22,7 @@ import "./itemsToHeader";
 import { ItemsHeader } from "./itemsToHeader";
 import { motion } from "framer-motion";
 
-export default function Header() {
+export default function Header({ children }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigationItems = useMemo(() => ItemsHeader(), []);
@@ -33,16 +33,13 @@ export default function Header() {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
-    >
+    <>
       <Navbar
+        isBlurred={true}
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
         style={{ position: "sticky", top: 0, zIndex: 1 }}
-        className="py-2"
+        className={`py-2 ${isMenuOpen ? "shadow-none" : "shadow-lg"}`}
       >
         <NavbarContent className="md:hidden" justify="start">
           <NavbarMenuToggle
@@ -175,11 +172,12 @@ export default function Header() {
             </motion.button>
           </NavbarItem>
         </NavbarContent>
-        <NavbarMenu className="bg-white">
+        <NavbarMenu className="bg-white p-5">
           {navigationItems.map((item, index) => (
             <NavbarMenuItem key={`${item.label}-${index}`}>
               <Link
                 color={"foreground"}
+                onClick={() => setIsMenuOpen(false)}
                 className="w-full text-3xl"
                 href="#"
                 size="lg"
@@ -190,6 +188,7 @@ export default function Header() {
           ))}
         </NavbarMenu>
       </Navbar>
-    </motion.div>
+      {children}
+    </>
   );
 }

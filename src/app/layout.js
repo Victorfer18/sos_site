@@ -1,4 +1,3 @@
-import Header from "./components/header/header.jsx";
 import { Inter } from "next/font/google";
 import "./styles/globals.css";
 import { Providers } from "./providers";
@@ -14,12 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body className={inter.className}>
-        <Providers>
-          <div>
-            <Header />
-            <div className="">{children}</div>
-          </div>
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

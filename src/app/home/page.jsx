@@ -1,29 +1,28 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
 import HeaderHome from "../components/sections/home/headerHome.jsx";
 import OurServices from "../components/sections/home/ourServices/ourServices.jsx";
 import ReportMaintenance from "../components/sections/home/reportMaintenance/reportMaintenance.jsx";
+import Branchs from "../components/sections/home/branchs/brantchs.jsx";
 import Template from "../components/template.jsx";
+import { Spacer } from "@nextui-org/react";
+import TemplateApp from "../components/templateApp.jsx";
 export default function Home() {
   return (
     <div>
-      <motion.div
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
-      >
+      <TemplateApp>
         <HeaderHome />
-        <div className="h-10" />
+        <Spacer y={32} />
         <Template>
           <OurServices />
-          <div className="h-10" />
+          <Spacer y={32} />
           <ReportMaintenance />
-          <div className="h-10" />
-          <div className="h-10" />
-          <div className="h-10" />
+          <Spacer y={32} />
+          <Branchs />
+          <Spacer y={32} />
+          <Spacer y={32} />
         </Template>
-      </motion.div>
+      </TemplateApp>
     </div>
   );
 }
