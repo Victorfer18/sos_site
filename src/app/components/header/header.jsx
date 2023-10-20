@@ -1,5 +1,5 @@
 "use client";
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import {
   Button,
   Dropdown,
@@ -18,8 +18,8 @@ import {
 } from "@nextui-org/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import "./header/itemsToHeader";
-import { ItemsHeader } from "./header/itemsToHeader";
+import "./itemsToHeader";
+import { ItemsHeader } from "./itemsToHeader";
 import { motion } from "framer-motion";
 
 export default function Header() {
@@ -38,7 +38,11 @@ export default function Header() {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <Navbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
+      <Navbar
+        isMenuOpen={isMenuOpen}
+        onMenuOpenChange={setIsMenuOpen}
+        style={{ position: "sticky", top: 0, zIndex: 1 }}
+      >
         <NavbarContent className="md:hidden" justify="start">
           <NavbarMenuToggle
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -175,7 +179,7 @@ export default function Header() {
             <NavbarMenuItem key={`${item.label}-${index}`}>
               <Link
                 color={"foreground"}
-                className="w-full text-2xl"
+                className="w-full text-3xl"
                 href="#"
                 size="lg"
               >

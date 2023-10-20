@@ -1,6 +1,6 @@
-import Header from "../components/header";
+import Header from "./components/header/header.jsx";
 import { Inter } from "next/font/google";
-import "../assets/styles/globals.css";
+import "./styles/globals.css";
 import { Providers } from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -17,8 +17,7 @@ export default function RootLayout({ children }) {
         <Providers>
           <div>
             <Header />
-            <div className="container mx-auto"></div>
-            <div className="container">{children}</div>
+            <div className="">{children}</div>
           </div>
         </Providers>
       </body>
