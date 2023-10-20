@@ -1,5 +1,5 @@
-import Carousel from "../../home/Carousel.jsx";
-import Button from "../../button.jsx";
+import Carousel from "../../../home/Carousel.jsx";
+import Button from "../../../button.jsx";
 export default function HeaderHome() {
   return (
     <section className="relative">

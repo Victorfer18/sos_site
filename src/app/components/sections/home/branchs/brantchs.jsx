@@ -1,13 +1,6 @@
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  Card,
-  CardBody,
-  CardHeader,
-  Image,
-  Tab,
-  Tabs,
-} from "@nextui-org/react";
+import { Card, CardBody, Image, Tab, Tabs } from "@nextui-org/react";
 import contentBranchs from "./contentBranchs.jsx";
 import { useMemo } from "react";
 import Button from "../../../button.jsx";
