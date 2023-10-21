@@ -13,7 +13,11 @@ import { contentCardsCollaborator } from "./contentOurCollaborator.jsx";
 import { useMemo } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faSquarePhone } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronLeft,
+  faEnvelope,
+  faSquarePhone,
+} from "@fortawesome/free-solid-svg-icons";
 
 const useCardsComponent = () => {
   const cardsComponent = useMemo(() => {
@@ -39,6 +43,13 @@ const useCardsComponent = () => {
                   </h2>
                 }
                 className=" p-0 w-full"
+                indicator={
+                  <FontAwesomeIcon
+                    icon={faChevronLeft}
+                    size="1x"
+                    style={{ color: "#FFFF" }}
+                  />
+                }
               >
                 <Divider />
                 <div className="grid gap-2 py-1">

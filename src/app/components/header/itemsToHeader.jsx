@@ -131,6 +131,10 @@ const ItemsHeader = () => {
       href: "#",
     },
     {
+      label: "Blog",
+      href: "#",
+    },
+    {
       label: "Área Cliente",
       href: "#",
       login: true,
