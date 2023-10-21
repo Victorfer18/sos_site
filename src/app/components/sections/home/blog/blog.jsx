@@ -43,12 +43,12 @@ export default function Blog() {
                     className="z-0 h-full w-full object-cover"
                     src={"https://picsum.photos/seed/" + post.id + "/500/300"}
                   />
-                  <div>
+                  {/* <div>
                     <h2 className="font-medium text-large">{post.title}</h2>
                     <small className="text-slate-400 text-xs">
                       {post.created_at}
                     </small>
-                  </div>
+                  </div> */}
                 </CardHeader>
                 <CardBody>
                   <p className="text-slate-500 text-sm">
