@@ -41,8 +41,7 @@ export default function Blog() {
                     removeWrapper
                     alt={post.title}
                     className="z-0 h-full w-full object-cover"
-                    src={"./images/branchs/image4.png"}
-                    // src={"https://picsum.photos/seed/" + post.id + "/500/300"}
+                    src={"https://picsum.photos/seed/" + post.id + "/500/300"}
                   />
                   <div>
                     <h2 className="font-medium text-large">{post.title}</h2>
