@@ -1,6 +1,6 @@
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Card, CardBody, Divider, Image, Link } from "@nextui-org/react";
+import { Card, CardBody, Image, Link } from "@nextui-org/react";
 import { useMemo } from "react";
 import { certificates, companyInfo } from "./contentCertificates.jsx";
 
@@ -40,6 +40,7 @@ export default function Certificates() {
       src={sgiImage}
       alt="SGI"
       className="rounded-none w-full h-full"
+      key={1}
     />,
     contentCard(companyInfo, 3, 6),
   ];

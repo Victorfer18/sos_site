@@ -109,7 +109,7 @@ const useCardsComponent = () => {
         </CardFooter>
       </Card>
     ));
-  }, [contentCardsCollaborator]);
+  }, []);
 
   return cardsComponent;
 };
