@@ -159,11 +159,6 @@ export default function Header({ children }) {
                       </Link>
                     </NavbarItem>
                   )}
-                  <NavbarItem>
-                    <Link color="foreground" href={item.href}>
-                      {item.label}
-                    </Link>
-                  </NavbarItem>
                 </div>
               );
             }
