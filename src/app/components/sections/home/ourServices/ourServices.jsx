@@ -1,7 +1,5 @@
-import { Link } from "@nextui-org/react";
+import { Divider, Link } from "@nextui-org/react";
 import ContentOurServices from "./contentOurServices";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function OurServices() {
   return (
@@ -20,15 +18,11 @@ export default function OurServices() {
         <div className="grid gap-5">
           <ContentOurServices />
           <div className="flex justify-end">
-            <Link
-              href="#"
-              color="foreground"
-              variant="flat"
-              className="flex items-center gap-2"
-            >
-              Veja todos <FontAwesomeIcon icon={faChevronRight} size="xs" />
+            <Link href="#" color="foreground">
+              Veja todos
             </Link>
           </div>
+          <Divider className="bg-neutral-300" />
         </div>
       </div>
     </section>

@@ -39,7 +39,7 @@ export default function Header({ children }) {
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
         style={{ position: "sticky", top: 0, zIndex: 1 }}
-        className={`py-2 ${isMenuOpen ? "shadow-none" : "shadow-lg"}`}
+        className={`py-2`}
       >
         <NavbarContent className="md:hidden" justify="start">
           <NavbarMenuToggle
@@ -172,7 +172,7 @@ export default function Header({ children }) {
             </motion.button>
           </NavbarItem>
         </NavbarContent>
-        <NavbarMenu className="bg-white p-5">
+        <NavbarMenu className="p-5">
           {navigationItems.map((item, index) => (
             <NavbarMenuItem key={`${item.label}-${index}`}>
               <NavbarItem>

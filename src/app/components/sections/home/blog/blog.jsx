@@ -29,7 +29,7 @@ export default function Blog() {
   return (
     <section>
       <div className="grid gap-5">
-        <div className="flex items-center justify-center gap-1 font-bold text-3xl">
+        <div className="flex items-center justify-center gap-1 font-bold text-3xl text-center">
           <h2>Confira nossas novidades em nosso blog.</h2>
         </div>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
@@ -41,7 +41,8 @@ export default function Blog() {
                     removeWrapper
                     alt={post.title}
                     className="z-0 h-full w-full object-cover"
-                    src={post.image}
+                    src={"./images/branchs/image4.png"}
+                    // src={"https://picsum.photos/seed/" + post.id + "/500/300"}
                   />
                   <div>
                     <h2 className="font-medium text-large">{post.title}</h2>
