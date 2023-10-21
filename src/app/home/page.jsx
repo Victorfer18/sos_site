@@ -14,7 +14,7 @@ export default function Home() {
     <div>
       <TemplateApp>
         <HeaderHome />
-        <Spacer y={32} />
+        <Spacer y={24} />
         <Template>
           <OurServices />
           <Spacer y={32} />

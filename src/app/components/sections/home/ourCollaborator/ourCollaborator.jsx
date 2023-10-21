@@ -120,9 +120,10 @@ export default function OurCollaborator() {
   return (
     <section>
       <div className="grid gap-5">
-        <div className="flex items-center gap-5 font-bold text-3xl justify-start">
+        <div className="flex items-center gap-5 font-bold text-3xl justify-center">
           <h2>Nossos Colaboradores</h2>
         </div>
+        <Divider className="bg-redTheme" />
         <div className="grid  md:grid-cols-3 gap-5 bg-white rounded-large p-5 place-content-center place-items-center">
           {cardsComponent}
         </div>
