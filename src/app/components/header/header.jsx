@@ -182,19 +182,21 @@ export default function Header({ children }) {
         <NavbarMenu className="bg-white p-5">
           {navigationItems.map((item, index) => (
             <NavbarMenuItem key={`${item.label}-${index}`}>
-              {item.login ? (
-                <NavbarItem>
-                  <Link color="danger" href={item.href}>
+              <NavbarItem>
+                {item.login ? (
+                  <Link color="danger" href={item.href} className="text-2xl">
                     {item.label}
                   </Link>
-                </NavbarItem>
-              ) : (
-                <NavbarItem>
-                  <Link color="foreground" href={item.href}>
+                ) : (
+                  <Link
+                    color="foreground"
+                    href={item.href}
+                    className="text-2xl"
+                  >
                     {item.label}
                   </Link>
-                </NavbarItem>
-              )}
+                )}
+              </NavbarItem>
             </NavbarMenuItem>
           ))}
         </NavbarMenu>
