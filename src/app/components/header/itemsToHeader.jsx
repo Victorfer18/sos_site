@@ -130,6 +130,11 @@ const ItemsHeader = () => {
       label: "Contato",
       href: "#",
     },
+    {
+      label: "Área Cliente",
+      href: "#",
+      login: true,
+    },
   ];
 };
 

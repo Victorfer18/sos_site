@@ -152,6 +152,13 @@ export default function Header({ children }) {
             } else {
               return (
                 <div key={index}>
+                  {!item.login && (
+                    <NavbarItem>
+                      <Link color="foreground" href={item.href}>
+                        {item.label}
+                      </Link>
+                    </NavbarItem>
+                  )}
                   <NavbarItem>
                     <Link color="foreground" href={item.href}>
                       {item.label}
@@ -175,15 +182,19 @@ export default function Header({ children }) {
         <NavbarMenu className="bg-white p-5">
           {navigationItems.map((item, index) => (
             <NavbarMenuItem key={`${item.label}-${index}`}>
-              <Link
-                color={"foreground"}
-                onClick={() => setIsMenuOpen(false)}
-                className="w-full text-3xl"
-                href="#"
-                size="lg"
-              >
-                {item.label}
-              </Link>
+              {item.login ? (
+                <NavbarItem>
+                  <Link color="danger" href={item.href}>
+                    {item.label}
+                  </Link>
+                </NavbarItem>
+              ) : (
+                <NavbarItem>
+                  <Link color="foreground" href={item.href}>
+                    {item.label}
+                  </Link>
+                </NavbarItem>
+              )}
             </NavbarMenuItem>
           ))}
         </NavbarMenu>
