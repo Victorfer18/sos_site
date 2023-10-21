@@ -4,9 +4,9 @@ import {
   CardBody,
   CardFooter,
   CardHeader,
-  Chip,
   Divider,
   Image,
+  Link,
   Modal,
   ModalBody,
   ModalContent,
@@ -43,8 +43,12 @@ export default function Blog() {
                     className="z-0 h-full w-full object-cover"
                     src={post.image}
                   />
-                  <h2 className="font-medium text-large">{post.title}</h2>
-                  <small>{post.created_at}</small>
+                  <div>
+                    <h2 className="font-medium text-large">{post.title}</h2>
+                    <small className="text-slate-400 text-xs">
+                      {post.created_at}
+                    </small>
+                  </div>
                 </CardHeader>
                 <CardBody>
                   <p className="text-slate-500 text-sm">
@@ -80,28 +84,27 @@ export default function Blog() {
                       className="z-0 h-full w-full object-cover"
                       src={modalContent.image}
                     />
-                    {/* <div className="flex justify-between gap-5">
-                      <Chip variant="shadow" color="danger" radius="md">
-                        {modalContent.tag}
-                      </Chip>
-                      <Chip variant="shadow" color="danger" radius="md">
-                        {modalContent.created_at}
-                      </Chip>
-                    </div> */}
-                    <Divider className="bg-redTheme" />
                     <div className="grid gap-5">
                       <h2 className="font-medium text-large">
                         {modalContent.title}
                       </h2>
-                      <small>{modalContent.created_at}</small>
+
+                      <small className="text-slate-400 text-xs">
+                        {modalContent.created_at}
+                      </small>
                     </div>
+                    <Divider className="bg-neutral-300" />
 
                     <p className="text-slate-500 text-sm">
                       {modalContent.description}
                     </p>
                   </ModalBody>
                   <ModalFooter>
-                    <Button color="danger" variant="solid">
+                    <Button
+                      color="danger"
+                      variant="solid"
+                      className="font-semibold"
+                    >
                       FALE CONOSCO
                     </Button>
                   </ModalFooter>
@@ -110,6 +113,12 @@ export default function Blog() {
             </ModalContent>
           </Modal>
         </div>
+        <div className="flex justify-end">
+          <Link href="#" color="foreground">
+            Veja todos
+          </Link>
+        </div>
+        <Divider className="bg-neutral-300" />
       </div>
     </section>
   );

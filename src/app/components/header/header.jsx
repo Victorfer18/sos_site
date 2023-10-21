@@ -49,15 +49,13 @@ export default function Header({ children }) {
         </NavbarContent>
         <NavbarContent justify={`center`}>
           <NavbarBrand>
-            <Link href="https://www.sos-service.com.br/">
-              <Image
-                loading="lazy"
-                src={logo.src}
-                alt={logo.alt}
-                width={80}
-                className="rounded-none min-w-unit-5"
-              />
-            </Link>
+            <Image
+              loading="lazy"
+              src={logo.src}
+              alt={logo.alt}
+              width={80}
+              className="rounded-none min-w-unit-5"
+            />
           </NavbarBrand>
         </NavbarContent>
         <NavbarContent className="hidden md:flex gap-10" justify="end">

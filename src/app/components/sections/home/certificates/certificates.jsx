@@ -66,7 +66,7 @@ export default function Certificates() {
                 variant="flat"
                 key={certificate.id}
                 className="font-bold text-redTheme no-underline hover:underline p-1"
-                target="_blank"
+                isExternal
               >
                 {certificate.name}
               </Link>

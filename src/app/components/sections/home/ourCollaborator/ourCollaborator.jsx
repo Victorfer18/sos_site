@@ -63,7 +63,7 @@ const useCardsComponent = () => {
                       variant="flat"
                       key={card.id}
                       className="font-bold text-white no-underline hover:underline p-1"
-                      target="_blank"
+                      isExternal
                     >
                       <small className="underline text-xs lg:text-sm">
                         <FontAwesomeIcon
@@ -82,7 +82,7 @@ const useCardsComponent = () => {
                       variant="flat"
                       key={card.id}
                       className="font-bold text-white no-underline hover:underline p-1"
-                      target="_blank"
+                      isExternal
                     >
                       <small className="underline text-xs lg:text-sm">
                         <FontAwesomeIcon
@@ -101,7 +101,7 @@ const useCardsComponent = () => {
                       variant="flat"
                       key={card.id}
                       className="font-bold text-white no-underline hover:underline p-1"
-                      target="_blank"
+                      isExternal
                     >
                       <small className="underline text-xs lg:text-sm">
                         <FontAwesomeIcon

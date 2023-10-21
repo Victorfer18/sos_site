@@ -3,7 +3,7 @@ import moment from "moment";
 const posts = [
   {
     id: 1,
-    created_at: moment().format("DD/MM/YYYY"),
+    created_at: moment().format("DD/MM/YYYY HH:MM"),
     tag: "Corretiva",
     title: "Manutenção Corretiva",
     description:
@@ -12,7 +12,7 @@ const posts = [
   },
   {
     id: 2,
-    created_at: moment().format("DD/MM/YYYY"),
+    created_at: moment().format("DD/MM/YYYY HH:MM"),
     tag: "Manutenção",
     title: "Manutenção",
     description:
@@ -21,7 +21,7 @@ const posts = [
   },
   {
     id: 3,
-    created_at: moment().format("DD/MM/YYYY"),
+    created_at: moment().format("DD/MM/YYYY HH:MM"),
     tag: "Preventiva",
     title: "Manutenção Preventiva",
     description:
@@ -30,7 +30,7 @@ const posts = [
   },
   {
     id: 4,
-    created_at: moment().format("DD/MM/YYYY"),
+    created_at: moment().format("DD/MM/YYYY HH:MM"),
     tag: "Lorem",
     title: "Duis mollis,.",
     description:
@@ -39,7 +39,7 @@ const posts = [
   },
   {
     id: 5,
-    created_at: moment().format("DD/MM/YYYY"),
+    created_at: moment().format("DD/MM/YYYY HH:MM"),
     tag: "Lorem",
     title: "Nullam id dolor.",
     description:
@@ -48,7 +48,7 @@ const posts = [
   },
   {
     id: 6,
-    created_at: moment().format("DD/MM/YYYY"),
+    created_at: moment().format("DD/MM/YYYY HH:MM"),
     tag: "Lorem",
     title: "Cras justo odio.",
     description:
@@ -57,7 +57,7 @@ const posts = [
   },
   {
     id: 7,
-    created_at: moment().format("DD/MM/YYYY"),
+    created_at: moment().format("DD/MM/YYYY HH:MM"),
     tag: "Lorem",
     title: "Fusce dapibus,.",
     description:
@@ -66,7 +66,7 @@ const posts = [
   },
   {
     id: 8,
-    created_at: moment().format("DD/MM/YYYY"),
+    created_at: moment().format("DD/MM/YYYY HH:MM"),
     tag: "Lorem",
     title: "Cum sociis natoque penatibus.",
     description:
@@ -75,7 +75,7 @@ const posts = [
   },
   {
     id: 9,
-    created_at: moment().format("DD/MM/YYYY"),
+    created_at: moment().format("DD/MM/YYYY HH:MM"),
     tag: "Lorem",
     title: "Sed posuere consectetur.",
     description:
@@ -84,7 +84,7 @@ const posts = [
   },
   {
     id: 10,
-    created_at: moment().format("DD/MM/YYYY"),
+    created_at: moment().format("DD/MM/YYYY HH:MM"),
     tag: "Lorem",
     title: "Curabitur blandit tempus.",
     description:
@@ -93,7 +93,7 @@ const posts = [
   },
   {
     id: 11,
-    created_at: moment().format("DD/MM/YYYY"),
+    created_at: moment().format("DD/MM/YYYY HH:MM"),
     tag: "Lorem",
     title: "Nullam id dolor.",
     description:
@@ -102,7 +102,7 @@ const posts = [
   },
   {
     id: 12,
-    created_at: moment().format("DD/MM/YYYY"),
+    created_at: moment().format("DD/MM/YYYY HH:MM"),
     tag: "Lorem",
     title: "Duis mollis,.",
     description:
@@ -111,7 +111,7 @@ const posts = [
   },
   {
     id: 13,
-    created_at: moment().format("DD/MM/YYYY"),
+    created_at: moment().format("DD/MM/YYYY HH:MM"),
     tag: "Lorem",
     title: "Praesent commodo cursus magna.",
     description:
@@ -120,7 +120,7 @@ const posts = [
   },
   {
     id: 14,
-    created_at: moment().format("DD/MM/YYYY"),
+    created_at: moment().format("DD/MM/YYYY HH:MM"),
     tag: "Lorem",
     title: "Sed posuere consectetur.",
     description:
@@ -129,7 +129,7 @@ const posts = [
   },
   {
     id: 15,
-    created_at: moment().format("DD/MM/YYYY"),
+    created_at: moment().format("DD/MM/YYYY HH:MM"),
     tag: "Lorem",
     title: "Fusce dapibus,.",
     description:
@@ -138,7 +138,7 @@ const posts = [
   },
   {
     id: 16,
-    created_at: moment().format("DD/MM/YYYY"),
+    created_at: moment().format("DD/MM/YYYY HH:MM"),
     tag: "Lorem",
     title: "Cum sociis natoque penatibus.",
     description:
@@ -147,7 +147,7 @@ const posts = [
   },
   {
     id: 17,
-    created_at: moment().format("DD/MM/YYYY"),
+    created_at: moment().format("DD/MM/YYYY HH:MM"),
     tag: "Lorem",
     title: "Curabitur blandit tempus.",
     description:
@@ -156,7 +156,7 @@ const posts = [
   },
   {
     id: 18,
-    created_at: moment().format("DD/MM/YYYY"),
+    created_at: moment().format("DD/MM/YYYY HH:MM"),
     tag: "Lorem",
     title: "Cras justo odio.",
     description:
@@ -165,7 +165,7 @@ const posts = [
   },
   {
     id: 19,
-    created_at: moment().format("DD/MM/YYYY"),
+    created_at: moment().format("DD/MM/YYYY HH:MM"),
     tag: "Lorem",
     title: "Morbi leo risus.",
     description:
@@ -174,7 +174,7 @@ const posts = [
   },
   {
     id: 20,
-    created_at: moment().format("DD/MM/YYYY"),
+    created_at: moment().format("DD/MM/YYYY HH:MM"),
     tag: "Lorem",
     title: "Nulla vitae elit.",
     description:
