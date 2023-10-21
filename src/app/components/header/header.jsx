@@ -35,7 +35,7 @@ export default function Header({ children }) {
   return (
     <>
       <Navbar
-        isBlurred={true}
+        isBlurred={false}
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
         style={{ position: "sticky", top: 0, zIndex: 1 }}
