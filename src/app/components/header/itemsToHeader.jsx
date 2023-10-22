@@ -2,7 +2,7 @@ const ItemsHeader = () => {
   return [
     {
       label: "Início",
-      href: "#",
+      href: "/home",
     },
     {
       label: "Serviços",
