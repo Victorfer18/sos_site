@@ -40,63 +40,78 @@ export default function Footer({ children }) {
   return (
     <>
       {children}
-      <Divider className="bg-neutral-300" />
+      {/* <Divider className="bg-neutral-300" /> */}
       <Spacer y={12} />
-      <footer className=" w-full px-7">
-        <div className="flex justify-end items-center gap-2">
-          <Link
-            isExternal
-            href="https://www.linkedin.com/seu-link-do-linkedin"
-            color="foreground"
-          >
-            <Image
-              removeWrapper
-              alt="LinkedIn"
-              src="./images/icons/linkedin.png"
-              width={40}
-              height={40}
-            />
-          </Link>
+      <footer className=" w-full  bg-white">
+        <div className="p-7">
+          <div className="flex justify-end items-center gap-2">
+            <Link
+              isExternal
+              href="https://www.linkedin.com/seu-link-do-linkedin"
+              color="foreground"
+            >
+              <Image
+                removeWrapper
+                alt="LinkedIn"
+                src="./images/icons/linkedin.png"
+                width={40}
+                height={40}
+              />
+            </Link>
 
-          <Link
-            isExternal
-            href="https://www.facebook.com/seu-link-do-facebook"
-            color="foreground"
-          >
-            <Image
-              removeWrapper
-              alt="Facebook"
-              src="./images/icons/facebook.png"
-              width={40}
-              height={40}
-            />
-          </Link>
-        </div>
-        <div className="grid grid-cols-2 lg:grid-cols-4 ">
-          {dataCompanys.map((company) => (
-            <Card key={company.id} className="bg-transparent shadow-none">
-              <CardBody>
-                <div className="grid gap-5">
-                  <h4>
-                    <span className="font-semibold text-redTheme">
-                      {company.estado}
-                    </span>
-                  </h4>
-                  <small>
-                    <FontAwesomeIcon
-                      icon={faBuilding}
-                      className="text-redTheme"
-                    />{" "}
-                    {company.endereco}
-                  </small>
-                  <small>
-                    <FontAwesomeIcon icon={faPhone} className="text-redTheme" />{" "}
-                    {company.telefone}
-                  </small>
-                </div>
-              </CardBody>
-            </Card>
-          ))}
+            <Link
+              isExternal
+              href="https://www.facebook.com/seu-link-do-facebook"
+              color="foreground"
+            >
+              <Image
+                removeWrapper
+                alt="Facebook"
+                src="./images/icons/facebook.png"
+                width={40}
+                height={40}
+              />
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 ">
+            {dataCompanys.map((company) => (
+              <Card key={company.id} className="bg-transparent shadow-none">
+                <CardBody>
+                  <div className="grid gap-5">
+                    <h4>
+                      <span className="font-semibold text-redTheme">
+                        {company.estado}
+                      </span>
+                    </h4>
+                    <Link
+                      href={`https://maps.google.com/?q=${company.endereco}`}
+                      isExternal
+                      color="foreground"
+                      className="no-underline hover:underline flex gap-2 items-center text-sm"
+                    >
+                      <FontAwesomeIcon
+                        icon={faBuilding}
+                        className="text-redTheme"
+                      />{" "}
+                      {company.endereco}
+                    </Link>
+                    <Link
+                      href={`tel:${company.telefone}`}
+                      isExternal
+                      color="foreground"
+                      className="no-underline hover:underline flex gap-2 text-sm"
+                    >
+                      <FontAwesomeIcon
+                        icon={faPhone}
+                        className="text-redTheme"
+                      />{" "}
+                      {company.telefone}
+                    </Link>
+                  </div>
+                </CardBody>
+              </Card>
+            ))}
+          </div>
         </div>
         <Spacer y={12} />
         <div className="max-w-screen-xl mx-auto py-2">

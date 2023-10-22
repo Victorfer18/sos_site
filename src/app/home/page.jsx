@@ -9,14 +9,15 @@ import OurCollaborator from "../components/sections/home/ourCollaborator/ourColl
 import Blog from "../components/sections/home/blog/blog.jsx";
 import Template from "../components/template.jsx";
 import { Spacer } from "@nextui-org/react";
-import TemplateApp from "../components/templateApp.jsx";
+import TemplateContent from "../components/templateContent.jsx";
+import Contact from "../components/sections/contact/contact.jsx";
 export default function Home() {
   return (
     <div>
-      <TemplateApp>
+      <Template>
         <HeaderHome />
         <Spacer y={24} />
-        <Template>
+        <TemplateContent>
           <OurServices />
           <Spacer y={32} />
           <ReportMaintenance />
@@ -29,9 +30,9 @@ export default function Home() {
           <Spacer y={32} />
           <Blog />
           <Spacer y={32} />
-          <Spacer y={32} />
-        </Template>
-      </TemplateApp>
+          <Contact />
+        </TemplateContent>
+      </Template>
     </div>
   );
 }
