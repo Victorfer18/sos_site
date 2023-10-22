@@ -24,7 +24,7 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
       scrollBehavior="inside"
     >
       <ModalContent>
-        {(onClose) => (
+        {() => (
           <>
             <ModalHeader className="flex justify-center text-3xl text-redTheme">
               <h2>Fale conosco</h2>
