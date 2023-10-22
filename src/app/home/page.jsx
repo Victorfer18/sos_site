@@ -10,7 +10,6 @@ import Blog from "../components/sections/home/blog/blog.jsx";
 import Template from "../components/template.jsx";
 import { Spacer } from "@nextui-org/react";
 import TemplateContent from "../components/templateContent.jsx";
-import Contact from "../components/sections/contact/contact.jsx";
 export default function Home() {
   return (
     <div>
@@ -30,7 +29,6 @@ export default function Home() {
           <Spacer y={32} />
           <Blog />
           <Spacer y={28} />
-          {/* <Contact /> */}
         </TemplateContent>
       </Template>
     </div>
