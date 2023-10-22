@@ -1,7 +1,14 @@
 import { faBuilding } from "@fortawesome/free-regular-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Card, CardBody, Chip, Divider, Spacer } from "@nextui-org/react";
+import {
+  Card,
+  CardBody,
+  Divider,
+  Image,
+  Link,
+  Spacer,
+} from "@nextui-org/react";
 
 export default function Footer({ children }) {
   const dataCompanys = [
@@ -33,9 +40,39 @@ export default function Footer({ children }) {
   return (
     <>
       {children}
-      <footer className=" w-full">
-        <Divider className="bg-neutral-300" />
-        <div className="grid grid-cols-2 lg:grid-cols-4 px-7">
+      <Divider className="bg-neutral-300" />
+      <Spacer y={12} />
+      <footer className=" w-full px-7">
+        <div className="flex justify-end items-center gap-2">
+          <Link
+            isExternal
+            href="https://www.linkedin.com/seu-link-do-linkedin"
+            color="foreground"
+          >
+            <Image
+              removeWrapper
+              alt="LinkedIn"
+              src="./images/icons/linkedin.png"
+              width={40}
+              height={40}
+            />
+          </Link>
+
+          <Link
+            isExternal
+            href="https://www.facebook.com/seu-link-do-facebook"
+            color="foreground"
+          >
+            <Image
+              removeWrapper
+              alt="Facebook"
+              src="./images/icons/facebook.png"
+              width={40}
+              height={40}
+            />
+          </Link>
+        </div>
+        <div className="grid grid-cols-2 lg:grid-cols-4 ">
           {dataCompanys.map((company) => (
             <Card key={company.id} className="bg-transparent shadow-none">
               <CardBody>
