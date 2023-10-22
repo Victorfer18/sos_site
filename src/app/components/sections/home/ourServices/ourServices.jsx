@@ -18,7 +18,7 @@ export default function OurServices() {
         <div className="grid gap-5">
           <ContentOurServices />
           <div className="flex justify-end">
-            <Link href="#" color="foreground">
+            <Link href="/services" color="foreground">
               Veja todos
             </Link>
           </div>

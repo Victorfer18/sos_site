@@ -42,7 +42,6 @@ export default function Posts({}) {
           {generationDots}
         </div>
         <div className=" grid gap-5">
-          {/* <div className="h-full w-full  right-0 bg-neutral-500 absolute" /> */}
           <Card>
             <CardBody>
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">

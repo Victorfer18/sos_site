@@ -1,10 +1,9 @@
 import { Link, useDisclosure } from "@nextui-org/react";
 import { posts } from "../../../blog/contentPosts";
-import { useMemo, useState } from "react";
 import ModalCardBlogPosts from "../../../modal/modalCardBlogPosts";
 import CardsPosts from "../../../blog/cardsPosts";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+
 export default function Blog() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [modalContent, setModalContent] = useState({});
@@ -13,20 +12,7 @@ export default function Blog() {
     setModalContent(post);
     onOpen();
   };
-  const generationDots = useMemo(() => {
-    var dots = [];
-    for (let index = 0; index < 10; index++) {
-      dots = [
-        ...dots,
-        <FontAwesomeIcon
-          icon={faCircle}
-          className="text-redTheme text-[7px] md:text-[10px] lg:block hidden"
-          key={index}
-        />,
-      ];
-    }
-    return dots;
-  }, []);
+
   return (
     <section>
       <div className="grid gap-5">

@@ -1,6 +1,6 @@
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Card, CardBody, Image, Tab, Tabs } from "@nextui-org/react";
+import { Card, CardBody, Image, Spacer, Tab, Tabs } from "@nextui-org/react";
 import contentBranchs from "./contentBranchs.jsx";
 import { useMemo } from "react";
 import Button from "../../../button.jsx";
@@ -9,7 +9,7 @@ export default function Branchs() {
   const contentTab = useMemo(() => contentBranchs, []);
   return (
     <section>
-      <div>
+      <div className="grid gap-5">
         <div className="flex items-center gap-1 font-bold text-3xl">
           <h2>
             <FontAwesomeIcon
@@ -25,9 +25,13 @@ export default function Branchs() {
           variant="underlined"
           color="danger"
           fullWidth={true}
+          classNames={{
+            tabList: " relative rounded-none p-0 border-b-2 border-divider",
+          }}
         >
           {(item) => (
-            <Tab key={item.id} title={item.label} className="">
+            <Tab key={item.id} title={item.label}>
+              <Spacer y={10} />
               <Card className="grid grid-rows-3 sm:grid-rows-2 lg:grid-rows-1 min-h-[850px] lg:min-h-[550px] lg:grid-cols-2  gap-5">
                 <Image
                   loading="lazy"

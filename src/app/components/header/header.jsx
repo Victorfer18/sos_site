@@ -41,10 +41,10 @@ export default function Header({ children }) {
         style={{ position: "sticky", top: 0, zIndex: 1 }}
         className={`py-2`}
       >
-        <NavbarContent className="md:hidden" justify="start">
+        <NavbarContent className="lg:hidden" justify="start">
           <NavbarMenuToggle
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            className="md:hidden"
+            className="lg:hidden"
           />
         </NavbarContent>
         <NavbarContent justify={`center`}>
@@ -60,7 +60,7 @@ export default function Header({ children }) {
             </Link>
           </NavbarBrand>
         </NavbarContent>
-        <NavbarContent className="hidden md:flex gap-10" justify="end">
+        <NavbarContent className="hidden lg:flex gap-10" justify="end">
           {navigationItems.map((item, index) => {
             if (item.children) {
               return (

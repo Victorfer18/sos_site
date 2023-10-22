@@ -6,7 +6,7 @@ export default function HeaderHome() {
       <Carousel />
       <div className=" md:absolute top-10 md:top-12 lg:top-32  flex justify-center">
         <div className="flex flex-col items-center justify-center w-5/6 text-black md:text-white gap-6 text-xs md:text-base">
-          <h2 className="text-redTheme md:text-white md:bg-redTheme p-2 rounded-xl font-semibold  text-xl">
+          <h2 className="text-redTheme md:text-white md:bg-redTheme/80 p-2 rounded-xl font-semibold  text-xl">
             ENERGIZANDO PARCERIAS
           </h2>
           <p className="text-sm md:text-lg leading-7 text-justify md:text-center">
