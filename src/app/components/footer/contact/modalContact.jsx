@@ -21,6 +21,7 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
       onOpenChange={onOpenChange}
       size="4xl"
       placement="center"
+      scrollBehavior="inside"
     >
       <ModalContent>
         {(onClose) => (

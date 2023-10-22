@@ -132,7 +132,7 @@ const ItemsHeader = () => {
     },
     {
       label: "Blog",
-      href: "#",
+      href: "/blog",
     },
     {
       label: "Área Cliente",

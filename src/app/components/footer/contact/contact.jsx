@@ -32,24 +32,27 @@ export default function Contact() {
               <h2 className="text-redTheme font-medium text-2xl text-center">
                 GOSTARIA DE NOS CONHECER ?
               </h2>
-              <div className="grid place-items-center md:grid-cols-5 gap-2">
-                <Input
-                  type="email"
-                  isRequired
-                  color="danger"
-                  className="w-full text-redTheme md:col-span-4"
-                  placeholder="E-mail"
-                  name="email"
-                  variant=""
-                />
-                <Button
-                  color="danger"
-                  className="md:col-span-1 w-1/2 md:w-full"
-                  onPress={onOpen}
-                >
-                  Enviar
-                </Button>
-              </div>
+              <form action="">
+                <div className="grid place-items-center md:grid-cols-5 gap-2">
+                  <Input
+                    type="email"
+                    isRequired
+                    color="danger"
+                    className="w-full text-redTheme md:col-span-4"
+                    placeholder="E-mail"
+                    name="email"
+                    variant=""
+                  />
+                  <Button
+                    type="submit"
+                    color="danger"
+                    className="md:col-span-1 w-1/2 md:w-full"
+                    onPress={onOpen}
+                  >
+                    Enviar
+                  </Button>
+                </div>
+              </form>
             </div>
           </CardBody>
         </Card>
