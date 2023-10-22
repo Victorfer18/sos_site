@@ -1,4 +1,5 @@
 import Header from "./header/header";
+import Footer from "./footer/footer";
 import { motion } from "framer-motion";
 export default function TemplateApp({ children }) {
   return (
@@ -9,7 +10,9 @@ export default function TemplateApp({ children }) {
         transition={{ duration: 0.5 }}
       >
         <Header>
-          <div className="">{children}</div>
+          <Footer>
+            <div className="">{children}</div>
+          </Footer>
         </Header>
       </motion.div>
     </div>
