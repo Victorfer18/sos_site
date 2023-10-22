@@ -44,7 +44,7 @@ export default function Blog() {
                     src={"https://picsum.photos/seed/" + post.id + "/500/300"}
                   />
                 </CardHeader>
-                <CardBody>
+                <CardBody className="grid gap-2">
                   <div>
                     <h2 className="font-medium text-large">{post.title}</h2>
                     <small className="text-slate-400 text-xs">
@@ -119,7 +119,6 @@ export default function Blog() {
             Veja todos
           </Link>
         </div>
-        <Divider className="bg-neutral-300" />
       </div>
     </section>
   );

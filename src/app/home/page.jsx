@@ -29,8 +29,8 @@ export default function Home() {
           <OurCollaborator />
           <Spacer y={32} />
           <Blog />
-          <Spacer y={32} />
-          <Contact />
+          <Spacer y={28} />
+          {/* <Contact /> */}
         </TemplateContent>
       </Template>
     </div>
