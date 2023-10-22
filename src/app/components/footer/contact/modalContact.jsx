@@ -31,8 +31,8 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
             <Divider className="bg-redTheme" />
             <ModalBody>
               <form>
-                <div className="grid gap-10">
-                  <div className="grid md:grid-cols-2 gap-10">
+                <div className="grid gap-10 p-5">
+                  <div className="grid md:grid-cols-2 gap-10 gap-y-5">
                     <Select
                       items={contentCardsCollaborator}
                       label={
