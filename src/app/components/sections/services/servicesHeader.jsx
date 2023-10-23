@@ -8,7 +8,7 @@ export default function ServicesHeader({ onOpen }) {
           className="w-full max-h-[600px] mx-auto md:filter md:brightness-50 md:object-cover"
           loading="lazy"
           alt="Collaboradores da SOS"
-          src={"../../../../../public/images/photosCarousel/image6.jpg"}
+          src={"./images/photosCarousel/image1.jpg"}
         />
         <div className=" md:absolute top-10 md:top-12 lg:top-32 flex justify-center ">
           <div className="flex flex-col items-center justify-center w-5/6 xl:w-1/2 text-black md:text-white gap-6 text-xs md:text-base">
