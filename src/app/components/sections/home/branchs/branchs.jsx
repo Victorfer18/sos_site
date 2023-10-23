@@ -41,8 +41,8 @@ export default function Branchs({ onOpen }) {
             <Tab key={item.id} title={item.label}>
               <Spacer y={10} />
               <Card className="grid grid-rows-3 sm:grid-rows-2 lg:grid-rows-1 min-h-[900px] lg:min-h-[600px] lg:grid-cols-2 gap-5">
-                <Image
-                  loading="lazy"
+                <img
+                  loading="eager"
                   src={item.src}
                   alt={item.label}
                   className=" w-full h-full object-cover rounded-none min-h-[420px] md:min-h-[430px] lg:min-h-[530px]"

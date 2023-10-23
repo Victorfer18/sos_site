@@ -2,12 +2,12 @@ const ItemsHeader = () => {
   return [
     {
       label: "Início",
-      href: "/home",
-      hrefMenu: "/home",
+      href: "/home#startPage",
+      hrefMenu: "/home#startPage",
     },
     {
       label: "Serviços",
-      hrefMenu: "#servicos",
+      hrefMenu: "/home#servicos",
       children: [
         {
           label: "Contratos de Manutenção",
@@ -134,23 +134,23 @@ const ItemsHeader = () => {
     },
     {
       label: "Filiais",
-      href: "#branhs",
-      hrefMenu: "#branhs",
+      href: "/home#branhs",
+      hrefMenu: "/home#branhs",
     },
     {
       label: "Certificações",
-      href: "#certificate",
-      hrefMenu: "#certificate",
+      href: "/home#certificate",
+      hrefMenu: "/home#certificate",
     },
     {
       label: "Contato",
-      href: "#contatc",
-      hrefMenu: "#contatc",
+      href: "/home#contatc",
+      hrefMenu: "/home#contatc",
     },
     {
       label: "Blog",
-      href: "#blog",
-      hrefMenu: "#blog",
+      href: "/home#blog",
+      hrefMenu: "/home#blog",
     },
     {
       label: "Área Cliente",
