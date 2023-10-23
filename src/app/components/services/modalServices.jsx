@@ -56,17 +56,17 @@ export default function ModalServices({
                         className=" w-full h-full object-cover rounded-none "
                         loading="lazy"
                       />
-                      <CardBody className="lg:col-span-2 p-0 grid place-content-start place-items-center gap-7 w-full">
+                      <CardBody className="lg:col-span-2 p-0 grid place-content-start place-items-center w-full">
                         {item.title && (
-                          <div className="min-h-[100px]">
-                            <h2 className="text-3xl font-bold leading-10 tracking-widest font-mono text-center text-redTheme uppercase">
+                          <div className="h-full">
+                            <h2 className="text-2xl font-bold leading-10 tracking-widest font-mono text-center text-redTheme uppercase">
                               {item.title}
                             </h2>
                           </div>
                         )}
-                        <ScrollShadow className="w-full h-full lg:h-[350px] grid gap-5 py-5">
+                        <ScrollShadow className="w-full h-full lg:h-[350px] grid gap-5 py-5 scrollBar">
                           <div className="grid gap-2 p-1">
-                            <p className="text-lg font-medium font-mono text-center lg:text-start text-slate-500">
+                            <p className=" font-medium font-mono text-center lg:text-start text-neutral-500">
                               {item.subTitle}
                             </p>
                           </div>
@@ -74,14 +74,14 @@ export default function ModalServices({
                             <ul className="list-none grid gap-5 place-content-start">
                               {item.acting.map((acting) => (
                                 <li
-                                  className=" text-base leading-5"
+                                  className=" text-sm leading-5"
                                   key={acting.name + "-" + acting.id}
                                 >
                                   <span
                                     className={`${
                                       acting.content
                                         ? "font-bold"
-                                        : "font-normal"
+                                        : "font-semibold"
                                     }`}
                                   >
                                     ⦁ {acting.name};
