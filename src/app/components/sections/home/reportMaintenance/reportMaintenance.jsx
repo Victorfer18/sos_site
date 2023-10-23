@@ -19,7 +19,11 @@ export default function ReportMaintenance() {
                 Relatórios Técnicos De Manutenções
               </h1>
               <p className=" text-gray-500 italic">
-                <Link color="foreground" variant="flat" href="#">
+                <Link
+                  color="foreground"
+                  variant="flat"
+                  href="https://www.sos-service.com.br/02/index.php/component/users/?view=login"
+                >
                   <b className="no-underline hover:underline text-lg">
                     Faça seu login para acessar todos os relatórios realizados
                     em suas dependências.
@@ -35,7 +39,7 @@ export default function ReportMaintenance() {
                   <Link
                     color="foreground"
                     variant="flat"
-                    href="#"
+                    href="https://www.sos-service.com.br/02/index.php/component/users/?view=login"
                     className="text-white"
                   >
                     Acessar
