@@ -2,8 +2,8 @@ const ItemsHeader = () => {
   return [
     {
       label: "Início",
-      href: "#startPage",
-      hrefMenu: "#startPage",
+      href: "/home",
+      hrefMenu: "/home",
     },
     {
       label: "Serviços",
@@ -14,61 +14,61 @@ const ItemsHeader = () => {
           children: [
             {
               label: "Gestão da manutenção",
-              href: "#",
+              href: "/services",
             },
             {
               label: "Inspeções",
-              href: "#",
+              href: "/services",
             },
             {
               label: "Limpeza Técnica",
-              href: "#",
+              href: "/services",
             },
             {
               label: "Manutenção de equipamentos",
-              href: "#",
+              href: "/services",
             },
           ],
         },
         {
           label: "Serviços de oficina",
-          href: "#",
+          href: "/services",
         },
         {
           label: "Construção e montagem de subestações",
-          href: "#",
+          href: "/services",
         },
         {
           label: "Retrofit em equipamentos",
           children: [
             {
               label: "Retrofit em oficina",
-              href: "#",
+              href: "/services",
             },
             {
               label: "Retrofit em campo",
-              href: "#",
+              href: "/services",
             },
           ],
         },
         {
           label: "Transformadores de potência",
-          href: "#",
+          href: "/services",
         },
         {
           label: "Manutenção preditiva",
           children: [
             {
               label: "Inspeção por ultrassom",
-              href: "#",
+              href: "/services",
             },
             {
               label: "Inspeção por termografia",
-              href: "#",
+              href: "/services",
             },
             {
               label: "Análise de óleo",
-              href: "#",
+              href: "/services",
             },
           ],
         },
@@ -77,52 +77,52 @@ const ItemsHeader = () => {
           children: [
             {
               label: "Analise de rede",
-              href: "#",
+              href: "/services",
             },
             {
               label: "Curto circuito e seletividade",
-              href: "#",
+              href: "/services",
             },
             {
               label: "SPDA",
-              href: "#",
+              href: "/services",
             },
             {
               label: "NR10",
-              href: "#",
+              href: "/services",
             },
           ],
         },
         {
           label: "Testes em EPI’s e EPC’s",
-          href: "#",
+          href: "/services",
         },
         {
           label: "Ensaios especiais",
           children: [
             {
               label: "Torkel",
-              href: "#",
+              href: "/services",
             },
             {
               label: "CPC 100",
-              href: "#",
+              href: "/services",
             },
             {
               label: "CT Analyzer",
-              href: "#",
+              href: "/services",
             },
             {
               label: "Franeo",
-              href: "#",
+              href: "/services",
             },
             {
               label: "VLF",
-              href: "#",
+              href: "/services",
             },
             {
               label: "Vidar",
-              href: "#",
+              href: "/services",
             },
           ],
         },
@@ -154,7 +154,7 @@ const ItemsHeader = () => {
     },
     {
       label: "Área Cliente",
-      href: "#",
+      href: "/services",
       login: true,
     },
   ];
