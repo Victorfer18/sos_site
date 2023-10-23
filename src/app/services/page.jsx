@@ -13,7 +13,7 @@ export default function Services() {
       <Template isOpen={isOpen} onOpen={onOpen} onOpenChange={onOpenChange}>
         <ServicesHeader onOpen={onOpen} />
         <TemplateContent>
-          <Spacer y={32} />
+          <Spacer y={20} />
           <ServicesContentPage onOpenModal={onOpen} />
           <Spacer y={28} />
         </TemplateContent>
