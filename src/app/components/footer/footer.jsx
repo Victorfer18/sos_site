@@ -14,21 +14,21 @@ export default function Footer({ children, isOpen, onOpen, onOpenChange }) {
     },
     {
       id: 2,
-      estado: "São Paulo",
-      endereco: "Av. Calil Mohamed Rahal, 459 Barueri - SP",
-      telefone: "(11) 3977 - 5198",
+      estado: "Paraná",
+      endereco: "Rua Augusto Guerino, 1083 Londrina – PR",
+      telefone: "(43) 3348 0606",
     },
     {
       id: 3,
-      estado: "São Paulo",
-      endereco: "Av. Calil Mohamed Rahal, 459 Barueri - SP",
-      telefone: "(11) 3977 - 5198",
+      estado: "Bahia",
+      endereco: "Av. Jorge Amado, s/nº Camaçari – BA",
+      telefone: "(71) 99736 0430",
     },
     {
       id: 4,
-      estado: "São Paulo",
-      endereco: "Av. Calil Mohamed Rahal, 459 Barueri - SP",
-      telefone: "(11) 3977 - 5198",
+      estado: "Minas Gerais",
+      endereco: "Av. Palmeira Imperial, 447 Uberlândia – MG",
+      telefone: "(34) 3232 1056",
     },
   ];
   return (
