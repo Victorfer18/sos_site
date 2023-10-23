@@ -1,0 +1,32 @@
+{
+  "short_name": "SOS Service",
+  "name": "SOS Service: Empresa especializada em prestação de serviços de manutenção em estações de energia.",
+  "lang": "pt-BR",
+  "prefer_related_applications": true,
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "type": "image/x-icon",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "./",
+  "display": "fullscreen",
+  "theme_color": "#fff",
+  "background_color": "#fff",
+  "scope": "./",
+  "description": "Empresa especializada em prestação de serviços de manutenção em estações de energia para diversas empresas. Saiba mais sobre nossos serviços e expertise."
+}

@@ -39,7 +39,7 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
                       items={contentCardsCollaborator}
                       label={
                         <span className="text-lg text-redTheme">
-                          Selecione a unidade
+                          Selecione o Contato
                         </span>
                       }
                       variant=""
@@ -56,7 +56,7 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
                       items={contentBranchs}
                       label={
                         <span className="text-lg text-redTheme">
-                          Selecione o Contato
+                          Selecione a Unidade
                         </span>
                       }
                       variant=""
