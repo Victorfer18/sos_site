@@ -23,7 +23,7 @@ export default function ModalServices({
       isOpen={isOpen}
       onOpenChange={onOpenChange}
       size="4xl"
-      placement="center"
+      placement="auto"
       scrollBehavior="inside"
     >
       <ModalContent>

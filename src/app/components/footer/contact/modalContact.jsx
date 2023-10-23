@@ -20,7 +20,7 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
       isOpen={isOpen}
       onOpenChange={onOpenChange}
       size="4xl"
-      placement="center"
+      placement="auto"
       scrollBehavior="inside"
     >
       <ModalContent>
@@ -35,6 +35,7 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
                 <div className="grid gap-10 p-5">
                   <div className="grid md:grid-cols-2 gap-10 gap-y-5">
                     <Select
+                      autoFocus
                       items={contentCardsCollaborator}
                       label={
                         <span className="text-lg text-redTheme">

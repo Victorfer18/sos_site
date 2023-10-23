@@ -20,7 +20,7 @@ export default function ModalCardBlogPosts({
       isOpen={isOpen}
       onOpenChange={onOpenChange}
       size="4xl"
-      placement="center"
+      placement="auto"
     >
       <ModalContent>
         {(onClose) => (
