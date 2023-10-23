@@ -56,11 +56,13 @@ export default function ModalServices({
                         className=" w-full h-full object-cover rounded-none "
                         loading="lazy"
                       />
-                      <CardBody className="lg:col-span-2 p-0 grid place-content-start place-items-center gap-7 ">
+                      <CardBody className="lg:col-span-2 p-0 grid place-content-start place-items-center gap-7 w-full">
                         {item.title && (
-                          <h2 className="text-3xl font-bold leading-10 tracking-widest font-mono text-center text-redTheme uppercase">
-                            {item.title}
-                          </h2>
+                          <div className="min-h-[100px]">
+                            <h2 className="text-3xl font-bold leading-10 tracking-widest font-mono text-center text-redTheme uppercase">
+                              {item.title}
+                            </h2>
+                          </div>
                         )}
                         <ScrollShadow className="w-full h-full lg:h-[350px] grid gap-5 py-5">
                           <div className="grid gap-2 p-1">

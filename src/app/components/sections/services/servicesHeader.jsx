@@ -11,12 +11,12 @@ export default function ServicesHeader({ onOpen }) {
           src={"./images/photosCarousel/image1.jpg"}
         />
         <div className=" md:absolute top-10 md:top-12 lg:top-32 flex justify-center ">
-          <div className="flex flex-col items-center justify-center text-black md:text-white gap-6 text-xs md:text-base">
+          <div className="flex flex-col items-center justify-center text-black md:text-white gap-10 text-xs md:text-base">
             <h2 className="text-redTheme md:text-white md:bg-redTheme/80 p-2 rounded-xl font-semibold  text-xl">
               SERVIÇOS
             </h2>
-            <p className="text-sm md:text-lg leading-7 text-justify md:text-center">
-              Conheça melhor os nossops serviços.
+            <p className="text-sm md:text-2xl leading-7 text-justify md:text-center">
+              Conheça melhor os nossos serviços.
             </p>
             <div>
               <Button color="danger" onPress={onOpen}>
