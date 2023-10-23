@@ -7,6 +7,7 @@ import {
   ModalContent,
   ModalFooter,
   ModalHeader,
+  ScrollShadow,
   Spacer,
   Tab,
   Tabs,
@@ -45,7 +46,7 @@ export default function ModalServices({
                 }}
               >
                 {(item) => (
-                  <Tab key={item.id} title={item.title}>
+                  <Tab key={item.id} title={item.tab}>
                     <Spacer y={7} />
                     <Card className="grid lg:grid-cols-3 bg-transparent shadow-none gap-5 place-items-center">
                       <img
@@ -54,29 +55,31 @@ export default function ModalServices({
                         className=" w-full h-full object-cover rounded-none "
                         loading="lazy"
                       />
-                      <CardBody className="lg:col-span-2 p-0 grid place-content-start place-items-center gap-7">
-                        <div className="grid gap-2 place-items-center p-1">
+                      <CardBody className="lg:col-span-2 p-0 grid place-content-start place-items-center gap-7 ">
+                        {item.title && (
                           <h2 className="text-3xl font-bold leading-10 tracking-widest font-mono text-center text-redTheme uppercase">
                             {item.title}
                           </h2>
-                          <p className="text-lg font-medium font-mono text-center text-slate-500">
-                            {item.subTitle} {item.subTitle} {item.subTitle}{" "}
-                            {item.subTitle} {item.subTitle} {item.subTitle}{" "}
-                            {item.subTitle}
-                          </p>
-                        </div>
-                        <ul className="list-disc">
-                          {item.acting.map((acting) => (
-                            <li
-                              className="text-base md:text-lg xl:text-xl leading-8"
-                              key={acting.name + "-" + acting.id}
-                            >
-                              {acting.name} {acting.name} {acting.name}{" "}
-                              {acting.name} {acting.name} {acting.name}{" "}
-                              {acting.name} {acting.name}
-                            </li>
-                          ))}
-                        </ul>
+                        )}
+                        <ScrollShadow className="w-full h-full lg:h-[350px] grid gap-5">
+                          <div className="grid gap-2 p-1">
+                            <p className="text-lg font-medium font-mono text-center lg:text-start text-slate-500">
+                              {item.subTitle}
+                            </p>
+                          </div>
+                          {item.acting && (
+                            <ul className="list-none grid gap-5 place-content-start">
+                              {item.acting.map((acting) => (
+                                <li
+                                  className=" text-base leading-5"
+                                  key={acting.name + "-" + acting.id}
+                                >
+                                  {acting.name}
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </ScrollShadow>
                       </CardBody>
                     </Card>
                   </Tab>

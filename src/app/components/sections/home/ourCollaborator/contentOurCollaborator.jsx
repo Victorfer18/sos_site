@@ -1,7 +1,7 @@
 const contentCardsCollaborator = [
   {
     id: 1,
-    photo: "./images/collaborators/image1.png",
+    photo: "./images/collaborators/image1.svg",
     nome: "Luiz Henrique",
     funcao: "Gerente",
     descricao: "Gerente Regional - Camaçari BA.",
@@ -11,7 +11,7 @@ const contentCardsCollaborator = [
   },
   {
     id: 2,
-    photo: "./images/collaborators/image2.png",
+    photo: "./images/collaborators/image2.svg",
     nome: "Paulo Bueno",
     funcao: "Gerente",
     descricao: "Gerente Regional – Uberlândia MG.",
@@ -21,7 +21,7 @@ const contentCardsCollaborator = [
   },
   {
     id: 3,
-    photo: "./images/collaborators/image3.png",
+    photo: "./images/collaborators/image3.svg",
     nome: "Priscila Yuri Seguiura",
     funcao: "Gerente",
     descricao: "Gerente de Vendas.",
@@ -31,7 +31,7 @@ const contentCardsCollaborator = [
   },
   {
     id: 4,
-    photo: "./images/collaborators/image4.png",
+    photo: "./images/collaborators/image4.svg",
     nome: "Bianca Ferrari",
     funcao: "Comercial",
     descricao: "Departamento comercial.",
@@ -41,7 +41,7 @@ const contentCardsCollaborator = [
   },
   {
     id: 5,
-    photo: "./images/collaborators/image5.png",
+    photo: "./images/collaborators/image5.svg",
     nome: "Guilherme Pukinska",
     funcao: "Gerente",
     descricao: "Gerente de contas.",
@@ -51,7 +51,7 @@ const contentCardsCollaborator = [
   },
   {
     id: 6,
-    photo: "./images/collaborators/image6.png",
+    photo: "./images/collaborators/image6.svg",
     nome: "Leonardo Moreira",
     funcao: "Engenheiro",
     descricao: "Engenheiro de Vendas.",
@@ -61,7 +61,7 @@ const contentCardsCollaborator = [
   },
   {
     id: 7,
-    photo: "./images/collaborators/image7.png",
+    photo: "./images/collaborators/image7.svg",
     nome: "Nilton Cesar",
     funcao: "Vendedor",
     descricao: "Vendedor.",
@@ -71,7 +71,7 @@ const contentCardsCollaborator = [
   },
   {
     id: 8,
-    photo: "./images/collaborators/image8.png",
+    photo: "./images/collaborators/image8.svg",
     nome: "Nilton Cesar",
     funcao: "Vendedor",
     descricao: "Vendedor.",
@@ -81,7 +81,7 @@ const contentCardsCollaborator = [
   },
   {
     id: 9,
-    photo: "./images/collaborators/image9.png",
+    photo: "./images/collaborators/image9.svg",
     nome: "Bianca Ferrari",
     funcao: "Comercial",
     descricao: "Departamento comercial.",

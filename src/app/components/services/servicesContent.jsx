@@ -1,183 +1,518 @@
 const servicesContent = [
-  // {
-  //   photo: "https://picsum.photos/500/300",
-  //   title: "Campo",
-  //   content: [
-  //     {
-  //       title: "Manutenção em subestações",
-  //       subTitle: "Manutenção em subestações de EAT, AT, MT e BT",
-  //       acting: [
-  //         {
-  //           name: "Nossos profissionais são qualificados e habilitados sempre atendendo à norma de segurança NR10.",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-  //   {
-  //     photo: "https://picsum.photos/500/300",
-  //     nome: "Serviços de oficina",
-  //     title: "Oficina",
-  //     descricao:
-  //       "Contamos com profissionais treinados pelos principais fabricantes de equipamentos elétricos.",
-  //     types: [
-  //       "Reforma e recondicionamento de disjuntor de MT e BT",
-  //       "Reforma e recondicionamento de contator de MT",
-  //       "Retrofit de proteção",
-  //       "Retrofit de disjuntor de MT e BT",
-  //       "Retrofit de contator de MT",
-  //     ],
-  //   },
-  //   {
-  //     photo: "https://picsum.photos/500/300",
-  //     nome: "Ensaios especiais",
-  //     title: "",
-  //     descricao: "",
-  //     types: [
-  //       "Laudo de conformidade das normas NR10, NBR 5419, NBR 5410, NBR14039",
-  //       "Estudo de curto circuito",
-  //       "Estudo de seletividade",
-  //       "Estudo de arc flash",
-  //       "Análise de qualidade de energia",
-  //       "Medição de grandezas elétricas (corrente, tensão, potência ativa, reativa, fator de potência e harmônicos)",
-  //     ],
-  //   },
-  //   {
-  //     photo: "https://picsum.photos/500/300",
-  //     nome: "Serviços de engenharia",
-  //     title: "",
-  //     descricao: "",
-  //     types: [
-  //       "Laudo de conformidade das normas NR10, NBR 5419, NBR 5410, NBR14039",
-  //       "Estudo de curto circuito",
-  //       "Estudo de seletividade",
-  //       "Estudo de arc flash",
-  //       "Análise de qualidade de energia",
-  //       "Medição de grandezas elétricas (corrente, tensão, potência ativa, reativa, fator de potência e harmônicos)",
-  //     ],
-  //   },
-  //   {
-  //     photo: "https://picsum.photos/500/300",
-  //     nome: "Análise de óleo",
-  //     title: "",
-  //     descricao:
-  //       "Tratamento termo vácuo em óleo isolante mineral e vegetal. Regeneração de óleo isolante mineral. Substituição do óleo isolante e acessórios.",
-  //     types: [
-  //       "Físico Química",
-  //       "Cromatografia",
-  //       "Teor de PCB",
-  //       "Teor de Furfuraldeído",
-  //       "Enxofre Corrosivo",
-  //       "Teor de DBDS",
-  //       "Teor de passivação",
-  //       "Grau de polimerização do papel",
-  //       "Contagem de partículas",
-  //     ],
-  //   },
-  //   {
-  //     photo: "https://picsum.photos/500/300",
-  //     nome: "Manutenção em Transformador e Reator",
-  //     title: "Manutenção em transformadores e reatores.",
-  //     descricao: "Manutenção e montagem de Transformadores.",
-  //     types: [
-  //       "Testes de comissionamento",
-  //       "Substituição de acessórios",
-  //       "Substituição / regeneração de óleo isolante",
-  //       "Manutenção preventiva / corretiva",
-  //       "Substituição de vedações",
-  //       "Serviços de reforma e pintura",
-  //       "Revisão em comutador de tapes",
-  //       "Substituição de buchas",
-  //     ],
-  //   },
-  //   {
-  //     photo: "https://picsum.photos/500/300",
-  //     nome: "Comissionamento de equipamentos de subestação",
-  //     title: "",
-  //     descricao: "",
-  //     types: [
-  //       "Testes de comissionamento em equipamentos de pátio de subestações de energia elétrica de EAT/AT/MT/BT, atendemos a todos os ensaios de TAC",
-  //       "Testes de comissionamento / parametrização / configuração de relés de proteção digital",
-  //       "Testes de comissionamento em sistemas de sinalização, comando, intertravamento, corrente, tensão, potência e automação",
-  //       "Testes de comissionamento em painéis elétricos de MT",
-  //       "Testes de comissionamento em painéis CA e CC",
-  //       "Testes de comissionamento em retificador e banco de baterias",
-  //     ],
-  //   },
-  //   {
-  //     photo: "https://picsum.photos/500/300",
-  //     nome: "Inspeção por termografia e ultrassom",
-  //     title: "",
-  //     descricao:
-  //       "Através da inspeção como por termografia e ultrassom, é possível obter informações em tempo real acerca das condições dos equipamentos. Isso oferece a chance de prever possíveis falhas e antecipar uma parada não planejada.",
-  //     types: [
-  //       "Inspeção por profissional devidamente treinado",
-  //       "Equipamento de ponta e com todas as certificações necessárias",
-  //       "Analise minuciosa levando em consideração as características dos equipamentos inspecionados e do ambiente",
-  //       "Elaboração de relatório técnico com roteiro dos locais inspecionados, imagens, assim como também um relato das anormalidades encontradas e recomendações para sanar o defeito",
-  //     ],
-  //   },
-  //   {
-  //     photo: "https://picsum.photos/500/300",
-  //     nome: "Testes em EPI’s e EPC’s",
-  //     title: "",
-  //     descricao:
-  //       "Para sua comodidade dispomos de laboratório móvel para testes em EPI's e EPC's. Atendemos em todo território nacional. Realizamos ensaios em uma ampla gama de Equipamentos de Proteção Individual (EPI's) e Equipamentos de Proteção Coletiva (EPC's).",
-  //     types: [
-  //       "Luvas isolantes",
-  //       "Capacetes de segurança",
-  //       "Ferramentas isoladas ",
-  //       "Botas de segurança",
-  //       "Sistemas de aterramento",
-  //       "Bastões isolantes",
-  //       "Detectores de tensão",
-  //     ],
-  //   },
+  {
+    id: 1,
+    photo: "https://picsum.photos/500/300?random=1",
+    title: "Contrado de manutenção",
+    content: [
+      {
+        id: 1,
+        tab: "Gestão de Manutenção",
+        title: "Gestão de Manutenção",
+        subTitle:
+          "A SOS Service realiza a gestão da manutenção em subestações, através de inspeções técnicas de analise, tendo como principal objetivo evitar falhas nos ativos, ocasionando paradas não programadas.",
+        photo: "https://picsum.photos/500/300?random=1",
+      },
+      {
+        id: 2,
+        tab: "Inspeções",
+        title: "Inspeções",
+        subTitle:
+          "As inspeções visam confirmar com regularidade a manutenção das boas condições de funcionamento e de segurança dos equipamentos, de acordo com as suas características técnicas ou procedimentos definidos.",
+        photo: "https://picsum.photos/500/300?random=2",
+      },
+      {
+        id: 3,
+        tab: "Limpeza Técnica",
+        title: "Limpeza Técnica",
+        subTitle:
+          "A SOS Service realiza a gestão da manutenção em subestações, através de inspeções técnicas de analise, tendo como principal objetivo evitar falhas nos ativos, ocasionando paradas não programadas.",
+        photo: "https://picsum.photos/500/300?random=3",
+      },
+      {
+        id: 4,
+        tab: "Manutenção de equipamentos ",
+        title: "Manutenção de equipamentos ",
+        subTitle:
+          "A SOS Service realiza a gestão da manutenção em subestações, através de inspeções técnicas de analise, tendo como principal objetivo evitar falhas nos ativos, ocasionando paradas não programadas.",
+        photo: "https://picsum.photos/500/300?random=4",
+      },
+    ],
+  },
+  {
+    id: 2,
+    photo: "https://picsum.photos/500/300?random=1",
+    title: "Serviços de oficina",
+    content: [
+      {
+        id: 1,
+        tab: "Serviços de oficina",
+        subTitle:
+          "A SOS SERVICE possui 03 oficinas (São Paulo, Paraná e Bahia) para revisão e reforma de disjuntores de Média e Baixa tensão. Nossa equipe é composta por profissionais altamente treinados e qualificados para realização dos trabalhos em equipamentos de todos fabricantes existentes no mercado.",
+        photo: "https://picsum.photos/500/300?random=1",
+        acting: [
+          {
+            id: 1,
+            name: "⦁ ⦁ Reforma e recondicionamento de disjuntor de Média e Baixa tensão.",
+          },
+          {
+            id: 2,
+            name: "⦁ ⦁ Reforma e recondicionamento de contator de Média tensão.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 3,
+    photo: "https://picsum.photos/500/300?random=1",
+    title: "Construção e Montagem de Subestações",
+    content: [
+      {
+        id: 1,
+        tab: "Construção e Montagem de Subestações",
+        title: "Construção e Montagem de Subestações",
+        photo: "https://picsum.photos/500/300?random=1",
+        subTitle:
+          "A SOS Service é especializada na montagem e comissionamento de subestações de energia elétrica, oferecendo seus serviços para empreendimentos em todo o território nacional. Com uma equipe altamente qualificada, estamos prontos para realizar serviços em diferentes locais, garantindo que cada projeto seja realizado com excelência e dentro dos padrões de segurança e qualidade exigidos.",
+        acting: [
+          {
+            id: 1,
+            name: "⦁ Realizamos Montagem eletromecânica de equipamentos de subestação de EAT/AT/MT.",
+          },
+          {
+            id: 2,
+            name: "⦁ Replacement de equipamentos de EAT / AT / MT.",
+          },
+          {
+            id: 3,
+            name: "⦁ Construção de parede corta fogo, bacia de captação, caixa de contenção e separador água / óleo, conforme IT37-19 e NBR 13231.",
+          },
+          {
+            id: 4,
+            name: "⦁ Construção de bases para disjuntor, para raio, TC, TP e transformador de potência.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 4,
+    photo: "https://picsum.photos/500/300?random=1",
+    title: "Retrofit em Equipamentos",
+    content: [
+      {
+        id: 1,
+        tab: "Retrofit em Oficina",
+        title: "Retrofit em Oficina",
+        photo: "https://picsum.photos/500/300?random=1",
+        subTitle:
+          "O retrofit de disjuntores é um processo que consiste em modernizar a infraestrutura elétrica de uma construção e conservar a estrutura original do local, promovendo a substituição ou acréscimo em elementos mais antigos, inadequados e obsoletos, por equipamentos mais modernos. Isso faz a adaptação necessária para que os novos equipamentos tornem-se intercambiáveis ao sistema existente. Esse processo é aconselhável quando os equipamentos e dispositivos do ambiente se encontram em estado de decomposição avançado. Desta forma, podemos evitar queima de aparelhos elétricos, gasto de energia elétrica desproporcional, curtos-circuitos, entre outros problemas.",
+      },
+      {
+        id: 2,
+        tab: "Retrofit em Campo",
+        title: "Retrofit em Campo",
+        photo: "https://picsum.photos/500/300?random=1",
+        subTitle:
+          "O retrofit em campo tem como princípio manter o painel existente com suas respectivas características, adequando ao mesmo um novo equipamento como disjuntor ou relés de proteção, realizando a adaptação necessária para que os novos equipamentos tornem-se intercambiáveis ao sistema existente. Um bom exemplo é o acréscimo de relés digitais inteligentes com comunicação para gerenciamento ou controle nos disjuntores, para aumento de confiabilidade e utilização de meios de extinção de arco sustentáveis e ecológicos.",
+      },
+    ],
+  },
+  {
+    id: 5,
+    photo: "https://picsum.photos/500/300?random=1",
+    title: "Transformadores de Potência",
+    content: [
+      {
+        id: 1,
+        tab: "Transformadores de Potência",
+        title: "Transformadores de Potência",
+        photo: "https://picsum.photos/500/300?random=1",
+        subTitle:
+          "Para evitar ou corrigir as paradas súbitas dos equipamentos, a inconstância ou paralisação do fornecimento de energia, a perda de produtividade e até mesmo o risco de eventuais acidentes a SOS Service oferece diversos tipos de serviços em transformadores de potência.",
+        acting: [
+          {
+            id: 1,
+            name: "⦁ Testes de comissionamento.",
+          },
+          {
+            id: 2,
+            name: "⦁ Substituição de acessórios.",
+          },
+          {
+            id: 3,
+            name: "⦁ Substituição / regeneração de óleo isolante.",
+          },
+          {
+            id: 4,
+            name: "⦁ Manutenção preventiva e corretiva.",
+          },
+          {
+            id: 5,
+            name: "⦁ Substituição de vedações.",
+          },
+          {
+            id: 6,
+            name: "⦁ Serviços de reforma e pintura.",
+          },
+          {
+            id: 7,
+            name: "⦁ Revisão em comutador de tapes.",
+          },
+          {
+            id: 8,
+            name: "⦁ Substituição de buchas.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 6,
+    photo: "https://picsum.photos/500/300?random=1",
+    title: "Manutenção Preditiva",
+    content: [
+      {
+        id: 1,
+        tab: "Inspeção por Ultrassom",
+        title: "Inspeção por Ultrassom",
+        photo: "https://picsum.photos/500/300?random=1",
+        subTitle:
+          "A inspeção por ultrassom é uma técnica não destrutiva utilizada para realizar a detecção de descontinuidades em equipamentos, com o objetivo de identificar falhas e corrigi-las, permitindo com que seja realizada uma manutenção evitando queima de aparelhos elétricos, curtos-circuitos, entre outros problemas.",
+      },
+      {
+        id: 2,
+        tab: "Inspeção por Termografia",
+        title: "Inspeção por Termografia",
+        photo: "https://picsum.photos/500/300?random=1",
+        subTitle:
+          "Através da inspeção por termografia é possível obter informações em tempo real acerca das condições dos equipamentos. Isso oferece a chance de prever possíveis falhas e antecipar uma parada não planejada, permitindo com que seja realizada uma manutenção aumentando a vida útil dos equipamentos.",
+      },
+      {
+        id: 3,
+        tab: "Análise de Óleo",
+        title: "Análise de Óleo",
+        photo: "https://picsum.photos/500/300?random=1",
+        subTitle:
+          "Com o objetivo de identificar com antecedência a deterioração e falhas nestes fluidos, a fim de evitar danos maiores a equipamentos essenciais para a empresa, a SOS Service oferece diversos tipos de ensaios em óleo isolante.",
+        acting: [
+          {
+            id: 1,
+            name: "⦁ Físico Química.",
+          },
+          {
+            id: 2,
+            name: "⦁ Cromatografia.",
+          },
+          {
+            id: 3,
+            name: "⦁ Teor de PCB.",
+          },
+          {
+            id: 4,
+            name: "⦁ Teor de Furfuraldeído.",
+          },
+          {
+            id: 5,
+            name: "⦁ Enxofre Corrosivo.",
+          },
+          {
+            id: 6,
+            name: "⦁ Teor de DBDS.",
+          },
+          {
+            id: 7,
+            name: "⦁ Teor de passivação.",
+          },
+          {
+            id: 8,
+            name: "⦁ Grau de polimerização do papel.",
+          },
+          {
+            id: 9,
+            name: "⦁ Contagem de partículas.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 7,
+    photo: "https://picsum.photos/500/300?random=1",
+    title: "Laudos e Estudos",
+    content: [
+      {
+        id: 1,
+        tab: "Análise de Rede",
+        title: "Análise de Rede",
+        photo: "https://picsum.photos/500/300?random=1",
+        subTitle: "Descrição da Análise de Rede",
+      },
+      {
+        id: 2,
+        tab: "Curto Circuito e Seletividade",
+        title: "Curto Circuito e Seletividade",
+        photo: "https://picsum.photos/500/300?random=1",
+        subTitle: "Descrição de Curto Circuito e Seletividade",
+      },
+      {
+        id: 3,
+        tab: "SPDA",
+        title: "SPDA",
+        photo: "https://picsum.photos/500/300?random=1",
+        subTitle: "Descrição do SPDA",
+      },
+      {
+        id: 4,
+        tab: "NR10",
+        title: "NR10",
+        photo: "https://picsum.photos/500/300?random=1",
+        subTitle: "Descrição da NR10",
+      },
+    ],
+  },
+  {
+    id: 8,
+    photo: "https://picsum.photos/500/300?random=1",
+    title: "Testes em EPI’s e EPC’s",
+    content: [
+      {
+        id: 1,
+        tab: "Testes em EPI’s e EPC’s",
+        title: "Testes em EPI’s e EPC’s",
+        photo: "https://picsum.photos/500/300?random=1",
+        subTitle:
+          "Para sua comodidade dispomos de laboratório móvel para testes em EPI's e EPC's. Atendemos em todo território nacional. Realizamos ensaios em uma ampla gama de Equipamentos de Proteção Individual (EPI's) e Equipamentos de Proteção Coletiva (EPC's). Os ensaios abrangem diversos itens essenciais como:",
+        acting: [
+          {
+            id: 1,
+            name: "⦁ Luvas isolantes.",
+          },
+          {
+            id: 2,
+            name: "⦁ Capacetes de segurança.",
+          },
+          {
+            id: 3,
+            name: "⦁ Ferramentas isoladas.",
+          },
+          {
+            id: 4,
+            name: "⦁ Botas de segurança.",
+          },
+          {
+            id: 5,
+            name: "⦁ Sistemas de aterramento.",
+          },
+          {
+            id: 6,
+            name: "⦁ Bastões isolantes.",
+          },
+          {
+            id: 7,
+            name: "⦁ Detectores de tensão.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 9,
+    photo: "https://picsum.photos/500/300?random=1",
+    title: "Ensaios Especiais",
+    content: [
+      {
+        id: 1,
+        tab: "Torkel",
+        title: "Torkel",
+        photo: "https://picsum.photos/500/300?random=1",
+        subTitle:
+          "O Torkel é um equipamento utilizado para verificar a integridade das baterias.",
+      },
+      {
+        id: 2,
+        tab: "CPC 100",
+        title: "CPC 100",
+        photo: "https://picsum.photos/500/300?random=1",
+        subTitle:
+          "O CPC 100 é um equipamento capaz de realizar testes elétricos em diversos equipamentos. O sistema de teste substitui dispositivos de ensaios individuais além de oferecer novos métodos inovadores de testes.",
+        acting: [
+          {
+            id: 1,
+            name: "⦁ Teste TC e TP",
+          },
+          {
+            id: 2,
+            name: "⦁ Relação de transformação",
+          },
+          {
+            id: 3,
+            name: "⦁ Polaridade",
+          },
+          {
+            id: 4,
+            name: "⦁ Saturação",
+          },
+          {
+            id: 5,
+            name: "⦁ Resistência de enrolamento",
+          },
+          {
+            id: 6,
+            name: "⦁ Carga (Burden)",
+          },
+          {
+            id: 7,
+            name: "⦁ Fator de potência da isolação",
+          },
+          {
+            id: 8,
+            name: "⦁ Teste disjuntor",
+          },
+          {
+            id: 9,
+            name: "⦁ Resistência de contato",
+          },
+          {
+            id: 10,
+            name: "⦁ Teste transformador de potência",
+          },
+          {
+            id: 11,
+            name: "⦁ Relação de transformação",
+          },
+          {
+            id: 12,
+            name: "⦁ Resistência de enrolamento",
+          },
+          {
+            id: 13,
+            name: "⦁ Corrente de excitação / magnetização",
+          },
+          {
+            id: 14,
+            name: "⦁ Teste do comutador sob carga",
+          },
+          {
+            id: 15,
+            name: "⦁ Fator de potência da isolação, 10 KV, com variação de frequência (15 a 400 Hz) - fator de potência são realizadas para investigar o estado do isolamento de transformadores de potência e buchas. Quando exposto a um número excessivo de altas correntes em decorrência de curtos-circuitos externos, a isolação vai se deteriorando a tal ponto de favorecer a ocorrência de curtos-circuitos.",
+          },
+          {
+            id: 16,
+            name: "⦁ Teste malha de terra",
+          },
+          {
+            id: 17,
+            name: "⦁ Resistência ôhmica do aterramento",
+          },
+          {
+            id: 18,
+            name: "⦁ Tensão de passo e toque",
+          },
+        ],
+      },
+      {
+        id: 3,
+        tab: "CT Analyzer",
+        title: "CT Analyzer",
+        photo: "https://picsum.photos/500/300?random=1",
+        subTitle:
+          "O CT Analyzer determina automaticamente todos os valores relevantes do transformador de corrente e compara os resultados com o padrão selecionado.",
+        acting: [
+          {
+            id: 1,
+            name: "⦁ Relação de transformação",
+          },
+          {
+            id: 2,
+            name: "⦁ Erro",
+          },
+          {
+            id: 3,
+            name: "⦁ Impedância",
+          },
+          {
+            id: 4,
+            name: "⦁ Saturação",
+          },
+          {
+            id: 5,
+            name: "⦁ Polaridade",
+          },
+          {
+            id: 6,
+            name: "⦁ Resistência de enrolamento",
+          },
+        ],
+      },
+      {
+        id: 4,
+        tab: "Franeo",
+        title: "Franeo",
+        photo: "https://picsum.photos/500/300?random=1",
+        subTitle:
+          "A análise de resposta em frequência (geralmente chamada de FRA ou SFRA) é eficaz para testar a integridade mecânica dos núcleos e enrolamentos do transformador.",
+        acting: [
+          {
+            id: 1,
+            name: "⦁ Testa integridade mecânica e elétrica dos transformadores de potência (deformação mecânica dos núcleos, enrolamentos, bobinas e cabos do transformador)",
+          },
+          {
+            id: 2,
+            name: "⦁ O teste deve ser aplicado após transporte e pós curto circuito e ou descarga atmosférica sofrido",
+          },
+          {
+            id: 3,
+            name: "⦁ Como manutenção preventiva o teste é recomendado a intervalos de 5 anos",
+          },
+          {
+            id: 4,
+            name: "⦁ O teste faz uma varredura da resposta de frequência (SFRA)",
+          },
+          {
+            id: 5,
+            name: "⦁ Aumenta confiabilidade do transformador, reduz custos de manutenção e evita falhas caras",
+          },
+        ],
+      },
+      {
+        id: 5,
+        tab: "VLF (Very Low Frequency)",
+        title: "VLF (Very Low Frequency)",
+        photo: "https://picsum.photos/500/300?random=1",
+        subTitle:
+          "O VLF (Very Low Frequency) é o equipamento ideal para verificar a integridade e prolongar a vida útil dos cabos.",
+        acting: [
+          {
+            id: 1,
+            name: "⦁ O teste de muito baixa frequência (VLF) permite detectar danos no isolamento no menor tempo possível, sem afetar a qualidade do material de isolamento. Esta técnica é utilizada para medir cabos de média tensão",
+          },
+          {
+            id: 2,
+            name: "⦁ O VLF-60 é um sistema de teste de alto potencial que opera com frequência muito baixa para assegurar um teste eficiente e a localização de falhas em cabos de média tensão. O teste com frequência muito baixa (VLF) envolve a aplicação de frequências na faixa de 0,01 até 0,1Hz no cabo sob teste, o que não é destrutivo para o isolamento dos cabos em bom funcionamento, mas capaz de detectar falhas presentes nos cabos com defeitos eventuais. Comparado com o teste baseado em CC, que pode introduzir danos no isolamento de cabos em bom estado caso não seja bem realizado, o teste do tipo VLF não introduz efeitos danosos no cabo que estiver sendo testado.",
+          },
+        ],
+      },
+      {
+        id: 6,
+        tab: "Vidar",
+        title: "Vidar",
+        photo: "https://picsum.photos/500/300?random=1",
+        subTitle:
+          "Destinado a testes em disjuntores de média tensão com isolação a vácuo ou gás SF6.",
+        acting: [
+          {
+            id: 1,
+            name: "⦁ Ensaio de tensão Aplicada com VIDAR (verificação da integridade das ampolas)",
+          },
+          {
+            id: 2,
+            name: "⦁ Teste do interruptor de vácuo VIDAR é utilizado para testar a capacidade da câmara de vácuo de inibir flashovers.",
+          },
+        ],
+      },
+    ],
+  },
 ];
-for (let i = 1; i <= 20; i++) {
-  const newService = {
-    id: i,
-    photo: `https://picsum.photos/500/300?random=${i}`,
-    title: `Serviço ${i}`,
-    content: [],
-  };
-
-  for (let j = 1; j <= 5; j++) {
-    newService.content.push({
-      id: j,
-      title: `Conteúdo${j}`,
-      subTitle: `Subtítulo${j}`,
-      photo: `https://picsum.photos/500/300?random=${i}`,
-      acting: [
-        {
-          id: j,
-          name: `Ação${j * j}`,
-        },
-        {
-          id: j,
-          name: `Ação${j * j}`,
-        },
-        {
-          id: j,
-          name: `Ação${j * j}`,
-        },
-        {
-          id: j,
-          name: `Ação${j * j}`,
-        },
-        {
-          id: j,
-          name: `Ação${j * j}`,
-        },
-        {
-          id: j,
-          name: `Ação${j * j}`,
-        },
-      ],
-    });
-  }
-
-  servicesContent.push(newService);
-}
 
 export default servicesContent;

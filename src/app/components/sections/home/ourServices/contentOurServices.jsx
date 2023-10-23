@@ -5,33 +5,33 @@ const ContentOurServices = () => {
   const contentOurServices = useMemo(
     () => [
       {
-        title: "Serviços de Campo",
+        title: "Contratos de Manutenção",
         description:
-          "Nossos profissionais são qualificados e habilitados em atendimento à NR10. Também são treinados e reciclados conforme previsto na NR10 e SEP.",
+          "A SOS Service realiza a gestão da manutenção em subestações, ativos através de inspeções técnicas de analise, tendo como principal objetivo evitar falhas nos ativos ocasionando paradas não programadas.",
         src: "./images/icons/chave.png",
       },
       {
         title: "Serviços de Oficina",
         description:
-          "Nossos profissionais são treinados pelos principais fabricantes de equipamentos elétricos.",
+          "A SOS SERVICE possui 03 oficinas (São Paulo, Paraná e Bahia) para revisão e reforma de disjuntores de Média Tensão e baixa tensão. Nossa equipe é composta por profissionais altamente treinados e qualificados, para realização dos trabalhos em equipamentos de todos fabricantes existente no mercado.",
         src: "./images/icons/maleta.png",
       },
       {
-        title: "Ensaios especiais",
+        title: "Testes em EPi's e EPC's",
         description:
-          "Para sua comodidade dispomos de laboratório móvel para testes em EPI's e EPC's. Atendemos em todo território nacional.",
+          "Para sua comodidade dispomos de laboratório móvel para testes em EPI's e EPC's. Atendemos em todo território nacional. Realizamos ensaios em uma ampla gama de Equipamentos de Proteção Individual (EPI's) e Equipamentos de Proteção Coletiva (EPC's). Os ensaios abrangem diversos itens essenciais como.",
         src: "./images/icons/escudo.png",
       },
       {
         title: "Transformadores",
         description:
-          "Para sua comodidade dispomos de laboratório móvel para testes em EPI's e EPC's. Atendemos em todo território nacional.",
+          "Para evitar ou corrigir as paradas súbitas dos equipamentos, a inconstância ou paralisação do fornecimento de energia, a perda de produtividade e até mesmo o risco de eventuais acidentes a SOS Service oferece diversos tipos de serviços em transformadores de potência.",
         src: "./images/icons/transformador.png",
       },
       {
-        title: "Testes em EPI's e EPC's",
+        title: "Retrofit em equipamentos",
         description:
-          "Para sua comodidade dispomos de laboratório móvel para testes em EPI's e EPC's. Atendemos em todo território nacional.",
+          "O retrofit é um processo que consiste em modernizar a infraestrutura elétrica de uma construção e conservar a estrutura original do local, promovendo a substituição ou acréscimo em elementos mais antigos.",
         src: "./images/icons/engrenagem.png",
       },
     ],
@@ -39,7 +39,7 @@ const ContentOurServices = () => {
   );
 
   const cardsComponent = (contentOurService) => (
-    <Card className=" grid place-content-start place-items-center text-center min-h-[280px]">
+    <Card className=" grid place-content-start place-items-center text-center h-full min-h-[280px]">
       <CardHeader className="pb-0 pt-2 px-4 flex-col items-cente gap-5">
         <div className="h-12">
           <Image
@@ -57,7 +57,9 @@ const ContentOurServices = () => {
       </CardHeader>
       <CardBody>
         <p className="text-slate-500 md:text-sm">
-          {contentOurService.description}
+          {contentOurService.description.length > 100
+            ? contentOurService.description.slice(0, 100) + "..."
+            : contentOurService.description}
         </p>
       </CardBody>
     </Card>

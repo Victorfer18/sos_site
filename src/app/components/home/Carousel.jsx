@@ -78,13 +78,6 @@ export default function CarouselSlide() {
           <img
             className="w-full max-h-[600px] mx-auto md:filter md:brightness-50 md:object-cover"
             alt="..."
-            src={"./images/photosCarousel/image2.JPG"}
-          />
-        </div>
-        <div className="flex items-center justify-center ">
-          <img
-            className="w-full max-h-[600px] mx-auto md:filter md:brightness-50 md:object-cover"
-            alt="..."
             src={"./images/photosCarousel/image3.JPG"}
           />
         </div>

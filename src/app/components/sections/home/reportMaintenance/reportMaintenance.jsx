@@ -25,10 +25,10 @@ export default function ReportMaintenance() {
                     em suas dependências.
                   </b>
                 </Link>{" "}
-                Área destinada para acesso de relatórios de manutenção, tais
-                como: Manutenção preventiva, Manutenção corretiva, Inspeções
-                mensais, Inspeções por Ultrassom e termográfica, Laudos e
-                outras...
+                Área destinada aos clientes para acesso de relatórios de
+                manutenção, tais como: Manutenção preventiva, Manutenção
+                corretiva, Inspeções mensais, Inspeções por Ultrassom e
+                termográfica, Laudos e outras...
               </p>
               <div className="grid grid-cols-1 place-items-end">
                 <Button className="w-1/3">

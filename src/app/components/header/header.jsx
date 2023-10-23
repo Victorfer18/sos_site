@@ -179,14 +179,20 @@ export default function Header({ children }) {
             <NavbarMenuItem key={`${item.label}-${index}`}>
               <NavbarItem>
                 {item.login ? (
-                  <Link color="danger" href={item.href} className="text-2xl">
+                  <Link
+                    color="danger"
+                    href={item.href}
+                    className="text-2xl"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
                     {item.label}
                   </Link>
                 ) : (
                   <Link
                     color="foreground"
-                    href={item.href}
+                    href={item.hrefMenu}
                     className="text-2xl"
+                    onClick={() => setIsMenuOpen(false)}
                   >
                     {item.label}
                   </Link>

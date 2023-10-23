@@ -32,6 +32,7 @@ export default function Branchs({ onOpen }) {
           variant="underlined"
           color="danger"
           fullWidth={true}
+          className="overflow-x-auto"
           classNames={{
             tabList: " relative rounded-none p-0 border-b-2 border-divider",
           }}
@@ -39,12 +40,12 @@ export default function Branchs({ onOpen }) {
           {(item) => (
             <Tab key={item.id} title={item.label}>
               <Spacer y={10} />
-              <Card className="grid grid-rows-3 sm:grid-rows-2 lg:grid-rows-1 min-h-[850px] lg:min-h-[550px] lg:grid-cols-2  gap-5">
+              <Card className="grid grid-rows-3 sm:grid-rows-2 lg:grid-rows-1 min-h-[900px] lg:min-h-[600px] lg:grid-cols-2 gap-5">
                 <Image
                   loading="lazy"
                   src={item.src}
                   alt={item.label}
-                  className=" w-full h-full object-cover rounded-none min-h-[320px] md:min-h-[430px] lg:min-h-[530px]"
+                  className=" w-full h-full object-cover rounded-none min-h-[420px] md:min-h-[430px] lg:min-h-[530px]"
                 />
                 <CardBody className="grid place-content-between gap-5 row-span-2 sm:row-span-1">
                   <h3 className="text-3xl font-bold leading-10 tracking-widest font-mono text-start">
