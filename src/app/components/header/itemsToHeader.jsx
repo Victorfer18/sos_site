@@ -154,7 +154,7 @@ const ItemsHeader = () => {
     },
     {
       label: "Área Cliente",
-      href: "/services",
+      href: "https://www.sos-service.com.br/02/index.php/component/users/?view=login",
       login: true,
     },
   ];

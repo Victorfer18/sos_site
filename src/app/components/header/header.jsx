@@ -169,6 +169,10 @@ export default function Header({ children }) {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               className="bg-redTheme p-2 rounded-xl hover:bg-redLightTheme transition-all text-white"
+              onClick={() =>
+                (window.location.href =
+                  "https://www.sos-service.com.br/02/index.php/component/users/?view=login")
+              }
             >
               Área cliente
             </motion.button>

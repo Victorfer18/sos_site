@@ -42,6 +42,7 @@ const useCardsComponent = () => {
                     {card.nome}
                   </h2>
                 }
+                subtitle={<small className="text-white">{card.region}</small>}
                 className=" p-0 w-full"
                 indicator={
                   <FontAwesomeIcon
