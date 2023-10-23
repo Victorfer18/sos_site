@@ -95,7 +95,7 @@ export default function CarouselSlide() {
             src={"./images/photosCarousel/image5.jpg"}
           />
         </div>
-        <div className="flex items-center justify-center ">
+        {/* <div className="flex items-center justify-center ">
           <img
             className="w-full max-h-[600px] mx-auto md:filter md:brightness-50 md:object-cover"
             alt="..."
@@ -108,7 +108,7 @@ export default function CarouselSlide() {
             alt="..."
             src={"./images/photosCarousel/image7.jpg"}
           />
-        </div>
+        </div> */}
       </Slider>
     </div>
   );
