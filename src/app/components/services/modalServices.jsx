@@ -2,6 +2,7 @@ import {
   Button,
   Card,
   CardBody,
+  Divider,
   Modal,
   ModalBody,
   ModalContent,
@@ -74,7 +75,29 @@ export default function ModalServices({
                                   className=" text-base leading-5"
                                   key={acting.name + "-" + acting.id}
                                 >
-                                  {acting.name}
+                                  <span
+                                    className={`${
+                                      acting.content
+                                        ? "font-bold"
+                                        : "font-normal"
+                                    }`}
+                                  >
+                                    ⦁ {acting.name};
+                                  </span>
+                                  {acting.content && (
+                                    <Divider className="bg-neutral-300" />
+                                  )}
+                                  {acting.content &&
+                                    acting.content.map((content) => (
+                                      <ul
+                                        className="list-none grid gap-5 place-content-start"
+                                        key={content.name + "-" + content.id}
+                                      >
+                                        <li className=" text-base leading-5">
+                                          ⦁ {content.name};
+                                        </li>
+                                      </ul>
+                                    ))}
                                 </li>
                               ))}
                             </ul>
