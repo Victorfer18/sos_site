@@ -1,11 +1,18 @@
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Card, CardBody, Image, Spacer, Tab, Tabs } from "@nextui-org/react";
+import {
+  Button,
+  Card,
+  CardBody,
+  Image,
+  Spacer,
+  Tab,
+  Tabs,
+} from "@nextui-org/react";
 import contentBranchs from "./contentBranchs.jsx";
 import { useMemo } from "react";
-import Button from "../../../button.jsx";
 
-export default function Branchs() {
+export default function Branchs({ onOpen }) {
   const contentTab = useMemo(() => contentBranchs, []);
   return (
     <section>
@@ -47,7 +54,9 @@ export default function Branchs() {
                     {item.description}
                   </p>
                   <div className="flex justify-end items-center">
-                    <Button>Fale Conosco</Button>
+                    <Button color="danger" onPress={onOpen}>
+                      Fale Conosco
+                    </Button>
                   </div>
                 </CardBody>
               </Card>

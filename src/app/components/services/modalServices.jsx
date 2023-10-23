@@ -12,8 +12,12 @@ import {
   Tabs,
 } from "@nextui-org/react";
 
-export default function ModalServices({ isOpen, onOpenChange, modalContent }) {
-  console.log(modalContent);
+export default function ModalServices({
+  isOpen,
+  onOpenChange,
+  modalContent,
+  onOpenModal,
+}) {
   return (
     <Modal
       isOpen={isOpen}
@@ -65,7 +69,7 @@ export default function ModalServices({ isOpen, onOpenChange, modalContent }) {
                           {item.acting.map((acting) => (
                             <li
                               className="text-base md:text-lg xl:text-xl leading-8"
-                              key={acting.id}
+                              key={acting.name + "-" + acting.id}
                             >
                               {acting.name} {acting.name} {acting.name}{" "}
                               {acting.name} {acting.name} {acting.name}{" "}
@@ -80,7 +84,12 @@ export default function ModalServices({ isOpen, onOpenChange, modalContent }) {
               </Tabs>
             </ModalBody>
             <ModalFooter>
-              <Button color="danger" variant="solid" className="font-semibold">
+              <Button
+                color="danger"
+                variant="solid"
+                className="font-semibold"
+                onPress={onOpenModal}
+              >
                 FALE CONOSCO
               </Button>
             </ModalFooter>

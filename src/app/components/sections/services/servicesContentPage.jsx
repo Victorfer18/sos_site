@@ -9,7 +9,7 @@ import {
 import servicesContent from "../../services/servicesContent";
 import ModalServices from "../../services/modalServices";
 import { useState } from "react";
-export default function ServicesContentPage() {
+export default function ServicesContentPage({ onOpenModal }) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [modalContent, setModalContent] = useState({});
   const openModal = (post) => {
@@ -42,6 +42,7 @@ export default function ServicesContentPage() {
         isOpen={isOpen}
         modalContent={modalContent}
         onOpenChange={onOpenChange}
+        onOpenModal={onOpenModal}
       />
     </section>
   );

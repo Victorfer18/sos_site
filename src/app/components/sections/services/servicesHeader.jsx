@@ -1,6 +1,6 @@
-import Button from "../../button";
+import { Button } from "@nextui-org/react";
 
-export default function ServicesHeader() {
+export default function ServicesHeader({ onOpen }) {
   return (
     <section>
       <div className="relative w-full mx-auto">
@@ -24,7 +24,9 @@ export default function ServicesHeader() {
               elétricas e serviços em eletricidade.
             </p>
             <div>
-              <Button>FALE CONOSCO</Button>
+              <Button color="danger" onPress={onOpen}>
+                FALE CONOSCO
+              </Button>
             </div>
           </div>
         </div>

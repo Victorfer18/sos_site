@@ -6,12 +6,10 @@ import {
   Image,
   Input,
   Link,
-  useDisclosure,
 } from "@nextui-org/react";
 
 import ModalContact from "./modalContact";
-export default function Contact() {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+export default function Contact({ isOpen, onOpen, onOpenChange }) {
   return (
     <>
       <div className="flex justify-between flex-col md:flex-row items-center md:items-end pb-5 ">

@@ -13,6 +13,7 @@ export default function ModalCardBlogPosts({
   isOpen,
   onOpenChange,
   modalContent,
+  onOpen,
 }) {
   return (
     <Modal
@@ -46,7 +47,12 @@ export default function ModalCardBlogPosts({
               </p>
             </ModalBody>
             <ModalFooter>
-              <Button color="danger" variant="solid" className="font-semibold">
+              <Button
+                color="danger"
+                variant="solid"
+                className="font-semibold"
+                onPress={onOpen}
+              >
                 FALE CONOSCO
               </Button>
             </ModalFooter>

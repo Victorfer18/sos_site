@@ -1,6 +1,6 @@
+import { Button } from "@nextui-org/react";
 import Carousel from "../../../home/Carousel.jsx";
-import Button from "../../../button.jsx";
-export default function HeaderHome() {
+export default function HeaderHome({ onOpen }) {
   return (
     <section className="relative">
       <Carousel />
@@ -21,7 +21,9 @@ export default function HeaderHome() {
             clientes.
           </p>
           <div>
-            <Button>FALE CONOSCO</Button>
+            <Button color="danger" onPress={onOpen}>
+              FALE CONOSCO
+            </Button>
           </div>
         </div>
       </div>

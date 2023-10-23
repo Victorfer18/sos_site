@@ -8,20 +8,22 @@ import Certificates from "../components/sections/home/certificates/certificates.
 import OurCollaborator from "../components/sections/home/ourCollaborator/ourCollaborator.jsx";
 import Blog from "../components/sections/home/blog/blog.jsx";
 import Template from "../components/template.jsx";
-import { Spacer } from "@nextui-org/react";
+import { Spacer, useDisclosure } from "@nextui-org/react";
 import TemplateContent from "../components/templateContent.jsx";
 export default function Home() {
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
   return (
     <div>
-      <Template>
-        <HeaderHome />
+      <Template isOpen={isOpen} onOpen={onOpen} onOpenChange={onOpenChange}>
+        <HeaderHome onOpen={onOpen} />
         <Spacer y={24} />
         <TemplateContent>
           <OurServices />
           <Spacer y={32} />
           <ReportMaintenance />
           <Spacer y={32} />
-          <Branchs />
+          <Branchs onOpen={onOpen} />
           <Spacer y={32} />
           <Certificates />
           <Spacer y={32} />

@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import ModalCardBlogPosts from "../../modal/modalCardBlogPosts.jsx";
 import CardsPosts from "../../blog/cardsPosts.jsx";
-export default function Posts({}) {
+export default function Posts({ onOpenModal }) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [modalContent, setModalContent] = useState({});
 
@@ -81,6 +81,7 @@ export default function Posts({}) {
                   isOpen={isOpen}
                   modalContent={modalContent}
                   onOpenChange={onOpenChange}
+                  onOpen={onOpenModal}
                 />
               </div>
             </CardBody>

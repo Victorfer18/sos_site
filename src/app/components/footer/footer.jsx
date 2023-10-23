@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Card, CardBody, Link, Spacer } from "@nextui-org/react";
 import Contact from "./contact/contact";
 
-export default function Footer({ children }) {
+export default function Footer({ children, isOpen, onOpen, onOpenChange }) {
   const dataCompanys = [
     {
       id: 1,
@@ -37,7 +37,11 @@ export default function Footer({ children }) {
 
       <footer className=" w-full  bg-white">
         <div className="p-7">
-          <Contact />
+          <Contact
+            isOpen={isOpen}
+            onOpen={onOpen}
+            onOpenChange={onOpenChange}
+          />
           <div className="grid grid-cols-2 lg:grid-cols-4 ">
             {dataCompanys.map((company) => (
               <Card key={company.id} className="bg-transparent shadow-none">
