@@ -62,7 +62,7 @@ export default function ModalServices({
                             {item.title}
                           </h2>
                         )}
-                        <ScrollShadow className="w-full h-full lg:h-[350px] grid gap-5">
+                        <ScrollShadow className="w-full h-full lg:h-[350px] grid gap-5 py-5">
                           <div className="grid gap-2 p-1">
                             <p className="text-lg font-medium font-mono text-center lg:text-start text-slate-500">
                               {item.subTitle}
