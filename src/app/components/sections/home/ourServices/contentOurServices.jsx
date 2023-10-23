@@ -39,7 +39,7 @@ const ContentOurServices = () => {
   );
 
   const cardsComponent = (contentOurService) => (
-    <Card className=" grid place-content-start place-items-center text-center h-full min-h-[280px]">
+    <Card className=" grid place-content-start place-items-center text-center h-full min-h-[280px] py-3">
       <CardHeader className="pb-0 pt-2 px-4 flex-col items-cente gap-5">
         <div className="h-12">
           <Image
@@ -56,7 +56,7 @@ const ContentOurServices = () => {
         </h4>
       </CardHeader>
       <CardBody>
-        <p className="text-slate-500 md:text-sm">
+        <p className="text-slate-500 md:text-sm text-center">
           {contentOurService.description.length > 100
             ? contentOurService.description.slice(0, 100) + "..."
             : contentOurService.description}

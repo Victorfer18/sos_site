@@ -78,35 +78,35 @@ export default function CarouselSlide() {
           <img
             className="w-full max-h-[600px] mx-auto md:filter md:brightness-50 md:object-cover"
             alt="..."
-            src={"./images/photosCarousel/image3.JPG"}
+            src={"./images/photosCarousel/image3.jpg"}
           />
         </div>
         <div className="flex items-center justify-center ">
           <img
             className="w-full max-h-[600px] mx-auto md:filter md:brightness-50 md:object-cover"
             alt="..."
-            src={"./images/photosCarousel/image4.JPG"}
+            src={"./images/photosCarousel/image4.jpg"}
           />
         </div>
         <div className="flex items-center justify-center ">
           <img
             className="w-full max-h-[600px] mx-auto md:filter md:brightness-50 md:object-cover"
             alt="..."
-            src={"./images/photosCarousel/image5.JPG"}
+            src={"./images/photosCarousel/image5.jpg"}
           />
         </div>
         <div className="flex items-center justify-center ">
           <img
             className="w-full max-h-[600px] mx-auto md:filter md:brightness-50 md:object-cover"
             alt="..."
-            src={"./images/photosCarousel/image6.JPG"}
+            src={"./images/photosCarousel/image6.jpg"}
           />
         </div>
         <div className="flex items-center justify-center ">
           <img
             className="w-full max-h-[600px] mx-auto md:filter md:brightness-50 md:object-cover"
             alt="..."
-            src={"./images/photosCarousel/image7.JPG"}
+            src={"./images/photosCarousel/image7.jpg"}
           />
         </div>
       </Slider>
