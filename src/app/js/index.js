@@ -1,4 +1,4 @@
-import create from "zustand";
+import { create } from "zustand";
 const getSetSessionStorage = (key, value = null) => {
   if (value) {
     window.sessionStorage.setItem(key, value);

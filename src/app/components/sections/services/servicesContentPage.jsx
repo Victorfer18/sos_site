@@ -28,7 +28,6 @@ export default function ServicesContentPage({ onOpenModal }) {
       );
     }
     serviceData.setServiceData(null);
-    // const serviceData = getServiceData;
   }, []);
   return (
     <section>
