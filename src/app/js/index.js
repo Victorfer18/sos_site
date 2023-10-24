@@ -4,7 +4,7 @@ const getSetSessionStorage = (key, value = null) => {
     window.sessionStorage.setItem(key, value);
     return;
   }
-  return window.sessionStorage.getItem(key);
+  return window?.sessionStorage.getItem(key);
 };
 
 const storeServiceData = create((set) => ({
