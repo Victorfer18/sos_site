@@ -29,6 +29,7 @@ const useCardsComponent = () => {
             alt="Card example background"
             className="z-0 h-full w-full object-cover"
             src={card.photo}
+            loading="lazy"
           />
         </CardBody>
         <CardFooter className="absolute bg-black/40 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between p-0">
