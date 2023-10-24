@@ -36,7 +36,6 @@ export default function Home() {
           <Spacer y={32} />
           <Blog />
           <Spacer y={28} />
-          <div id="contatc" />
         </TemplateContent>
       </Template>
     </div>

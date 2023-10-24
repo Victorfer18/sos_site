@@ -34,7 +34,7 @@ export default function Footer({ children, isOpen, onOpen, onOpenChange }) {
   return (
     <>
       {children}
-
+      <div id="contatc" />
       <footer className=" w-full  bg-white">
         <div className="p-7">
           <Contact

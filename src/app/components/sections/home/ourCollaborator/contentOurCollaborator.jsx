@@ -1,6 +1,7 @@
 const contentCardsCollaborator = [
   {
     id: 1,
+    idRefBranch: 1,
     photo: "./images/collaborators/image3.svg",
     nome: "Priscila Yuri",
     funcao: "Gerente",
@@ -12,6 +13,7 @@ const contentCardsCollaborator = [
   },
   {
     id: 2,
+    idRefBranch: 1,
     photo: "./images/collaborators/image4.svg",
     nome: "Guilherme Pukinska",
     funcao: "Gerente",
@@ -23,6 +25,7 @@ const contentCardsCollaborator = [
   },
   {
     id: 3,
+    idRefBranch: 1,
     photo: "./images/collaborators/image9.svg",
     nome: "Bianca Ferrari",
     funcao: "Comercial",
@@ -34,6 +37,7 @@ const contentCardsCollaborator = [
   },
   {
     id: 4,
+    idRefBranch: 1,
     photo: "./images/collaborators/image6.svg",
     nome: "Nilton Cesar",
     funcao: "Engenheiro",
@@ -45,6 +49,7 @@ const contentCardsCollaborator = [
   },
   {
     id: 5,
+    idRefBranch: 1,
     photo: "./images/collaborators/image5.svg",
     nome: "Leonardo Moreira",
     funcao: "Vendedor",
@@ -56,6 +61,7 @@ const contentCardsCollaborator = [
   },
   {
     id: 6,
+    idRefBranch: 2,
     photo: "./images/collaborators/image8.svg",
     nome: "Fernando Akira",
     funcao: "Gerente",
@@ -67,6 +73,7 @@ const contentCardsCollaborator = [
   },
   {
     id: 7,
+    idRefBranch: 2,
     photo: "./images/collaborators/image7.svg",
     nome: "Alexandre Cavalheiro",
     funcao: "Desenvolvimento de negócio",
@@ -78,6 +85,7 @@ const contentCardsCollaborator = [
   },
   {
     id: 8,
+    idRefBranch: 3,
     photo: "./images/collaborators/image1.svg",
     nome: "Luiz Henrique",
     funcao: "Gerente",
@@ -89,6 +97,7 @@ const contentCardsCollaborator = [
   },
   {
     id: 9,
+    idRefBranch: 4,
     photo: "./images/collaborators/image2.svg",
     nome: "Paulo Bueno",
     funcao: "Gerente",

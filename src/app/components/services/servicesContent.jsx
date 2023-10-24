@@ -276,12 +276,28 @@ const servicesContent = [
   {
     id: 8,
     photo: "https://picsum.photos/500/300?random=1",
-    title: "Testes em EPI’s e EPC’s",
+    title: "Serviços de Campo",
     content: [
       {
         id: 1,
-        tab: "Testes em EPI’s e EPC’s",
-        title: "Testes em EPI’s e EPC’s",
+        tab: "Manutenção Preventiva",
+        title: "Manutenção Preventiva",
+        photo: "https://picsum.photos/500/300?random=1",
+        subTitle:
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, quasi deleniti! Possimus magni consequuntur libero aperiam dolorum sunt incidunt nam exercitationem itaque, labore nihil atque perferendis, similique laborum est cumque.",
+      },
+      {
+        id: 2,
+        tab: "Manutenção Corretiva",
+        title: "Manutenção Corretiva",
+        photo: "https://picsum.photos/500/300?random=1",
+        subTitle:
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, quasi deleniti! Possimus magni consequuntur libero aperiam dolorum sunt incidunt nam exercitationem itaque, labore nihil atque perferendis, similique laborum est cumque.",
+      },
+      {
+        id: 3,
+        tab: "Teste em EPI's e EPC's",
+        title: "Teste em EPI's e EPC's",
         photo: "https://picsum.photos/500/300?random=1",
         subTitle:
           "Para sua comodidade dispomos de laboratório móvel para testes em EPI's e EPC's. Atendemos em todo território nacional. Realizamos ensaios em uma ampla gama de Equipamentos de Proteção Individual (EPI's) e Equipamentos de Proteção Coletiva (EPC's). Os ensaios abrangem diversos itens essenciais como:",

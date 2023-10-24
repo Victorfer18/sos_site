@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import {
   Button,
   Divider,
@@ -15,6 +16,19 @@ import { contentCardsCollaborator } from "../../sections/home/ourCollaborator/co
 import contentBranchs from "../../sections/home/branchs/contentBranchs";
 
 export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
+  const [selectedBranch, setSelectedBranch] = useState(null);
+
+  const handleBranchSelectionChange = (e) => {
+    setSelectedBranch(parseInt(e.target.value));
+  };
+
+  const filteredContacts =
+    selectedBranch !== null
+      ? contentCardsCollaborator.filter(
+          (item) => item.idRefBranch === selectedBranch
+        )
+      : contentCardsCollaborator;
+
   return (
     <Modal
       isOpen={isOpen}
@@ -42,9 +56,11 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
                         </span>
                       }
                       variant=""
+                      placeholder="Selecione"
                       className="w-full "
                       color="danger"
                       isRequired
+                      onChange={handleBranchSelectionChange}
                     >
                       {(item) => (
                         <SelectItem key={item.id}>{item.label}</SelectItem>
@@ -52,7 +68,7 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
                     </Select>
                     <Select
                       autoFocus
-                      items={contentCardsCollaborator}
+                      items={filteredContacts}
                       label={
                         <span className="text-lg text-redTheme">
                           Selecione o Contato
@@ -111,7 +127,7 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
                   </div>
                   <Textarea
                     label={
-                      <span className="text-lg text-redTheme">Menssagem</span>
+                      <span className="text-lg text-redTheme">Mensagem</span>
                     }
                     className="w-full"
                     color="danger"

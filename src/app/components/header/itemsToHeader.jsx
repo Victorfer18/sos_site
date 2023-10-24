@@ -127,8 +127,27 @@ const ItemsHeader = () => {
         },
         {
           idRef: 8,
-          label: "Testes em EPI’s e EPC’s",
-          href: "/services",
+          label: "Serviços de Campo",
+          children: [
+            {
+              idRef: 8,
+              id: 1,
+              label: "Manutenção Preventiva",
+              href: "/services",
+            },
+            {
+              idRef: 8,
+              id: 2,
+              label: "Manutenção Corretiva",
+              href: "/services",
+            },
+            {
+              idRef: 8,
+              id: 3,
+              label: "Teste em EPI's e EPC's",
+              href: "/services",
+            },
+          ],
         },
         {
           idRef: 9,
@@ -191,8 +210,8 @@ const ItemsHeader = () => {
     },
     {
       label: "Contato",
-      href: "/home#contatc",
-      hrefMenu: "/home#contatc",
+      href: "#contatc",
+      hrefMenu: "#contatc",
     },
     {
       label: "Blog",

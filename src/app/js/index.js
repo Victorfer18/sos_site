@@ -1,10 +1,15 @@
 import { create } from "zustand";
 const getSetSessionStorage = (key, value = null) => {
   if (value) {
-    window.sessionStorage.setItem(key, value);
+    if (typeof window !== "undefined") {
+      window.sessionStorage.setItem(key, value);
+    }
     return;
   }
-  return window?.sessionStorage.getItem(key);
+  if (typeof window !== "undefined") {
+    return window.sessionStorage.getItem(key);
+  }
+  return null;
 };
 
 const storeServiceData = create((set) => ({
