@@ -8,7 +8,9 @@ import {
 } from "@nextui-org/react";
 import servicesContent from "../../services/servicesContent";
 import ModalServices from "../../services/modalServices";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { storeServiceData } from "../../../js/index";
+
 export default function ServicesContentPage({ onOpenModal }) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [modalContent, setModalContent] = useState({});
@@ -16,6 +18,18 @@ export default function ServicesContentPage({ onOpenModal }) {
     setModalContent(post);
     onOpen();
   };
+  useEffect(() => {
+    const serviceData = storeServiceData.getState();
+    if (serviceData.serviceData) {
+      openModal(
+        servicesContent.filter(
+          (item) => item.id === serviceData.serviceData.idRef
+        )[0]
+      );
+    }
+    serviceData.setServiceData(null);
+    // const serviceData = getServiceData;
+  }, []);
   return (
     <section>
       <Card>

@@ -41,13 +41,14 @@ export default function ModalServices({
                 variant="underlined"
                 color="danger"
                 fullWidth={true}
+                defaultSelectedKey={2}
                 classNames={{
                   tabList:
                     " relative rounded-none p-0 border-b-2 border-divider",
                 }}
               >
                 {(item) => (
-                  <Tab key={item.id} title={item.tab}>
+                  <Tab key={item.id} title={item.tab} checked={2}>
                     <Spacer y={7} />
                     <Card className="grid lg:grid-cols-3 bg-transparent shadow-none gap-5 place-items-center">
                       <img

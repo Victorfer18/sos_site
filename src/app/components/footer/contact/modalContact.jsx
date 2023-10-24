@@ -35,6 +35,22 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
                 <div className="grid gap-10 p-5">
                   <div className="grid md:grid-cols-2 gap-10 gap-y-5">
                     <Select
+                      items={contentBranchs}
+                      label={
+                        <span className="text-lg text-redTheme">
+                          Selecione a Unidade
+                        </span>
+                      }
+                      variant=""
+                      className="w-full "
+                      color="danger"
+                      isRequired
+                    >
+                      {(item) => (
+                        <SelectItem key={item.id}>{item.label}</SelectItem>
+                      )}
+                    </Select>
+                    <Select
                       autoFocus
                       items={contentCardsCollaborator}
                       label={
@@ -50,22 +66,6 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
                     >
                       {(item) => (
                         <SelectItem key={item.id}>{item.nome}</SelectItem>
-                      )}
-                    </Select>
-                    <Select
-                      items={contentBranchs}
-                      label={
-                        <span className="text-lg text-redTheme">
-                          Selecione a Unidade
-                        </span>
-                      }
-                      variant=""
-                      className="w-full "
-                      color="danger"
-                      isRequired
-                    >
-                      {(item) => (
-                        <SelectItem key={item.id}>{item.label}</SelectItem>
                       )}
                     </Select>
                     <Input

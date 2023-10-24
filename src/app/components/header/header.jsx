@@ -18,15 +18,14 @@ import {
 } from "@nextui-org/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import "./itemsToHeader";
 import { ItemsHeader } from "./itemsToHeader";
 import { motion } from "framer-motion";
-
+import { storeServiceData } from "../../js/index";
 export default function Header({ children }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigationItems = useMemo(() => ItemsHeader(), []);
-
+  const serviceData = storeServiceData((state) => state.setServiceData);
   const logo = {
     src: "./images/logo/logo_sos.png",
     alt: "Logotipo da SOS",
@@ -126,7 +125,9 @@ export default function Header({ children }) {
                                         href={item.href}
                                         className="text-sm"
                                       >
-                                        {item.label}
+                                        <span onClick={() => serviceData(item)}>
+                                          {item.label}
+                                        </span>
                                       </Link>
                                     </DropdownItem>
                                   )}
@@ -139,7 +140,9 @@ export default function Header({ children }) {
                                 href={item.href}
                                 className="text-sm"
                               >
-                                {item.label}
+                                <span onClick={() => serviceData(item)}>
+                                  {item.label}
+                                </span>
                               </Link>
                             )}
                           </div>
