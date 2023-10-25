@@ -97,7 +97,7 @@ export default function Header({ children }) {
                                     radius="sm"
                                     color="foreground"
                                     variant="flat"
-                                    className="text-sm flex items-center justify-between"
+                                    className="text-sm flex items-center justify-between w-full"
                                   >
                                     {item.label}
                                     <FontAwesomeIcon
@@ -123,11 +123,26 @@ export default function Header({ children }) {
                                       <Link
                                         color="foreground"
                                         href={item.href}
-                                        className="text-sm"
+                                        className="text-sm w-full"
                                       >
-                                        <span onClick={() => serviceData(item)}>
-                                          {item.label}
-                                        </span>
+                                        <div
+                                          onClick={() =>
+                                            serviceData(
+                                              item.idRef === 10 ? null : item
+                                            )
+                                          }
+                                          className="w-full"
+                                        >
+                                          <span
+                                            onClick={() =>
+                                              serviceData(
+                                                item.idRef === 10 ? null : item
+                                              )
+                                            }
+                                          >
+                                            {item.label}
+                                          </span>
+                                        </div>
                                       </Link>
                                     </DropdownItem>
                                   )}
@@ -138,11 +153,24 @@ export default function Header({ children }) {
                               <Link
                                 color="foreground"
                                 href={item.href}
-                                className="text-sm"
+                                className="text-sm w-full"
                               >
-                                <span onClick={() => serviceData(item)}>
-                                  {item.label}
-                                </span>
+                                <div
+                                  onClick={() =>
+                                    serviceData(item.idRef === 10 ? null : item)
+                                  }
+                                  className="w-full"
+                                >
+                                  <span
+                                    onClick={() =>
+                                      serviceData(
+                                        item.idRef === 10 ? null : item
+                                      )
+                                    }
+                                  >
+                                    {item.label}
+                                  </span>
+                                </div>
                               </Link>
                             )}
                           </div>

@@ -30,27 +30,18 @@ export default function Contact({ isOpen, onOpen, onOpenChange }) {
               <h2 className="text-redTheme font-medium text-2xl text-center">
                 GOSTARIA DE NOS CONHECER ?
               </h2>
-              <form action="">
-                <div className="grid place-items-center md:grid-cols-5 gap-2">
-                  <Input
-                    type="email"
-                    isRequired
-                    color="danger"
-                    className="w-full text-redTheme md:col-span-4"
-                    placeholder="E-mail"
-                    name="email"
-                    variant=""
-                  />
+              <div className="grid place-items-center place-justify-center gap-2 ">
+                <div>
                   <Button
                     type="submit"
                     color="danger"
-                    className="md:col-span-1 w-1/2 md:w-full"
+                    className="w-full"
                     onPress={onOpen}
                   >
-                    Enviar
+                    FALE CONOSCO
                   </Button>
                 </div>
-              </form>
+              </div>
             </div>
           </CardBody>
         </Card>
@@ -59,7 +50,7 @@ export default function Contact({ isOpen, onOpen, onOpenChange }) {
             <div className="flex justify-end items-end gap-2">
               <Link
                 isExternal
-                href="https://www.linkedin.com/seu-link-do-linkedin"
+                href="https://www.linkedin.com/company/sos-service-com%C3%A9rcio-e-engenharia-ltda/"
                 color="foreground"
               >
                 <Image
@@ -70,7 +61,6 @@ export default function Contact({ isOpen, onOpen, onOpenChange }) {
                   height={40}
                 />
               </Link>
-
               <Link
                 isExternal
                 href="https://www.facebook.com/SOSServiceEngenhariaEletrica?mibextid=LQQJ4d"
