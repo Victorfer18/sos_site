@@ -32,7 +32,7 @@ export default function ReportMaintenance() {
                 Área destinada aos clientes para acesso de relatórios de
                 manutenção, tais como: Manutenção preventiva, Manutenção
                 corretiva, Inspeções mensais, Inspeções por Ultrassom e
-                termográfica, Laudos e outras...
+                Termográfica, Laudos e outras...
               </p>
               <div className="grid grid-cols-1 place-items-end">
                 <Button className="w-1/3">
