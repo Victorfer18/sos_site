@@ -18,7 +18,7 @@ const contentBranchs = [
   {
     id: 3,
     label: "Camaçari – BA",
-    title: "2022, ano de inauguração filiam Camaçari – BA",
+    title: "2022, ano de inauguração filial Camaçari – BA",
     description:
       "A Filial Nordeste Camaçari/BA foi inaugurada em 2022, buscando atender a demanda da Região Nordeste com maior agilidade, mantendo o nível de qualidade e excelência SOS Service na prestação de serviços. Estrategicamente localizada na cidade de Camaçari/BA, esta filial conta com uma Oficina completa para realizar manutenções em Disjuntores e Contatores, além de equipamentos de última geração e equipe altamente qualificada para executar trabalhos em campo.",
     src: "./images/branchs/image2.png",
@@ -26,9 +26,9 @@ const contentBranchs = [
   {
     id: 4,
     label: "Uberlândia – MG",
-    title: "2023, ano de inauguração filiam Uberlandia - MG",
+    title: "2023, ano de inauguração filial Uberlandia - MG",
     description:
-      "A mais recente filial da SOS Service, localizada na cidade de Uberlândia/MG, representa mais um passo no processo de expansão da SOS Service. Visando maior agilidade e prontidão no atendimento dos clientes e parceiros do Triangulo Mineiro, a Filial de Uberlândia conta com um corpo de profissionais especializado para realizar serviços de Manutenção Preventiva, Corretiva e Preditivas em equipamentos de Subestações de Energia.",
+      "A mais recente filial da SOS Service, localizada na cidade de Uberlândia/MG, representa mais um passo no processo de expansão da SOS Service. Visando maior agilidade e prontidão no atendimento dos clientes e parceiros do Triângulo Mineiro, a Filial de Uberlândia conta com um corpo de profissionais especializado para realizar serviços de Manutenção Preventiva, Corretiva e Preditivas em equipamentos de Subestações de Energia.",
     src: "./images/branchs/image4.png",
   },
 ];

@@ -73,7 +73,7 @@ export default function Contact({ isOpen, onOpen, onOpenChange }) {
 
               <Link
                 isExternal
-                href="https://www.facebook.com/seu-link-do-facebook"
+                href="https://www.facebook.com/SOSServiceEngenhariaEletrica?mibextid=LQQJ4d"
                 color="foreground"
               >
                 <Image
