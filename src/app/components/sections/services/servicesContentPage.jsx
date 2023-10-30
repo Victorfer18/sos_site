@@ -39,7 +39,7 @@ export default function ServicesContentPage({ onOpenModal }) {
                 loading="lazy"
                 src={item.photo}
                 alt={item.title}
-                className="w-full rounded-none  object-cover h-fit"
+                className="w-full rounded-none object-cover h-full"
               />
               <CardHeader className="flex justify-between">
                 <h2 className="font-medium text-large">{item.title}</h2>

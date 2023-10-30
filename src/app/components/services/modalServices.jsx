@@ -54,7 +54,7 @@ export default function ModalServices({
                       <img
                         src={item.photo}
                         alt={item.title}
-                        className=" w-full h-full object-cover rounded-none col-span-3 bg-cover"
+                        className=" w-full h-full object-cover rounded-none col-span-3"
                         loading="lazy"
                       />
                       <CardBody className="lg:col-span-4 p-0 grid place-content-start place-items-center w-full">
