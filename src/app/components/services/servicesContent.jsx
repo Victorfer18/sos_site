@@ -190,7 +190,7 @@ const services = [
     ],
   },
   {
-    photo: "https://picsum.photos/500/300?random=1",
+    photo: "./images/servicos/ensaios_especiais.png",
     title: "Manutenção Preditiva",
     content: [
       {
@@ -246,7 +246,7 @@ const services = [
     ],
   },
   {
-    photo: "https://picsum.photos/500/300?random=1",
+    photo: "./images/servicos/ensaios_especiais.png",
     title: "Laudos e Estudos",
     content: [
       {
