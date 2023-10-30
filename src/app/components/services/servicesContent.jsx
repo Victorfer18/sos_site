@@ -22,14 +22,14 @@ const services = [
         title: "Limpeza Técnica",
         subTitle:
           "A limpeza técnica em equipamentos é ação importante de manutenção, para preservação dos ativos, auxilia evitar possiveis incidentes aos equipamentos, meio ambiente e as pessoas.",
-        photo: "https://picsum.photos/500/300?random=3",
+        photo: "./images/servicos/limpeza_tecnica.png",
       },
       {
         tab: "Manutenção de equipamentos ",
         title: "Manutenção de equipamentos ",
         subTitle:
           "A manutenção de subestação consiste em realizar ensaios em equipamentos para analisar os dados coletados visando acompanhar o desgaste ou envelhecimento dos ativos através de comparativos de diagnósticos normalizados.",
-        photo: "https://picsum.photos/500/300?random=4",
+        photo: "./images/servicos/manutencao_equipamentos.png",
       },
     ],
   },
@@ -60,7 +60,7 @@ const services = [
       {
         tab: "Manutenção Preventiva",
         title: "Manutenção Preventiva",
-        photo: "https://picsum.photos/500/300?random=1",
+        photo: "./images/servicos/manutencao_preventiva.png",
         subTitle:
           "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, quasi deleniti! Possimus magni consequuntur libero aperiam dolorum sunt incidunt nam exercitationem itaque, labore nihil atque perferendis, similique laborum est cumque.",
       },
