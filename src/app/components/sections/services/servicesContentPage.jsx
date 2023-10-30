@@ -41,7 +41,7 @@ export default function ServicesContentPage({ onOpenModal }) {
                 alt={item.title}
                 className="w-full rounded-none object-cover h-full"
               />
-              <CardHeader className="flex justify-between">
+              <CardHeader className="flex justify-between gap-1">
                 <h2 className="font-medium text-large">{item.title}</h2>
                 <Button onClick={() => openModal(item)} color="danger">
                   Abrir
