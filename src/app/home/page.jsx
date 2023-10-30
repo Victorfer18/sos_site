@@ -33,8 +33,8 @@ export default function Home() {
           <Spacer y={32} />
           <OurCollaborator />
           <div id="blog" />
-          <Spacer y={32} />
-          <Blog />
+          {/* <Spacer y={32} /> */}
+          {/* <Blog /> */}
           <Spacer y={28} />
         </TemplateContent>
       </Template>
