@@ -1,7 +1,7 @@
 const services = [
   {
-    photo: "https://picsum.photos/500/300?random=1",
-    title: "Contrado de manutenção",
+    photo: "./images/servicos/contratos_manutencao.png",
+    title: "Contrato de manutenção",
     content: [
       {
         tab: "Gestão de Manutenção",
@@ -34,14 +34,14 @@ const services = [
     ],
   },
   {
-    photo: "https://picsum.photos/500/300?random=1",
+    photo: "./images/servicos/servicos_oficina.png",
     title: "Serviços de oficina",
     content: [
       {
         tab: "Serviços de oficina",
         subTitle:
           "A SOS SERVICE possui 03 oficinas (São Paulo, Paraná e Bahia) para revisão e reforma de disjuntores de Média e Baixa tensão. Nossa equipe é composta por profissionais altamente treinados e qualificados para realização dos trabalhos em equipamentos de todos fabricantes existentes no mercado.",
-        photo: "https://picsum.photos/500/300?random=1",
+        photo: "./images/servicos/servicos_oficina.png",
         acting: [
           {
             name: "Reforma e recondicionamento de disjuntor de Média e Baixa tensão",
@@ -54,7 +54,7 @@ const services = [
     ],
   },
   {
-    photo: "https://picsum.photos/500/300?random=1",
+    photo: "./images/servicos/servicos_campo.png",
     title: "Serviços de Campo",
     content: [
       {
@@ -67,14 +67,14 @@ const services = [
       {
         tab: "Manutenção Corretiva",
         title: "Manutenção Corretiva",
-        photo: "https://picsum.photos/500/300?random=1",
+        photo: "./images/servicos/manutencao_corretiva.png",
         subTitle:
           "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, quasi deleniti! Possimus magni consequuntur libero aperiam dolorum sunt incidunt nam exercitationem itaque, labore nihil atque perferendis, similique laborum est cumque.",
       },
       {
         tab: "Teste em EPI's e EPC's",
         title: "Teste em EPI's e EPC's",
-        photo: "https://picsum.photos/500/300?random=1",
+        photo: "./images/servicos/teste_epi.png",
         subTitle:
           "Para sua comodidade dispomos de laboratório móvel para testes em EPI's e EPC's. Atendemos em todo território nacional. Realizamos ensaios em uma ampla gama de Equipamentos de Proteção Individual (EPI's) e Equipamentos de Proteção Coletiva (EPC's). Os ensaios abrangem diversos itens essenciais como:",
         acting: [
@@ -104,13 +104,13 @@ const services = [
     ],
   },
   {
-    photo: "https://picsum.photos/500/300?random=1",
+    photo: "./images/servicos/construcao_montagem_substacao.png",
     title: "Construção e Montagem de Subestações",
     content: [
       {
         tab: "Construção e Montagem de Subestações",
         title: "Construção e Montagem de Subestações",
-        photo: "https://picsum.photos/500/300?random=1",
+        photo: "./images/servicos/construcao_montagem_substacao.png",
         subTitle:
           "A SOS Service é especializada na montagem e comissionamento de subestações de energia elétrica, oferecendo seus serviços para empreendimentos em todo o território nacional. Com uma equipe altamente qualificada, estamos prontos para realizar serviços em diferentes locais, garantindo que cada projeto seja realizado com excelência, dentro dos padrões de segurança e qualidade exigidos.",
         acting: [
@@ -131,33 +131,33 @@ const services = [
     ],
   },
   {
-    photo: "https://picsum.photos/500/300?random=1",
+    photo: "./images/servicos/retrofit.png",
     title: "Retrofit em Equipamentos",
     content: [
       {
         tab: "Retrofit em Oficina",
         title: "Retrofit em Oficina",
-        photo: "https://picsum.photos/500/300?random=1",
+        photo: "./images/servicos/retrofit_oficina.png",
         subTitle:
           "O retrofit de disjuntores é um processo que consiste em modernizar a infraestrutura elétrica de uma construção e conservar a estrutura original do local, promovendo a substituição ou acréscimo em elementos mais antigos, inadequados e obsoletos, por equipamentos mais modernos. Assim fazendo a adaptação necessária para que os novos equipamentos tornem-se intercambiáveis ao sistema existente. Esse processo é aconselhável quando os equipamentos e dispositivos do ambiente se encontram em estado de decomposição avançado. Desta forma podemos evitar queima de aparelhos elétricos, gasto de energia elétrica desproporcional, curtos-circuitos entre outros problemas.",
       },
       {
         tab: "Retrofit em Campo",
         title: "Retrofit em Campo",
-        photo: "https://picsum.photos/500/300?random=1",
+        photo: "./images/servicos/retrofit_campo.png",
         subTitle:
           "O retrofit em campo tem como principio manter o painel existente com suas respectivas características, adequando ao mesmo, um novo equipamento como disjuntor ou relés de proteção, realizando a adaptação necessária para que os novos equipamentos tornem-se intercambiáveis ao sistema existente. Um bom exemplo é o acrescimo de relés digitais inteligente com comunicação  para gerenciamento ou controle nos disjuntores, para aumento de confiabilidade, utilização de meios de extinção de arco sustentaveis e ecologicos.",
       },
     ],
   },
   {
-    photo: "https://picsum.photos/500/300?random=1",
+    photo: "./images/servicos/transformadores.png",
     title: "Transformadores de Potência",
     content: [
       {
         tab: "Transformadores de Potência",
         title: "Transformadores de Potência",
-        photo: "https://picsum.photos/500/300?random=1",
+        photo: "./images/servicos/transformadores.png",
         subTitle:
           "Para evitar ou corrigir as paradas súbitas dos equipamentos, a inconstância ou paralisação do fornecimento de energia, a perda de produtividade e até mesmo o risco de eventuais acidentes a SOS Service oferece diversos tipos de serviços em transformadores de potência.",
         acting: [
@@ -203,7 +203,7 @@ const services = [
       {
         tab: "Inspeção por Termografia",
         title: "Inspeção por Termografia",
-        photo: "https://picsum.photos/500/300?random=1",
+        photo: "./images/servicos/termografia.png",
         subTitle:
           "Através da inspeção como por termografia é possível obter informações em tempo real acerca das condições dos equipamentos. Isso oferece a chance de prever possíveis falhas e antecipar uma parada não planejada, permitindo com que seja realizada uma manutenção aumentando a vida útil dos equipamentos.",
       },
@@ -279,13 +279,13 @@ const services = [
   },
 
   {
-    photo: "https://picsum.photos/500/300?random=1",
+    photo: "./images/servicos/ensaios_especiais.png",
     title: "Ensaios Especiais",
     content: [
       {
         tab: "Torkel",
         title: "Torkel",
-        photo: "https://picsum.photos/500/300?random=1",
+        photo: "./images/servicos/torkel.png",
         subTitle:
           "O Torkel é um equipamento utilizado para verificar a integridade das baterias.",
         acting: [
@@ -306,7 +306,7 @@ const services = [
       {
         tab: "CPC 100",
         title: "CPC 100",
-        photo: "https://picsum.photos/500/300?random=1",
+        photo: "./images/servicos/cpc.png",
         subTitle:
           "O CPC 100 é um equipamento capaz de realizar testes elétricos em diversos equipamentos. O sistema de teste substitui dispositivos de ensaios individuais além de oferecer novos métodos inovadores de testes.",
         acting: [
@@ -377,7 +377,7 @@ const services = [
       {
         tab: "CT Analyzer",
         title: "CT Analyzer",
-        photo: "https://picsum.photos/500/300?random=1",
+        photo: "./images/servicos/ct_analayzer.png",
         subTitle:
           "O CT Analyzer determina automaticamente todos os valores relevantes do transformador de corrente e compara os resultados com o padrão selecionado.",
         acting: [
@@ -404,7 +404,7 @@ const services = [
       {
         tab: "Franeo",
         title: "Franeo",
-        photo: "https://picsum.photos/500/300?random=1",
+        photo: "./images/servicos/franeo.png",
         subTitle:
           "A análise de resposta em frequência (geralmente chamada de FRA ou SFRA) é eficaz para testar a integridade mecânica dos núcleos e enrolamentos do transformador.",
         acting: [
@@ -428,7 +428,7 @@ const services = [
       {
         tab: "VLF",
         title: "VLF (Very Low Frequency)",
-        photo: "https://picsum.photos/500/300?random=1",
+        photo: "./images/servicos/vlf.png",
         subTitle:
           "O VLF (Very Low Frequency) é o equipamento ideal para verificar a integridade e prolongar a vida útil dos cabos.",
         acting: [
@@ -449,7 +449,7 @@ const services = [
       {
         tab: "Vidar",
         title: "Vidar",
-        photo: "https://picsum.photos/500/300?random=1",
+        photo: "./images/servicos/vidar.png",
         subTitle:
           "Destinado a testes em disjuntores de média tensão com isolação a vácuo ou gás SF6.",
         acting: [

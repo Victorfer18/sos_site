@@ -34,12 +34,12 @@ export default function ServicesContentPage({ onOpenModal }) {
       <Card>
         <CardBody className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {servicesContent.map((item) => (
-            <Card key={item.id}>
+            <Card key={item.id} className="h-full">
               <Image
                 loading="lazy"
                 src={item.photo}
                 alt={item.title}
-                className="w-full rounded-none min-w-unit-5"
+                className="w-full rounded-none  object-cover h-fit"
               />
               <CardHeader className="flex justify-between">
                 <h2 className="font-medium text-large">{item.title}</h2>

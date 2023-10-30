@@ -50,14 +50,14 @@ export default function ModalServices({
                 {(item) => (
                   <Tab key={item.id} title={item.tab} checked={2}>
                     <Spacer y={7} />
-                    <Card className="grid lg:grid-cols-3 bg-transparent shadow-none gap-5 place-items-center">
+                    <Card className="grid lg:grid-cols-7 bg-transparent shadow-none gap-5 place-items-center">
                       <img
                         src={item.photo}
                         alt={item.title}
-                        className=" w-full h-full object-cover rounded-none "
+                        className=" w-full h-full object-cover rounded-none col-span-3 bg-cover"
                         loading="lazy"
                       />
-                      <CardBody className="lg:col-span-2 p-0 grid place-content-start place-items-center w-full">
+                      <CardBody className="lg:col-span-4 p-0 grid place-content-start place-items-center w-full">
                         {item.title && (
                           <div className="h-full">
                             <h2 className="text-2xl font-bold leading-10 tracking-widest font-mono text-center text-redTheme uppercase">
