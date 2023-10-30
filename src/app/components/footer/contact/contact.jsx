@@ -15,13 +15,15 @@ export default function Contact({ isOpen, onOpen, onOpenChange }) {
       <div className="flex justify-between flex-col md:flex-row items-center md:items-end pb-5 ">
         <Card className="bg-transparent shadow-none">
           <CardBody>
-            <Image
-              loading="lazy"
-              src={"./images/logo/logo_sos.png"}
-              alt={"Logo SOS"}
-              width={80}
-              className="rounded-none min-w-unit-5"
-            />
+            <Link href="/home#startPage" color="foreground">
+              <Image
+                loading="lazy"
+                src={"./images/logo/logo_sos.png"}
+                alt={"Logo SOS"}
+                width={80}
+                className="rounded-none min-w-unit-5"
+              />
+            </Link>
           </CardBody>
         </Card>
         <Card className="bg-transparent shadow-none">

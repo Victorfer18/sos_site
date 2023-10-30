@@ -48,7 +48,7 @@ export default function Header({ children }) {
         </NavbarContent>
         <NavbarContent justify={`center`}>
           <NavbarBrand>
-            <Link href="/home" color="foreground">
+            <Link href="/home#startPage" color="foreground">
               <Image
                 loading="lazy"
                 src={logo.src}
