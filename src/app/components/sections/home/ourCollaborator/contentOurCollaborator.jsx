@@ -15,7 +15,7 @@ const contentCardsCollaborator = [
     id: 2,
     idRefBranch: 1,
     photo: "./images/collaborators/image4.svg",
-    nome: "Guilherme Pukinska",
+    nome: "Guilherme Pukinskas",
     funcao: "Gerente",
     descricao: "Gerente de contas.",
     email: "guilherme@sos-service.com.br",

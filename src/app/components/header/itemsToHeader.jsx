@@ -214,11 +214,11 @@ const ItemsHeader = () => {
       href: "#contatc",
       hrefMenu: "#contatc",
     },
-    {
-      label: "Blog",
-      href: "/home#blog",
-      hrefMenu: "/home#blog",
-    },
+    // {
+    //   label: "Blog",
+    //   href: "/home#blog",
+    //   hrefMenu: "/home#blog",
+    // },
     {
       label: "Área Cliente",
       href: "https://www.sos-service.com.br/02/index.php/component/users/?view=login",

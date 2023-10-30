@@ -112,7 +112,7 @@ const services = [
         title: "Construção e Montagem de Subestações",
         photo: "https://picsum.photos/500/300?random=1",
         subTitle:
-          "A SOS Service é especializada na montagem e comissionamento de subestações de energia elétrica, oferecendo seus serviços para empreendimentos em todo o território nacional. Com uma equipe altamente qualificada, estamos prontos para realizar serviços em diferentes locais, garantindo que cada projeto seja realizado com excelência e dentro dos padrões de segurança e qualidade exigidos.",
+          "A SOS Service é especializada na montagem e comissionamento de subestações de energia elétrica, oferecendo seus serviços para empreendimentos em todo o território nacional. Com uma equipe altamente qualificada, estamos prontos para realizar serviços em diferentes locais, garantindo que cada projeto seja realizado com excelência, dentro dos padrões de segurança e qualidade exigidos.",
         acting: [
           {
             name: "Realizamos Montagem eletromecânica de equipamentos de subestação de EAT/AT/MT",
@@ -139,14 +139,14 @@ const services = [
         title: "Retrofit em Oficina",
         photo: "https://picsum.photos/500/300?random=1",
         subTitle:
-          "O retrofit de disjuntores é um processo que consiste em modernizar a infraestrutura elétrica de uma construção e conservar a estrutura original do local, promovendo a substituição ou acréscimo em elementos mais antigos, inadequados e obsoletos, por equipamentos mais modernos. Assim fazendo a adaptação necessária para que os novos equipamentos tornem-se intercambiáveis ao sistema existente. Esse processo é aconselhável quando os equipamentos e dispositivos do ambiente se encontram em estado de decomposição avançado. Desta forma podemos evitar queima de aparelhos elétricos, gasto de energia elétrica desproporcional, curtos-circuitos, entre outros problemas.",
+          "O retrofit de disjuntores é um processo que consiste em modernizar a infraestrutura elétrica de uma construção e conservar a estrutura original do local, promovendo a substituição ou acréscimo em elementos mais antigos, inadequados e obsoletos, por equipamentos mais modernos. Assim fazendo a adaptação necessária para que os novos equipamentos tornem-se intercambiáveis ao sistema existente. Esse processo é aconselhável quando os equipamentos e dispositivos do ambiente se encontram em estado de decomposição avançado. Desta forma podemos evitar queima de aparelhos elétricos, gasto de energia elétrica desproporcional, curtos-circuitos entre outros problemas.",
       },
       {
         tab: "Retrofit em Campo",
         title: "Retrofit em Campo",
         photo: "https://picsum.photos/500/300?random=1",
         subTitle:
-          "O retrofit em campo tem como principio manter o painel existente com suas respectivas características, adequando ao mesmo, um novo equipamento como disjuntor ou relés de proteção, realizando a adaptação necessária para que os novos equipamentos tornem-se intercambiáveis ao sistema existente. Um bom exemplo é o acrescimo de relés digitais inteligente com comunicação  para gerenciamento ou controle nos disjuntores, para aumento de confiabilidade e utilização de meios de extinção de arco sustentaveis e ecologicos.",
+          "O retrofit em campo tem como principio manter o painel existente com suas respectivas características, adequando ao mesmo, um novo equipamento como disjuntor ou relés de proteção, realizando a adaptação necessária para que os novos equipamentos tornem-se intercambiáveis ao sistema existente. Um bom exemplo é o acrescimo de relés digitais inteligente com comunicação  para gerenciamento ou controle nos disjuntores, para aumento de confiabilidade, utilização de meios de extinção de arco sustentaveis e ecologicos.",
       },
     ],
   },

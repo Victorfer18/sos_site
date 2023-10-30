@@ -67,14 +67,14 @@ export default function Header({ children }) {
                   <Dropdown>
                     <NavbarItem>
                       <DropdownTrigger>
-                        <Button
-                          disableRipple
-                          className="p-0 bg-transparent data-[hover=true]:bg-transparent"
+                        <Link
                           radius="sm"
-                          variant="light"
+                          color="foreground"
+                          variant="flat"
+                          className=" flex items-center justify-between w-full cursor-pointer"
                         >
                           {item.label}
-                        </Button>
+                        </Link>
                       </DropdownTrigger>
                     </NavbarItem>
                     <DropdownMenu
