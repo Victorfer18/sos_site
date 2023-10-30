@@ -62,14 +62,14 @@ const services = [
         title: "Manutenção Preventiva",
         photo: "./images/servicos/manutencao_preventiva.png",
         subTitle:
-          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, quasi deleniti! Possimus magni consequuntur libero aperiam dolorum sunt incidunt nam exercitationem itaque, labore nihil atque perferendis, similique laborum est cumque.",
+          "Com foco em diagnosticar possíveis necessidades de intervenções, garantindo maior confiabilidade na operação, reduzindo paradas não programadas e otimizando a operação além de prolongar a vida útil dos ativos instalados em subestações de Alta, Média e Baixa Tensão.",
       },
       {
         tab: "Manutenção Corretiva",
         title: "Manutenção Corretiva",
         photo: "./images/servicos/manutencao_corretiva.png",
         subTitle:
-          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, quasi deleniti! Possimus magni consequuntur libero aperiam dolorum sunt incidunt nam exercitationem itaque, labore nihil atque perferendis, similique laborum est cumque.",
+          "Solução de falhas identificadas, sendo elas realizadas em local ou em oficina, reestabelecendo a opção dos equipamentos através de substituição de peças, adequações e ou ajustes.",
       },
       {
         tab: "Teste em EPI's e EPC's",
