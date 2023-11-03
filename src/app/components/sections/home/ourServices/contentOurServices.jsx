@@ -5,7 +5,7 @@ const ContentOurServices = () => {
   const contentOurServices = useMemo(
     () => [
       {
-        title: "Contratos de Manutenção",
+        title: "Serviços de Campo",
         description:
           "A SOS Service realiza a gestão da manutenção em subestações, ativos através de inspeções técnicas de analise, tendo como principal objetivo evitar falhas nos ativos ocasionando paradas não programadas.",
         src: "./images/icons/torre_eletrica.png",
@@ -17,7 +17,7 @@ const ContentOurServices = () => {
         src: "./images/icons/chave.png",
       },
       {
-        title: "Retrofit em equipamentos",
+        title: "Ensaios especiais",
         description:
           "O retrofit é um processo que consiste em modernizar a infraestrutura elétrica de uma construção e conservar a estrutura original do local, promovendo a substituição ou acréscimo em elementos mais antigos.",
         src: "./images/icons/multimetro.png",
