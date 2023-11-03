@@ -8,19 +8,19 @@ const ContentOurServices = () => {
         title: "Contratos de Manutenção",
         description:
           "A SOS Service realiza a gestão da manutenção em subestações, ativos através de inspeções técnicas de analise, tendo como principal objetivo evitar falhas nos ativos ocasionando paradas não programadas.",
-        src: "./images/icons/chave.png",
+        src: "./images/icons/torre_eletrica.png",
       },
       {
         title: "Serviços de Oficina",
         description:
           "A SOS SERVICE possui 03 oficinas (São Paulo, Paraná e Bahia) para revisão e reforma de disjuntores de Média Tensão e baixa tensão. Nossa equipe é composta por profissionais altamente treinados e qualificados, para realização dos trabalhos em equipamentos de todos fabricantes existente no mercado.",
-        src: "./images/icons/maleta.png",
+        src: "./images/icons/chave.png",
       },
       {
-        title: "Testes em EPi's e EPC's",
+        title: "Retrofit em equipamentos",
         description:
-          "Para sua comodidade dispomos de laboratório móvel para testes em EPI's e EPC's. Atendemos em todo território nacional. Realizamos ensaios em uma ampla gama de Equipamentos de Proteção Individual (EPI's) e Equipamentos de Proteção Coletiva (EPC's). Os ensaios abrangem diversos itens essenciais como.",
-        src: "./images/icons/escudo.png",
+          "O retrofit é um processo que consiste em modernizar a infraestrutura elétrica de uma construção e conservar a estrutura original do local, promovendo a substituição ou acréscimo em elementos mais antigos.",
+        src: "./images/icons/multimetro.png",
       },
       {
         title: "Transformadores",
@@ -29,10 +29,10 @@ const ContentOurServices = () => {
         src: "./images/icons/transformador.png",
       },
       {
-        title: "Retrofit em equipamentos",
+        title: "Testes em EPi's e EPC's",
         description:
-          "O retrofit é um processo que consiste em modernizar a infraestrutura elétrica de uma construção e conservar a estrutura original do local, promovendo a substituição ou acréscimo em elementos mais antigos.",
-        src: "./images/icons/engrenagem.png",
+          "Para sua comodidade dispomos de laboratório móvel para testes em EPI's e EPC's. Atendemos em todo território nacional. Realizamos ensaios em uma ampla gama de Equipamentos de Proteção Individual (EPI's) e Equipamentos de Proteção Coletiva (EPC's). Os ensaios abrangem diversos itens essenciais como.",
+        src: "./images/icons/capacete.png",
       },
     ],
     []
