@@ -50,7 +50,7 @@ export default function ModalServices({
                 {(item) => (
                   <Tab key={item.id} title={item.tab} checked={2}>
                     <Spacer y={7} />
-                    <Card className="grid lg:grid-cols-7 bg-transparent shadow-none gap-5 place-items-center">
+                    <Card className="grid lg:grid-cols-7 bg-transparent shadow-none lg:gap-5 place-items-center">
                       <img
                         src={item.photo}
                         alt={item.title}
