@@ -246,7 +246,7 @@ const services = [
     ],
   },
   {
-    photo: "./images/servicos/circuirto_seletividade.png",
+    photo: "./images/servicos/laudos_estudos.png",
     title: "Laudos e Estudos",
     content: [
       {
@@ -259,14 +259,14 @@ const services = [
       {
         tab: "Curto Circuito e Seletividade",
         title: "Curto Circuito e Seletividade",
-        photo: "./images/servicos/circuirto_seletividade.png",
+        photo: "./images/servicos/circuito_seletividade.png",
         subTitle:
           "Estudo de curto-circuito é a análise do sistema elétrico que determina a magnitude das correntes que fluem durante uma falha elétrica, comparação desses valores calculados com as classificações dos equipamentos é o primeiro passo para garantir que o sistema de energia seja protegido através dos ajustes e parâmetros necessários.",
       },
       {
         tab: "SPDA",
         title: "SPDA",
-        photo: "./images/servicos/circuirto_seletividade.png",
+        photo: "./images/servicos/circuito_seletividade.png",
         subTitle:
           "O laudo técnico de SPDA, trata-se de uma inspeção fundamental para assegurar que os sistemas de proteção contra descargas atmosféricas, ou para-raios, estejam funcionando adequadamente preservando integridade física dos colaboradores e ativos instalados.",
       },
