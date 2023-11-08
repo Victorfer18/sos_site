@@ -65,46 +65,48 @@ export default function ModalServices({
                             </h2>
                           </div>
                         )}
-                        <ScrollShadow className="w-full h-full lg:h-[350px] grid gap-5 py-5 scrollBar">
+                        <ScrollShadow className="w-full h-full lg:h-[350px] grid gap-5 py-5 scrollBar ">
                           <div className="grid gap-2 p-1">
                             <p className=" font-medium font-mono text-center lg:text-start text-neutral-500">
                               {item.subTitle}
                             </p>
                           </div>
-                          {item.acting && (
-                            <ul className="list-none grid gap-5 place-content-start">
-                              {item.acting.map((acting) => (
-                                <li
-                                  className=" text-sm leading-5"
-                                  key={acting.name + "-" + acting.id}
-                                >
-                                  <span
-                                    className={`${
-                                      acting.content
-                                        ? "font-bold"
-                                        : "font-semibold"
-                                    }`}
+                          <div className="h-full w-full">
+                            {item.acting && (
+                              <ul className="list-none grid gap-5 place-content-start">
+                                {item.acting.map((acting) => (
+                                  <li
+                                    className=" text-sm leading-5"
+                                    key={acting.name + "-" + acting.id}
                                   >
-                                    ⦁ {acting.name};
-                                  </span>
-                                  {acting.content && (
-                                    <Divider className="bg-neutral-300" />
-                                  )}
-                                  {acting.content &&
-                                    acting.content.map((content) => (
-                                      <ul
-                                        className="list-none grid gap-5 place-content-start"
-                                        key={content.name + "-" + content.id}
-                                      >
-                                        <li className=" text-base leading-5">
-                                          ⦁ {content.name};
-                                        </li>
-                                      </ul>
-                                    ))}
-                                </li>
-                              ))}
-                            </ul>
-                          )}
+                                    <span
+                                      className={`${
+                                        acting.content
+                                          ? "font-bold"
+                                          : "font-semibold"
+                                      }`}
+                                    >
+                                      ⦁ {acting.name};
+                                    </span>
+                                    {acting.content && (
+                                      <Divider className="bg-neutral-300" />
+                                    )}
+                                    {acting.content &&
+                                      acting.content.map((content) => (
+                                        <ul
+                                          className="list-none grid gap-5 place-content-start"
+                                          key={content.name + "-" + content.id}
+                                        >
+                                          <li className=" text-base leading-5">
+                                            ⦁ {content.name};
+                                          </li>
+                                        </ul>
+                                      ))}
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
+                          </div>
                         </ScrollShadow>
                       </CardBody>
                     </Card>

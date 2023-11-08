@@ -8,14 +8,14 @@ const services = [
         title: "Gestão de Manutenção",
         subTitle:
           "A SOS Service realiza a gestão da manutenção em subestações, através de inspeções técnicas de analise, tendo como principal objetivo evitar falhas nos ativos, ocasionando paradas não programadas.",
-        photo: "https://picsum.photos/500/300?random=1",
+        photo: "./images/servicos/gestao_manutencao.png",
       },
       {
         tab: "Inspeções",
         title: "Inspeções",
         subTitle:
           "As inspeções visam confirmar com regularidade a manutenção das boas condições de funcionamento e de segurança dos equipamentos, de acordo com as suas características técnicas ou procedimentos definidos.",
-        photo: "https://picsum.photos/500/300?random=2",
+        photo: "./images/servicos/inspecoes.png",
       },
       {
         tab: "Limpeza Técnica",
@@ -190,13 +190,13 @@ const services = [
     ],
   },
   {
-    photo: "./images/servicos/ensaios_especiais.png",
+    photo: "./images/servicos/manutencao_preditiva.png",
     title: "Manutenção Preditiva",
     content: [
       {
         tab: "Inspeção por Ultrassom",
         title: "Inspeção por Ultrassom",
-        photo: "https://picsum.photos/500/300?random=1",
+        photo: "./images/servicos/ultrassom.png",
         subTitle:
           "A inspeção por ultrassom é uma técnica não destrutiva utilizada para realizar a detecção de descontinuidades em equipamentos, com o objetivo de identificar falhas e corrigi-las, permitindo com que seja realizada uma manutenção evitando queima de aparelhos elétricos, curtos-circuitos, entre outros problemas.",
       },
@@ -246,34 +246,36 @@ const services = [
     ],
   },
   {
-    photo: "./images/servicos/ensaios_especiais.png",
+    photo: "./images/servicos/circuirto_seletividade.png",
     title: "Laudos e Estudos",
     content: [
       {
         tab: "Análise de Rede",
         title: "Análise de Rede",
-        photo: "https://picsum.photos/500/300?random=1",
+        photo: "./images/servicos/analise_rede.png",
         subTitle:
-          "Descrição da Análise de Rede Descrição da Análise de Rede Descrição da Análise de Rede",
+          "A SOS Service realiza a coleta de dados para análise  de sua rede elétrica, onde pode-se identificar problemas como variações de tensão, oscilações de frequência, distorção harmônica, entre outros. Após as análises, fornecemos relatórios com as devidas recomendações necessárias e das principais informações/falhas coletadas no sistema.",
       },
       {
         tab: "Curto Circuito e Seletividade",
         title: "Curto Circuito e Seletividade",
-        photo: "https://picsum.photos/500/300?random=1",
+        photo: "./images/servicos/circuirto_seletividade.png",
         subTitle:
-          "Descrição de Curto Circuito e Seletividade Descrição de Curto Circuito e Seletividade Descrição de Curto Circuito e Seletividade",
+          "Estudo de curto-circuito é a análise do sistema elétrico que determina a magnitude das correntes que fluem durante uma falha elétrica, comparação desses valores calculados com as classificações dos equipamentos é o primeiro passo para garantir que o sistema de energia seja protegido através dos ajustes e parâmetros necessários.",
       },
       {
         tab: "SPDA",
         title: "SPDA",
-        photo: "https://picsum.photos/500/300?random=1",
-        subTitle: "Descrição do SPDA Descrição do SPDA Descrição do SPDA",
+        photo: "./images/servicos/circuirto_seletividade.png",
+        subTitle:
+          "O laudo técnico de SPDA, trata-se de uma inspeção fundamental para assegurar que os sistemas de proteção contra descargas atmosféricas, ou para-raios, estejam funcionando adequadamente preservando integridade física dos colaboradores e ativos instalados.",
       },
       {
         tab: "NR10",
         title: "NR10",
-        photo: "https://picsum.photos/500/300?random=1",
-        subTitle: "Descrição da NR10 Descrição da NR10 Descrição da NR10",
+        photo: "./images/servicos/nr_10.png",
+        subTitle:
+          "O laudo de instalações elétricas NR -10 é emitido após a análise crítica de um engenheiro eletricista, onde indica se as instalações elétricas estão atendendo a todos os requisitos das normas brasileiras (NBRs e outras), de forma que o sistema elétrico esteja em conformidade com os requisitos normativos, desta forma, remetendo maior confiabilidade e segurança nas instalações.",
       },
     ],
   },

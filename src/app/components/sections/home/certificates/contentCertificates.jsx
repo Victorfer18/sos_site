@@ -2,17 +2,17 @@ const certificates = [
   {
     id: 1,
     name: "ISO 45001",
-    link: "https://www.sos-service.com.br/cert/18001.jpg",
+    link: "./filles/certificates/CERTIFICADO SOS SERVICE  ISO 45001.pdf",
   },
   {
     id: 2,
     name: "ISO 9001",
-    link: "https://www.sos-service.com.br/cert/9001.jpg",
+    link: "./filles/certificates/9001.jpg",
   },
   {
     id: 3,
     name: "ISO 14001",
-    link: "https://www.sos-service.com.br/cert/14001.jpg",
+    link: "./filles/certificates/14001.jpg",
   },
 ];
 
