@@ -14,9 +14,16 @@ import {
 } from "@nextui-org/react";
 import { contentCardsCollaborator } from "../../sections/home/ourCollaborator/contentOurCollaborator";
 import contentBranchs from "../../sections/home/branchs/contentBranchs";
+import axios from "axios";
 
 export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
+  const [name, setName] = useState("victor");
+  const [email, setEmail] = useState("victorfernandomagalhaes@gmail.com");
+  const [phone, setPhone] = useState("11 91560-1390");
+  const [company, setCompany] = useState("DDCompany");
+  const [message, setMessage] = useState("Sou o victor");
   const [selectedBranch, setSelectedBranch] = useState(null);
+  const [selectedContacts, setSelectedContacts] = useState(new Set([]));
 
   const handleBranchSelectionChange = (e) => {
     setSelectedBranch(parseInt(e.target.value));
@@ -29,6 +36,50 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
         )
       : contentCardsCollaborator;
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const email_to = filteredContacts.filter(
+      (item) => item.id === parseInt(selectedContacts.currentKey)
+    )[0].email;
+    try {
+      const response = await axios.post("http://localhost:8080/send_email", {
+        email: email_to,
+        subject: name + " - " + company,
+        message:
+          "<html><head><title>" +
+          name +
+          " - " +
+          company +
+          "</title></head><body><h4>Empresa: " +
+          company +
+          "</h4><h4>Nome:" +
+          name +
+          "</h4><h4>Email: " +
+          email +
+          "</h4><h4>Telefone: " +
+          phone +
+          "</h4><p>" +
+          message +
+          "</p><br><br><br><br><br><br><br><p>Atenciosamente " +
+          company +
+          ".</p></body></html>",
+      });
+
+      if (response.status === 200) {
+        alert("Email sent successfully.");
+        setName("");
+        setEmail("");
+        setPhone("");
+        setCompany("");
+        setMessage("");
+      } else {
+        alert("Error sending email.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Error sending email.");
+    }
+  };
   return (
     <Modal
       isOpen={isOpen}
@@ -45,7 +96,7 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
             </ModalHeader>
             <Divider className="bg-redTheme" />
             <ModalBody>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="grid gap-10 p-5">
                   <div className="grid md:grid-cols-2 gap-10 gap-y-5">
                     <Select
@@ -59,7 +110,6 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
                       placeholder="Selecione"
                       className="w-full "
                       color="danger"
-                      isRequired
                       onChange={handleBranchSelectionChange}
                     >
                       {(item) => (
@@ -78,7 +128,8 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
                       placeholder="Selecione"
                       className="w-full "
                       color="danger"
-                      isRequired
+                      selectedKeys={selectedContacts}
+                      onSelectionChange={setSelectedContacts}
                     >
                       {(item) => (
                         <SelectItem key={item.id}>{item.nome}</SelectItem>
@@ -93,6 +144,8 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
                       isRequired
                       color="danger"
                       variant=""
+                      value={name}
+                      onValueChange={setName}
                     />
                     <Input
                       type="email"
@@ -103,6 +156,8 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
                       isRequired
                       color="danger"
                       variant=""
+                      value={email}
+                      onValueChange={setEmail}
                     />
                     <Input
                       type="text"
@@ -113,6 +168,8 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
                       isRequired
                       color="danger"
                       variant=""
+                      value={phone}
+                      onValueChange={setPhone}
                     />
                     <Input
                       type="text"
@@ -123,6 +180,8 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
                       isRequired
                       color="danger"
                       variant=""
+                      value={company}
+                      onValueChange={setCompany}
                     />
                   </div>
                   <Textarea
@@ -134,6 +193,8 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
                     variant=""
                     isRequired
                     minRows={10}
+                    value={message}
+                    onValueChange={setMessage}
                   />
                   <div className="flex justify-center">
                     <Button
