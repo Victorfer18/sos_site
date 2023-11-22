@@ -38,12 +38,12 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const email_to = filteredContacts.filter(
-      (item) => item.id === parseInt(selectedContacts.currentKey)
-    )[0].email;
+    // const email_to = filteredContacts.filter(
+    //   (item) => item.id === parseInt(selectedContacts.currentKey)
+    // )[0].email;
     try {
       const response = await axios.post("http://localhost:8080/send_email", {
-        email: email_to,
+        email: "victorfernandomagalhaes@gmail.com",
         subject: name + " - " + company,
         message:
           "<html><head><title>" +
