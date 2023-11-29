@@ -7,8 +7,31 @@ const services = [
         tab: "Gestão de Manutenção",
         title: "Gestão de Manutenção",
         subTitle:
-          "A SOS Service realiza a gestão da manutenção em subestações, através de inspeções técnicas de analise, tendo como principal objetivo evitar falhas nos ativos, ocasionando paradas não programadas.",
+          "A gestão de manutenção são um conjunto de práticas que tem como objetivo manter os bens ativos preservados, através de acompanhamento do ciclo de vida dos equipamentos. A gestão inclui controle de estoque de peças de reposição, avaliação e periodicidade de manutenções, desempenho e riscos dos ativos, além de verificar o cumprimento das normas técnicas. Os ganhos são:",
         photo: "./images/servicos/gestao_manutencao.png",
+        acting: [
+          {
+            name: "Redução de falhas e paradas",
+          },
+          {
+            name: "Aumento da confiabilidade e segurança dos ativos",
+          },
+          {
+            name: "Melhoria na gestão de riscos",
+          },
+          {
+            name: "Redução de impactos ambientais",
+          },
+          {
+            name: "Criar ou melhorar os indicadores",
+          },
+          {
+            name: "Planos de investimentos em novas tecnologias",
+          },
+          {
+            name: "Oportunidades de aprimorar e melhorias",
+          },
+        ],
       },
       {
         tab: "Inspeções",
@@ -40,7 +63,7 @@ const services = [
       {
         tab: "Serviços de oficina",
         subTitle:
-          "A SOS SERVICE possui 03 oficinas (São Paulo, Paraná e Bahia) para revisão e reforma de disjuntores de Média e Baixa tensão. Nossa equipe é composta por profissionais altamente treinados e qualificados para realização dos trabalhos em equipamentos de todos fabricantes existentes no mercado.",
+          "A SOS SERVICE possui 03 oficinas (São Paulo, Paraná e Bahia) para revisão e reforma de disjuntores de Média e Baixa tensão. Nossa equipe é composta por profissionais qualificados e treinados para realização dos trabalhos em equipamentos de todos fabricantes existentes no mercado.",
         photo: "./images/servicos/servicos_oficina.png",
         acting: [
           {
@@ -62,14 +85,14 @@ const services = [
         title: "Manutenção Preventiva",
         photo: "./images/servicos/manutencao_preventiva.png",
         subTitle:
-          "Com foco em diagnosticar possíveis necessidades de intervenções, garantindo maior confiabilidade na operação, reduzindo paradas não programadas e otimizando a operação além de prolongar a vida útil dos ativos instalados em subestações de Alta, Média e Baixa Tensão.",
+          "Realizamos ensaios elétricos em todos os equipamentos instalados em subestações de BT, MT, AT e EAT, com finalidade de obtermos valores que são analisados pelos nossos técnicos e engenheiros, que baseados em normas vigentes relata atual estágio de envelhecimento ou vida útil dos equipamentos Também relatamos se os valores coletados nas medições, estão dentro dos parâmetros normalizados, possíveis ações corretivas necessárias e criticidade dos equipamentos instalados. Nas manutenções preventivas, são limpos e inspecionados os isoladores, contatos elétricos, painéis, barramentos e equipamentos. Tambem nas manutenções preventivas são realizados os looping e trip teste e intertravamentos entre os equipamentos. Nosso time de campo, são capacitados e treinados para atender as necessidades de qualidade e segurança. As medições são realizadas somente com instrumentação top mundial para maior confiabilidade dos valores coletados.",
       },
       {
         tab: "Manutenção Corretiva",
         title: "Manutenção Corretiva",
         photo: "./images/servicos/manutencao_corretiva.png",
         subTitle:
-          "Solução de falhas identificadas, sendo elas realizadas em local ou em oficina, reestabelecendo a opção dos equipamentos através de substituição de peças, adequações e ou ajustes.",
+          "Oferecemos soluções de ações corretivas de anormalidades identificadas nas manutenções preditivas e preventivas, sendo elas realizadas em local ou em oficina, reestabelecendo os equipamentos através de substituição de peças, adequações e ou ajustes.",
       },
       {
         tab: "Teste em EPI's e EPC's",
@@ -112,10 +135,13 @@ const services = [
         title: "Construção e Montagem de Subestações",
         photo: "./images/servicos/construcao_montagem_substacao.png",
         subTitle:
-          "A SOS Service é especializada na montagem e comissionamento de subestações de energia elétrica, oferecendo seus serviços para empreendimentos em todo o território nacional. Com uma equipe altamente qualificada, estamos prontos para realizar serviços em diferentes locais, garantindo que cada projeto seja realizado com excelência, dentro dos padrões de segurança e qualidade exigidos.",
+          "A SOS Service realiza construção, montagem e comissionamento de subestações de energia elétrica de MT, AT e EAT. Nosso foco é replacement, retrofit e incremento de equipamentos. Oferecemos serviços para empreendimentos em todo o território nacional com equipe qualificada e treinada, garantindo que cada projeto seja realizado com excelência, dentro dos padrões de segurança e qualidade exigidos.",
         acting: [
           {
-            name: "Realizamos Montagem eletromecânica de equipamentos de subestação de EAT/AT/MT",
+            name: "Obra civil; construção de casa de comando, base de equipamentos, pórticos, canaletas e alambrado",
+          },
+          {
+            name: "Montagem eletromecânica; malha de terra, cabeamento de controle, cabos de potência, equipamentos de pátio, equipamentos da sala de comando e iluminação",
           },
           {
             name: "Replacement de equipamentos de EAT / AT / MT",
@@ -139,14 +165,14 @@ const services = [
         title: "Retrofit em Oficina",
         photo: "./images/servicos/retrofit_oficina.png",
         subTitle:
-          "O retrofit de disjuntores é um processo que consiste em modernizar a infraestrutura elétrica de uma construção e conservar a estrutura original do local, promovendo a substituição ou acréscimo em elementos mais antigos, inadequados e obsoletos, por equipamentos mais modernos. Assim fazendo a adaptação necessária para que os novos equipamentos tornem-se intercambiáveis ao sistema existente. Esse processo é aconselhável quando os equipamentos e dispositivos do ambiente se encontram em estado de decomposição avançado. Desta forma podemos evitar queima de aparelhos elétricos, gasto de energia elétrica desproporcional, curtos-circuitos entre outros problemas.",
+          "O retrofit de disjuntor é um processo que consiste em modernizar e melhorar a infraestrutura elétrica de uma construção e conservar a estrutura original do local, promovendo a substituição ou acréscimo em elementos mais antigos, inadequados e obsoletos, por equipamentos mais modernos. Assim fazendo a adaptação necessária para que os novos equipamentos tornem-se intercambiáveis ao sistema existente. Esse processo é aconselhável quando os equipamentos e dispositivos se encontram em estado crítico de operação (falta de confiabilidade), descontinuidade de peças de reposição, ou necessidade de atender aos novos requisitos técnicos.",
       },
       {
         tab: "Retrofit em Campo",
         title: "Retrofit em Campo",
         photo: "./images/servicos/retrofit_campo.png",
         subTitle:
-          "O retrofit em campo tem como principio manter o painel existente com suas respectivas características, adequando ao mesmo, um novo equipamento como disjuntor ou relés de proteção, realizando a adaptação necessária para que os novos equipamentos tornem-se intercambiáveis ao sistema existente. Um bom exemplo é o acrescimo de relés digitais inteligente com comunicação  para gerenciamento ou controle nos disjuntores, para aumento de confiabilidade, utilização de meios de extinção de arco sustentaveis e ecologicos.",
+          "O retrofit em campo tem como princípio manter 	a estrutura existente com suas respectivas características construtivas, adequando ao mesmo, um novo equipamento como disjuntor ou relés de proteção, realizando as adaptações necessárias para que os novos equipamentos tornem-se intercambiáveis ao sistema existente. Um bom exemplo é a substituição de antigos relés por digital e inteligente com comunicação para gerenciamento ou controle do sistema; ou substituição de disjuntor para aumento de confiabilidade, utilização de meios de extinção de arco sustentáveis e ecológicos.",
       },
     ],
   },
@@ -159,7 +185,7 @@ const services = [
         title: "Transformadores de Potência",
         photo: "./images/servicos/transformadores.png",
         subTitle:
-          "Para evitar ou corrigir as paradas súbitas dos equipamentos, a inconstância ou paralisação do fornecimento de energia, a perda de produtividade e até mesmo o risco de eventuais acidentes a SOS Service oferece diversos tipos de serviços em transformadores de potência.",
+          "Para prevenir e evitar paradas no fornecimento de energia elétrica, perda de produtividade e até mesmo o risco de eventuais acidentes, a SOS Service oferece diversos tipos de serviços em transformadores de potência. Também oferecemos serviços que preservam os ativos elétricos instalados.",
         acting: [
           {
             name: "Testes de comissionamento",
@@ -198,21 +224,21 @@ const services = [
         title: "Inspeção por Ultrassom",
         photo: "./images/servicos/ultrassom.png",
         subTitle:
-          "A inspeção por ultrassom é uma técnica não destrutiva utilizada para realizar a detecção de descontinuidades em equipamentos, com o objetivo de identificar falhas e corrigi-las, permitindo com que seja realizada uma manutenção evitando queima de aparelhos elétricos, curtos-circuitos, entre outros problemas.",
+          "A inspeção por ultrassom é um ensaio não destrutivo que permite detectar sons que estão fora do alcance audível humano, mas que indica anomalias na operação de equipamentos elétricos. Para inspeção não é necessário desligamento ou abertura de portas dos painéis. A inspeção por ultrassom é uma ferramenta a mais na prevenção, identificando possíveis falhas na isolação na sua fase inicial ou embrionária, auxiliando no planejamento de futuras manutenções preventivas e ou corretivas. A inspeção por ultrassom detecta, coronas, descargas elétricas embrionárias e arco elétrico.",
       },
       {
         tab: "Inspeção por Termografia",
         title: "Inspeção por Termografia",
         photo: "./images/servicos/termografia.png",
         subTitle:
-          "Através da inspeção como por termografia é possível obter informações em tempo real acerca das condições dos equipamentos. Isso oferece a chance de prever possíveis falhas e antecipar uma parada não planejada, permitindo com que seja realizada uma manutenção aumentando a vida útil dos equipamentos.",
+          "A termografia é inspeção eficaz para detectar aquecimentos anormais em equipamentos elétricos e pontos quentes em conexões e componentes elétricos. A inspeção por termografia detecta de forma preditiva, aquecimentos anormais, evitando falha, pane, interrupção no fornecimento de energia elétrica e incêndio. Ferramenta indispensável para planejamento de manutenções preventivas e corretivas.",
       },
       {
         tab: "Análise de Óleo",
         title: "Análise de Óleo",
-        photo: "https://picsum.photos/500/300?random=1",
+        photo: "./images/servicos/analise_de_oleo.png",
         subTitle:
-          "Com o objetivo de identificar com antecedência a deterioração e falhas nestes fluidos, a fim de evitar danos maiores a equipamentos essenciais para a empresa, a SOS Service oferece diversos tipos de ensaios em óleo isolante.",
+          "Análise de óleo físico química, cromatográfica, teor de PCB e outras análises especiais, são ensaios capazes de diagnosticar a qualidade, contaminação e degeneração do fluído isolante, utilizado em transformadores e reatores de potência. As análises em fluídos isolantes detectam umidade, compostos ácidos, formação de borra, aquecimentos anormais, descargas internas e contaminantes diversos que podem afetar a vida útil do equipamento Um dos ensaios especiais podemos citar furfuraldeido, que avalia grau de envelhecimento e degradação da vida útil do papel. Realizamos análises em fluidos de origem mineral, vegetal ou silicone.",
         acting: [
           {
             name: "Físico Química",
@@ -254,28 +280,28 @@ const services = [
         title: "Análise de Rede",
         photo: "./images/servicos/analise_rede.png",
         subTitle:
-          "A SOS Service realiza a coleta de dados para análise  de sua rede elétrica, onde pode-se identificar problemas como variações de tensão, oscilações de frequência, distorção harmônica, entre outros. Após as análises, fornecemos relatórios com as devidas recomendações necessárias e das principais informações/falhas coletadas no sistema.",
+          "Realizamos a coleta de dados para análise de sua rede elétrica, onde pode-se identificar problemas como variações de tensão, sobrecarga, oscilações de frequência, distorção harmônica, entre outros. Após as análises, fornecemos relatórios com as devidas recomendações necessárias e das principais informações/falhas coletadas no sistema.",
       },
       {
         tab: "Curto Circuito e Seletividade",
         title: "Curto Circuito e Seletividade",
         photo: "./images/servicos/circuito_seletividade.png",
         subTitle:
-          "Estudo de curto-circuito é a análise do sistema elétrico que determina a magnitude das correntes que fluem durante uma falha elétrica, comparação desses valores calculados com as classificações dos equipamentos é o primeiro passo para garantir que o sistema de energia seja protegido através dos ajustes e parâmetros necessários.",
+          "Estudo de curto-circuito é a análise do sistema elétrico que determina a magnitude das correntes que fluem durante uma falha elétrica, comparação desses valores calculados com as classificações dos equipamentos é o primeiro passo para garantir que o sistema de energia seja protegido através dos ajustes e parâmetros necessários. O estudo é obrigatório ou necessário quando do projeto de qualquer sistema elétrico; quando a concessionária realiza alterações nos parâmetros de fornecimento de energia e ou alterações em equipamentos das subestações do parque industrial.",
       },
       {
         tab: "SPDA",
         title: "SPDA",
         photo: "./images/servicos/spda.png",
         subTitle:
-          "O laudo técnico de SPDA, trata-se de uma inspeção fundamental para assegurar que os sistemas de proteção contra descargas atmosféricas, ou para-raios, estejam funcionando adequadamente preservando integridade física dos colaboradores e ativos instalados.",
+          "O laudo técnico de SPDA, trata-se de uma inspeção fundamental e normalizado para assegurar que os sistemas de proteção contra descargas atmosféricas, ou para-raios, estejam funcionando adequadamente preservando integridade física dos colaboradores e ativos instalados.",
       },
       {
         tab: "NR10",
         title: "NR10",
         photo: "./images/servicos/nr_10.png",
         subTitle:
-          "O laudo de instalações elétricas NR -10 é emitido após a análise crítica de um engenheiro eletricista, onde indica se as instalações elétricas estão atendendo a todos os requisitos das normas brasileiras (NBRs e outras), de forma que o sistema elétrico esteja em conformidade com os requisitos normativos, desta forma, remetendo maior confiabilidade e segurança nas instalações.",
+          "O laudo de instalações elétricas NR -10 é obrigatório e emitido por engenheiro eletricista, onde após inspeções e medições, indica se as instalações elétricas estão seguras e atendendo a todos os requisitos das normas brasileiras (NBRs e outras), de forma que o sistema elétrico esteja em conformidade com os requisitos normativos, desta forma, remetendo maior confiabilidade e segurança nas instalações, garantindo a integridade dos ativos e pessoas.",
       },
     ],
   },
