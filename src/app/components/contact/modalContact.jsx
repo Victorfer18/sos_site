@@ -12,8 +12,8 @@ import {
   SelectItem,
   Textarea,
 } from "@nextui-org/react";
-import { contentCardsCollaborator } from "../../sections/home/ourCollaborator/contentOurCollaborator";
-import contentBranchs from "../../sections/home/branchs/contentBranchs";
+import { contentCardsCollaborator } from "../sections/home/ourCollaborator/contentOurCollaborator";
+import contentBranchs from "../sections/home/branchs/contentBranchs";
 import axios from "axios";
 
 export default function ModalContact({ isOpen, onOpen, onOpenChange }) {

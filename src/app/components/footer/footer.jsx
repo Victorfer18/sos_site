@@ -2,7 +2,7 @@ import { faBuilding } from "@fortawesome/free-regular-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Card, CardBody, Link, Spacer } from "@nextui-org/react";
-import Contact from "./contact/contact";
+import Contact from "../contact/contact";
 
 export default function Footer({ children, isOpen, onOpen, onOpenChange }) {
   const dataCompanys = [

@@ -20,7 +20,7 @@ const contentCardsCollaborator = [
     descricao: "Gerente de contas.",
     email: "guilherme@sos-service.com.br",
     telephone: "011 99227-2221",
-    telephoneMessage: "011992272221",
+    telephoneMessage: "11992272221",
     region: "São Paulo - SP",
   },
   {
@@ -44,7 +44,7 @@ const contentCardsCollaborator = [
     descricao: "Engenheiro de Vendas.",
     email: "nilton@sos-service.com.br",
     telephone: "011 99230-1795",
-    telephoneMessage: "011992301795",
+    telephoneMessage: "11992301795",
     region: "São Paulo - SP",
   },
   {
@@ -56,7 +56,7 @@ const contentCardsCollaborator = [
     descricao: "Vendedor.",
     email: "bid@sos-service.com.br",
     telephone: "011 94290-3882",
-    telephoneMessage: "011942903882",
+    telephoneMessage: "11942903882",
     region: "São Paulo - SP",
   },
   {
@@ -68,7 +68,7 @@ const contentCardsCollaborator = [
     descricao: "Gerente operacional.",
     email: "akira@sosservice-sul.com.br",
     telephone: "043 99806-0606",
-    telephoneMessage: "043998060606",
+    telephoneMessage: "43998060606",
     region: "Londrina - PR",
   },
   {
@@ -80,7 +80,7 @@ const contentCardsCollaborator = [
     descricao: "Desenvolvimento de negócios.",
     email: "cavalheiro@sosservice-sul.com.br",
     telephone: "011 96190-9001",
-    telephoneMessage: "011 96190-9001",
+    telephoneMessage: "11961909001",
     region: "Londrina - PR",
   },
   {
@@ -104,7 +104,7 @@ const contentCardsCollaborator = [
     descricao: "Gerente Regional – Uberlândia MG.",
     email: "vendas.uberlandia@sos-service.com.br",
     telephone: "034 97094-7869",
-    telephoneMessage: "034970947869",
+    telephoneMessage: "34970947869",
     region: "Ubernândia - MG",
   },
 ];

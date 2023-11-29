@@ -37,7 +37,7 @@ export default function Header({ children }) {
         isBlurred={true}
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
-        style={{ position: "sticky", top: 0, zIndex: 1 }}
+        style={{ position: "sticky", top: 0, zIndex: 50 }}
         className={`py-2`}
       >
         <NavbarContent className="lg:hidden" justify="start">

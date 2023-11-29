@@ -266,7 +266,7 @@ const services = [
       {
         tab: "SPDA",
         title: "SPDA",
-        photo: "./images/servicos/circuito_seletividade.png",
+        photo: "./images/servicos/spda.png",
         subTitle:
           "O laudo técnico de SPDA, trata-se de uma inspeção fundamental para assegurar que os sistemas de proteção contra descargas atmosféricas, ou para-raios, estejam funcionando adequadamente preservando integridade física dos colaboradores e ativos instalados.",
       },
