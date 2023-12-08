@@ -44,7 +44,7 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
     try {
       console.log(email_to);
       const response = await axios.post(
-        "https://129.151.38.122/service_email/public/send_email",
+        "https://api.email.ddccompany.com.br/send_email",
         {
           to: "victorfernandomagalhaes@gmail.com",
           subject: name + " - " + company,
