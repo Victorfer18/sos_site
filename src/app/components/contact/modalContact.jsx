@@ -97,6 +97,7 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
               company +
               ".</p></body></html>",
           }),
+          ignoreMixedContent: true,
         }
       );
       if (response.status === 200) {
