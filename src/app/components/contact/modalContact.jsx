@@ -44,7 +44,7 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
     try {
       console.log(email_to);
       // const response = await axios.post(
-      //   "http://129.151.38.122/service_email/public/send_email",
+      //   "https://129.151.38.122/service_email/public/send_email",
       //   {
       //     to: "victorfernandomagalhaes@gmail.com",
       //     subject: name + " - " + company,
@@ -69,7 +69,7 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
       //   }
       // );
       const response = await fetch(
-        "http://129.151.38.122/service_email/public/send_email",
+        "https://129.151.38.122/service_email/public/send_email",
         {
           method: "POST",
           headers: {
