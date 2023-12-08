@@ -43,63 +43,32 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
     )[0].email;
     try {
       console.log(email_to);
-      // const response = await axios.post(
-      //   "https://129.151.38.122/service_email/public/send_email",
-      //   {
-      //     to: "victorfernandomagalhaes@gmail.com",
-      //     subject: name + " - " + company,
-      //     message:
-      //       "<html><head><title>" +
-      //       name +
-      //       " - " +
-      //       company +
-      //       "</title></head><body><h4>Empresa: " +
-      //       company +
-      //       "</h4><h4>Nome: " +
-      //       name +
-      //       "</h4><h4>Email: " +
-      //       email +
-      //       "</h4><h4>Telefone: " +
-      //       phone +
-      //       "</h4><p>" +
-      //       message +
-      //       "</p><br><br><br><br><br><br><br><p>Atenciosamente " +
-      //       company +
-      //       ".</p></body></html>",
-      //   }
-      // );
-      const response = await fetch(
+      const response = await axios.post(
         "https://129.151.38.122/service_email/public/send_email",
         {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            to: "victorfernandomagalhaes@gmail.com",
-            subject: name + " - " + company,
-            message:
-              "<html><head><title>" +
-              name +
-              " - " +
-              company +
-              "</title></head><body><h4>Empresa: " +
-              company +
-              "</h4><h4>Nome: " +
-              name +
-              "</h4><h4>Email: " +
-              email +
-              "</h4><h4>Telefone: " +
-              phone +
-              "</h4><p>" +
-              message +
-              "</p><br><br><br><br><br><br><br><p>Atenciosamente " +
-              company +
-              ".</p></body></html>",
-          }),
-          ignoreMixedContent: true,
+          to: "victorfernandomagalhaes@gmail.com",
+          subject: name + " - " + company,
+          message:
+            "<html><head><title>" +
+            name +
+            " - " +
+            company +
+            "</title></head><body><h4>Empresa: " +
+            company +
+            "</h4><h4>Nome: " +
+            name +
+            "</h4><h4>Email: " +
+            email +
+            "</h4><h4>Telefone: " +
+            phone +
+            "</h4><p>" +
+            message +
+            "</p><br><br><br><br><br><br><br><p>Atenciosamente " +
+            company +
+            ".</p></body></html>",
         }
       );
+
       if (response.status === 200) {
         alert("Email sent successfully.");
         setName("");
