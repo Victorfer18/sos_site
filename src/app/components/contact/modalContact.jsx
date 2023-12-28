@@ -17,11 +17,16 @@ import contentBranchs from "../sections/home/branchs/contentBranchs";
 import axios from "axios";
 
 export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
-  const [name, setName] = useState("victor");
-  const [email, setEmail] = useState("victorfernandomagalhaes@gmail.com");
-  const [phone, setPhone] = useState("11 91560-1390");
-  const [company, setCompany] = useState("DDCompany");
-  const [message, setMessage] = useState("Sou o victor");
+  // const [name, setName] = useState("victor");
+  const [name, setName] = useState("");
+  // const [email, setEmail] = useState("victorfernandomagalhaes@gmail.com");
+  const [email, setEmail] = useState("");
+  // const [phone, setPhone] = useState("11 91560-1390");
+  const [phone, setPhone] = useState("");
+  // const [company, setCompany] = useState("DDCompany");
+  const [company, setCompany] = useState("");
+  // const [message, setMessage] = useState("Sou o victor");
+  const [message, setMessage] = useState("");
   const [selectedBranch, setSelectedBranch] = useState(null);
   const [selectedContacts, setSelectedContacts] = useState(new Set([]));
 
