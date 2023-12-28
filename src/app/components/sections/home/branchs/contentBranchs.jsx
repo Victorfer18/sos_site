@@ -5,7 +5,7 @@ const contentBranchs = [
     title: "1995, ano de fundação da SOS Service - SP",
     description:
       "Fundada em 1995 por engenheiros eletricistas, a SOS Service é uma empresa focada na prestação de serviços de engenharia elétrica em Subestações de AT e MT, Comissionamento de equipamentos elétricos, modernização e projetos de Subestações de Energia. A empresa tem como foco EXCELENCIA nos serviços prestados, apoiado sempre na garantia de SEGURANÇA em qualquer atividade que executa. Com constantes investimentos em treinamento de profissionais, aquisição de equipamentos, atualização de melhores práticas, a SOS Service hoje é referência no mercado na prestação de serviços de Manutenção em Subestações de Energia.",
-    src: "./images/branchs/image3.jpg",
+    src: "./images/branchs/image3.svg",
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ const contentBranchs = [
     title: "2023, ano de inauguração filial Uberlandia - MG",
     description:
       "A mais recente filial da SOS Service, localizada na cidade de Uberlândia/MG, representa mais um passo no processo de expansão da SOS Service. Visando maior agilidade e prontidão no atendimento dos clientes e parceiros do Triângulo Mineiro, a Filial de Uberlândia conta com um corpo de profissionais especializado para realizar serviços de Manutenção Preventiva, Corretiva e Preditivas em equipamentos de Subestações de Energia.",
-    src: "./images/branchs/image4.jpg",
+    src: "./images/branchs/image4.svg",
   },
 ];
 export default contentBranchs;
