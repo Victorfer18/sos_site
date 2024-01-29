@@ -7,7 +7,7 @@ export default function ReportMaintenance() {
     <section>
       <Card className=" grid place-content-start place-items-center text-center min-h-[280px]">
         <CardBody>
-          <div className="grid md:grid-cols-2 place-items-center gap-10 p-20 ps-0">
+          <div className="grid md:grid-cols-2 place-items-center gap-10 p-5 ps-0">
             <Image
               loading="lazy"
               src={LogoLock}
