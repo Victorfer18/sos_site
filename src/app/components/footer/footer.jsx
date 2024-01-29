@@ -22,7 +22,7 @@ export default function Footer({ children, isOpen, onOpen, onOpenChange }) {
       id: 3,
       estado: "Bahia",
       endereco: "Av. Jorge Amado, s/nº Camaçari – BA",
-      telefone: "(71) 99736 - 0430",
+      telefone: "(71) 3511-1330",
     },
     {
       id: 4,

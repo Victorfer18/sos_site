@@ -105,7 +105,7 @@ const contentCardsCollaborator = [
     email: "vendas.uberlandia@sos-service.com.br",
     telephone: "011 97094-7869",
     telephoneMessage: "11970947869",
-    region: "Ubernândia - MG",
+    region: "Uberlândia - MG",
   },
 ];
 export { contentCardsCollaborator };
