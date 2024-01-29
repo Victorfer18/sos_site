@@ -24,7 +24,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/app/components/contact/EmailSend.js"
+    "src/app/js/EmailSend.js"
   ],
   "exclude": ["node_modules"]
 }

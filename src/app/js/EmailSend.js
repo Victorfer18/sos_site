@@ -20,7 +20,7 @@ export async function EmailSend(to, subject, message) {
   };
   try {
     const info = await transporter.sendMail(mailOptions);
-    console.log(info);
+    return info;
   } catch (err) {
     new Error(err);
   }

@@ -13,7 +13,7 @@ import {
 } from "@nextui-org/react";
 import { contentCardsCollaborator } from "../sections/home/ourCollaborator/contentOurCollaborator";
 import contentBranchs from "../sections/home/branchs/contentBranchs";
-import { EmailSend } from "./EmailSend";
+import { EmailSend } from "../../js/EmailSend";
 import Loading from "../../components/loading";
 import ModalResponse from "../../components/modal/modalResponse";
 
