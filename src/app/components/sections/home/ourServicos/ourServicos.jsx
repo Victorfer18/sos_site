@@ -1,7 +1,7 @@
 import { Divider, Link } from "@nextui-org/react";
-import ContentOurServices from "./contentOurServices";
+import ContentOurServicos from "./contentOurServicos";
 
-export default function OurServices() {
+export default function OurServicos() {
   return (
     <section>
       <div className="grid gap-5">
@@ -16,9 +16,9 @@ export default function OurServices() {
           </div>
         </div>
         <div className="grid gap-5">
-          <ContentOurServices />
+          <ContentOurServicos />
           <div className="flex justify-end">
-            <Link href="/services" color="foreground">
+            <Link href="/servicos" color="foreground">
               Veja todos
             </Link>
           </div>

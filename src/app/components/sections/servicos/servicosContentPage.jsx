@@ -6,12 +6,12 @@ import {
   Image,
   useDisclosure,
 } from "@nextui-org/react";
-import servicesContent from "../../services/servicesContent";
-import ModalServices from "../../services/modalServices";
+import servicosContent from "../../servicos/servicosContent";
+import ModalServicos from "../../servicos/modalServicos";
 import { useEffect, useState } from "react";
 import { storeServiceData } from "../../../js/index";
 
-export default function ServicesContentPage({ onOpenModal }) {
+export default function ServicosContentPage({ onOpenModal }) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [modalContent, setModalContent] = useState({});
   const openModal = (post) => {
@@ -22,7 +22,7 @@ export default function ServicesContentPage({ onOpenModal }) {
     const serviceData = storeServiceData.getState();
     if (serviceData.serviceData) {
       openModal(
-        servicesContent.filter(
+        servicosContent.filter(
           (item) => item.id === serviceData.serviceData.idRef
         )[0]
       );
@@ -32,7 +32,7 @@ export default function ServicesContentPage({ onOpenModal }) {
   return (
     <section>
       <Card className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 p-5">
-        {servicesContent.map((item) => (
+        {servicosContent.map((item) => (
           <Card key={item.id} className="h-full">
             <Image
               loading="lazy"
@@ -57,7 +57,7 @@ export default function ServicesContentPage({ onOpenModal }) {
           </Card>
         ))}
       </Card>
-      <ModalServices
+      <ModalServicos
         isOpen={isOpen}
         modalContent={modalContent}
         onOpenChange={onOpenChange}

@@ -202,7 +202,7 @@ export default function Header({ children }) {
               className="bg-redTheme p-2 rounded-xl hover:bg-redLightTheme transition-all text-white"
               onClick={() =>
                 (window.location.href =
-                  "https://www.sos-service.com.br/02/index.php/component/users/?view=login")
+                  "https://www.old.sos-service.com.br/02/index.php/component/users/?view=login")
               }
             >
               Área cliente

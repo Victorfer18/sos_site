@@ -4,7 +4,6 @@ import {
   CardBody,
   Divider,
   Image,
-  Input,
   Link,
 } from "@nextui-org/react";
 

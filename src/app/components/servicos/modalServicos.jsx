@@ -14,7 +14,7 @@ import {
   Tabs,
 } from "@nextui-org/react";
 
-export default function ModalServices({
+export default function ModalServicos({
   isOpen,
   onOpenChange,
   modalContent,

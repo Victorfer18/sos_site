@@ -1,6 +1,6 @@
 import { Button } from "@nextui-org/react";
 
-export default function ServicesHeader({ onOpen }) {
+export default function ServicosHeader({ onOpen }) {
   return (
     <section>
       <div className="relative w-full mx-auto grid place-items-center">

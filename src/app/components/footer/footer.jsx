@@ -9,7 +9,7 @@ export default function Footer({ children, isOpen, onOpen, onOpenChange }) {
     {
       id: 1,
       estado: "São Paulo",
-      endereco: "Av. Calil Mohamed Rahal, 459 Barueri - SP",
+      endereco: "Av. Calil Mohamed Rahal, 449 Barueri - SP",
       telefone: "(11) 3977 - 5198",
     },
     {

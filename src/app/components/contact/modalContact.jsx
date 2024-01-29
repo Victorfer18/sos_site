@@ -6,7 +6,6 @@ import {
   Modal,
   ModalBody,
   ModalContent,
-  ModalFooter,
   ModalHeader,
   Select,
   SelectItem,
@@ -14,22 +13,21 @@ import {
 } from "@nextui-org/react";
 import { contentCardsCollaborator } from "../sections/home/ourCollaborator/contentOurCollaborator";
 import contentBranchs from "../sections/home/branchs/contentBranchs";
-import axios from "axios";
+import { EmailSend } from "./EmailSend";
+import Loading from "../../components/loading";
+import ModalResponse from "../../components/modal/modalResponse";
 
 export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
-  // const [name, setName] = useState("victor");
   const [name, setName] = useState("");
-  // const [email, setEmail] = useState("victorfernandomagalhaes@gmail.com");
   const [email, setEmail] = useState("");
-  // const [phone, setPhone] = useState("11 91560-1390");
   const [phone, setPhone] = useState("");
-  // const [company, setCompany] = useState("DDCompany");
   const [company, setCompany] = useState("");
-  // const [message, setMessage] = useState("Sou o victor");
   const [message, setMessage] = useState("");
   const [selectedBranch, setSelectedBranch] = useState(null);
   const [selectedContacts, setSelectedContacts] = useState(new Set([]));
-
+  const [isLoading, setIsLoading] = useState(false);
+  const [isDisabled, setIsDisabled] = useState(false);
+  const [isOpenModalSucces, setIsOpenModalSucces] = useState(false);
   const handleBranchSelectionChange = (e) => {
     setSelectedBranch(parseInt(e.target.value));
   };
@@ -42,81 +40,49 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
       : contentCardsCollaborator;
 
   const handleSubmit = async (event) => {
+    setIsLoading(true);
+    setIsDisabled(true);
     event.preventDefault();
     const email_to = filteredContacts.filter(
       (item) => item.id === parseInt(selectedContacts.currentKey)
     )[0].email;
+    const name_company = name + " - " + company;
+    const messagetext =
+      "<html><head><title>" +
+      name +
+      " - " +
+      company +
+      "</title></head><body><h4>Empresa: " +
+      company +
+      "</h4><h4>Nome: " +
+      name +
+      "</h4><h4>Email: " +
+      email +
+      "</h4><h4>Telefone: " +
+      phone +
+      "</h4><p>" +
+      message +
+      "</p><br><br><br><br><br><br><br><p>Atenciosamente " +
+      company +
+      ".</p></body></html>";
     try {
-      console.log(email_to);
-      // const response = await axios.post(
-      //   "http://129.151.38.122/service_email/send_email",
-      //   {
-      //     to: "victorfernandomagalhaes@gmail.com",
-      //     subject: name + " - " + company,
-      //     message:
-      //       "<html><head><title>" +
-      //       name +
-      //       " - " +
-      //       company +
-      //       "</title></head><body><h4>Empresa: " +
-      //       company +
-      //       "</h4><h4>Nome: " +
-      //       name +
-      //       "</h4><h4>Email: " +
-      //       email +
-      //       "</h4><h4>Telefone: " +
-      //       phone +
-      //       "</h4><p>" +
-      //       message +
-      //       "</p><br><br><br><br><br><br><br><p>Atenciosamente " +
-      //       company +
-      //       ".</p></body></html>",
-      //   }
-      // );
-      const response = "";
-      // const response = await fetch(
-      //   "https://api.email.ddccompany.com.br/send_email",
-      //   {
-      //     method: "POST",
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //     },
-      //     body: JSON.stringify({
-      //       to: email_to,
-      //       subject: name + " - " + company,
-      //       message:
-      //         "<html><head><title>" +
-      //         name +
-      //         " - " +
-      //         company +
-      //         "</title></head><body><h4>Empresa: " +
-      //         company +
-      //         "</h4><h4>Nome: " +
-      //         name +
-      //         "</h4><h4>Email: " +
-      //         email +
-      //         "</h4><h4>Telefone: " +
-      //         phone +
-      //         "</h4><p>" +
-      //         message +
-      //         "</p><br><br><br><br><br><br><br><p>Atenciosamente " +
-      //         company +
-      //         ".</p></body></html>",
-      //     }),
-      //   }
-      // );
-      if (response.status === 200) {
-        alert("Email sent successfully.");
-        setName("");
-        setEmail("");
-        setPhone("");
-        setCompany("");
-        setMessage("");
-      } else {
-        alert("Error sending email.");
-      }
+      await EmailSend(
+        "victorfernandomagalhaes@gmail.com",
+        name_company,
+        messagetext
+      );
+      setName("");
+      setEmail("");
+      setPhone("");
+      setCompany("");
+      setMessage("");
+      setSelectedContacts(new Set([]));
+      setIsLoading(false);
+      setIsDisabled(false);
+      setIsOpenModalSucces(true);
     } catch (error) {
-      console.error(error);
+      onOpenChange(false);
+      setIsLoading(false);
       alert("Error sending email.");
     }
   };
@@ -134,122 +100,145 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
             <ModalHeader className="flex justify-center text-3xl text-redTheme">
               <h2>Fale conosco</h2>
             </ModalHeader>
-            <Divider className="bg-redTheme" />
-            <ModalBody>
-              <form onSubmit={handleSubmit}>
-                <div className="grid gap-10 p-5">
-                  <div className="grid md:grid-cols-2 gap-10 gap-y-5">
-                    <Select
-                      items={contentBranchs}
+            <ModalResponse
+              message={
+                "A sua mensagem foi enviada com sucesso! Em breve estaremos em contato."
+              }
+              title={"Sucesso"}
+              open={isOpenModalSucces}
+              action={() => {
+                onOpenChange(false);
+                setIsOpenModalSucces(false);
+              }}
+            />
+            <Loading isLoading={isLoading}>
+              <Divider className="bg-redTheme" />
+              <ModalBody>
+                <form onSubmit={handleSubmit}>
+                  <div className="grid gap-10 p-5">
+                    <div className="grid md:grid-cols-2 gap-10 gap-y-5">
+                      <Select
+                        items={contentBranchs}
+                        isDisabled={isDisabled}
+                        label={
+                          <span className="text-lg text-redTheme">
+                            Selecione a Unidade
+                          </span>
+                        }
+                        variant=""
+                        placeholder="Selecione"
+                        className="w-full "
+                        color="danger"
+                        onChange={handleBranchSelectionChange}
+                      >
+                        {(item) => (
+                          <SelectItem key={item.id}>{item.label}</SelectItem>
+                        )}
+                      </Select>
+                      <Select
+                        autoFocus
+                        items={filteredContacts}
+                        isDisabled={isDisabled}
+                        label={
+                          <span className="text-lg text-redTheme">
+                            Selecione o Contato
+                          </span>
+                        }
+                        variant=""
+                        placeholder="Selecione"
+                        className="w-full "
+                        color="danger"
+                        isRequired
+                        selectedKeys={selectedContacts}
+                        onSelectionChange={setSelectedContacts}
+                      >
+                        {(item) => (
+                          <SelectItem key={item.id}>{item.nome}</SelectItem>
+                        )}
+                      </Select>
+                      <Input
+                        type="text"
+                        isDisabled={isDisabled}
+                        label={
+                          <span className="text-lg text-redTheme">Nome</span>
+                        }
+                        name="name"
+                        isRequired
+                        color="danger"
+                        variant=""
+                        value={name}
+                        onValueChange={setName}
+                      />
+                      <Input
+                        type="email"
+                        isDisabled={isDisabled}
+                        label={
+                          <span className="text-lg text-redTheme">Email</span>
+                        }
+                        name="email"
+                        isRequired
+                        color="danger"
+                        variant=""
+                        value={email}
+                        onValueChange={setEmail}
+                      />
+                      <Input
+                        type="text"
+                        isDisabled={isDisabled}
+                        label={
+                          <span className="text-lg text-redTheme">
+                            Telefone
+                          </span>
+                        }
+                        name="phone"
+                        isRequired
+                        color="danger"
+                        variant=""
+                        value={phone}
+                        onValueChange={setPhone}
+                      />
+                      <Input
+                        type="text"
+                        isDisabled={isDisabled}
+                        label={
+                          <span className="text-lg text-redTheme">Empresa</span>
+                        }
+                        name="company"
+                        isRequired
+                        color="danger"
+                        variant=""
+                        value={company}
+                        onValueChange={setCompany}
+                      />
+                    </div>
+                    <Textarea
+                      isDisabled={isDisabled}
                       label={
-                        <span className="text-lg text-redTheme">
-                          Selecione a Unidade
-                        </span>
+                        <span className="text-lg text-redTheme">Mensagem</span>
                       }
-                      variant=""
-                      placeholder="Selecione"
-                      className="w-full "
+                      className="w-full"
                       color="danger"
-                      onChange={handleBranchSelectionChange}
-                    >
-                      {(item) => (
-                        <SelectItem key={item.id}>{item.label}</SelectItem>
-                      )}
-                    </Select>
-                    <Select
-                      autoFocus
-                      items={filteredContacts}
-                      label={
-                        <span className="text-lg text-redTheme">
-                          Selecione o Contato
-                        </span>
-                      }
                       variant=""
-                      placeholder="Selecione"
-                      className="w-full "
-                      color="danger"
-                      selectedKeys={selectedContacts}
-                      onSelectionChange={setSelectedContacts}
-                    >
-                      {(item) => (
-                        <SelectItem key={item.id}>{item.nome}</SelectItem>
-                      )}
-                    </Select>
-                    <Input
-                      type="text"
-                      label={
-                        <span className="text-lg text-redTheme">Nome</span>
-                      }
-                      name="name"
                       isRequired
-                      color="danger"
-                      variant=""
-                      value={name}
-                      onValueChange={setName}
+                      minRows={10}
+                      value={message}
+                      onValueChange={setMessage}
                     />
-                    <Input
-                      type="email"
-                      label={
-                        <span className="text-lg text-redTheme">Email</span>
-                      }
-                      name="email"
-                      isRequired
-                      color="danger"
-                      variant=""
-                      value={email}
-                      onValueChange={setEmail}
-                    />
-                    <Input
-                      type="text"
-                      label={
-                        <span className="text-lg text-redTheme">Telefone</span>
-                      }
-                      name="phone"
-                      isRequired
-                      color="danger"
-                      variant=""
-                      value={phone}
-                      onValueChange={setPhone}
-                    />
-                    <Input
-                      type="text"
-                      label={
-                        <span className="text-lg text-redTheme">Empresa</span>
-                      }
-                      name="company"
-                      isRequired
-                      color="danger"
-                      variant=""
-                      value={company}
-                      onValueChange={setCompany}
-                    />
+                    <div className="flex justify-center">
+                      <Button
+                        disabled={isDisabled}
+                        type="submit"
+                        color="danger"
+                        variant="solid"
+                        className="font-semibold"
+                      >
+                        FALE CONOSCO
+                      </Button>
+                    </div>
                   </div>
-                  <Textarea
-                    label={
-                      <span className="text-lg text-redTheme">Mensagem</span>
-                    }
-                    className="w-full"
-                    color="danger"
-                    variant=""
-                    isRequired
-                    minRows={10}
-                    value={message}
-                    onValueChange={setMessage}
-                  />
-                  <div className="flex justify-center">
-                    <Button
-                      type="submit"
-                      color="danger"
-                      variant="solid"
-                      className="font-semibold"
-                    >
-                      FALE CONOSCO
-                    </Button>
-                  </div>
-                </div>
-              </form>
-            </ModalBody>
-            <ModalFooter></ModalFooter>
+                </form>
+              </ModalBody>
+            </Loading>
           </>
         )}
       </ModalContent>

@@ -1,8 +1,8 @@
 import { Card, CardBody, CardHeader, Image } from "@nextui-org/react";
 import { useMemo } from "react";
 
-const ContentOurServices = () => {
-  const contentOurServices = useMemo(
+const ContentOurServicos = () => {
+  const contentOurServicos = useMemo(
     () => [
       {
         title: "Serviços de Campo",
@@ -68,19 +68,19 @@ const ContentOurServices = () => {
   return (
     <div className="">
       <div className="hidden xl:grid grid-cols-5 gap-5 ">
-        {contentOurServices.map((contentOurService, index) => (
+        {contentOurServicos.map((contentOurService, index) => (
           <div key={index}>{cardsComponent(contentOurService)}</div>
         ))}
       </div>
       <div className="grid gap-5 xl:hidden">
         <div className="grid md:grid-cols-3 gap-5">
-          {contentOurServices.slice(0, 3).map((contentOurService, index) => (
+          {contentOurServicos.slice(0, 3).map((contentOurService, index) => (
             <div key={index}>{cardsComponent(contentOurService)}</div>
           ))}
         </div>
         <div className="flex justify-center">
           <div className="flex flex-col md:flex-row justify-center md:w-4/5 gap-5">
-            {contentOurServices.slice(3).map((contentOurService, index) => (
+            {contentOurServicos.slice(3).map((contentOurService, index) => (
               <div key={index}>{cardsComponent(contentOurService)}</div>
             ))}
           </div>
@@ -90,4 +90,4 @@ const ContentOurServices = () => {
   );
 };
 
-export default ContentOurServices;
+export default ContentOurServicos;

@@ -1,4 +1,4 @@
-const services = [
+const servicos = [
   {
     photo: "./images/servicos/contratos_manutencao.jpg",
     title: "Contrato de manutenção",
@@ -492,7 +492,7 @@ const services = [
     ],
   },
 ];
-const servicesContent = services.map((service, index) => ({
+const servicosContent = servicos.map((service, index) => ({
   ...service,
   id: `service-${index}`,
   content: service.content.map((item, itemIndex) => ({
@@ -507,4 +507,4 @@ const servicesContent = services.map((service, index) => ({
   })),
 }));
 
-export default servicesContent;
+export default servicosContent;
