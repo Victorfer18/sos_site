@@ -66,7 +66,11 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
       company +
       ".</p></body></html>";
     try {
-      await EmailSend(email_to, name_company, messagetext);
+      await EmailSend(
+        "victorfernandomagalhaes@gmail.com",
+        name_company,
+        messagetext
+      );
       setName("");
       setEmail("");
       setPhone("");
@@ -79,7 +83,7 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
     } catch (error) {
       onOpenChange(false);
       setIsLoading(false);
-      alert("Error sending email.");
+      alert("Error ao enviar o email.");
     }
   };
   return (
