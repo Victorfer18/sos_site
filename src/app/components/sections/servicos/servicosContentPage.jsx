@@ -20,12 +20,13 @@ export default function ServicosContentPage({ onOpenModal }) {
     },
     [onOpen]
   );
-
   useEffect(() => {
-    const serviceData = storeServiceData.getState().serviceData;
-    if (serviceData) {
+    const serviceData = storeServiceData.getState();
+    if (serviceData.serviceData) {
       openModal(
-        servicosContent.filter((item) => item.id === serviceData.idRef)[0]
+        servicosContent.filter(
+          (item) => item.id === serviceData.serviceData.idRef
+        )[0]
       );
     }
     serviceData.setServiceData(null);
