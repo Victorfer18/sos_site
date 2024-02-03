@@ -21,7 +21,7 @@ export default function ModalResponse({
     if (open) {
       onOpen();
     }
-  }, [open]);
+  }, [open, onOpen]);
   return (
     <Modal isOpen={isOpen} onClose={onClose} isDismissable={false}>
       <ModalContent>

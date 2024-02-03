@@ -2,33 +2,34 @@ import {
   Button,
   Card,
   CardBody,
-  CardHeader,
   Image,
   useDisclosure,
 } from "@nextui-org/react";
 import servicosContent from "../../servicos/servicosContent";
 import ModalServicos from "../../servicos/modalServicos";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { storeServiceData } from "../../../js/index";
 
 export default function ServicosContentPage({ onOpenModal }) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [modalContent, setModalContent] = useState({});
-  const openModal = (post) => {
-    setModalContent(post);
-    onOpen();
-  };
+  const openModal = useCallback(
+    (post) => {
+      setModalContent(post);
+      onOpen();
+    },
+    [onOpen]
+  );
+
   useEffect(() => {
-    const serviceData = storeServiceData.getState();
-    if (serviceData.serviceData) {
+    const serviceData = storeServiceData.getState().serviceData;
+    if (serviceData) {
       openModal(
-        servicosContent.filter(
-          (item) => item.id === serviceData.serviceData.idRef
-        )[0]
+        servicosContent.filter((item) => item.id === serviceData.idRef)[0]
       );
     }
     serviceData.setServiceData(null);
-  }, []);
+  }, [openModal]);
   return (
     <section>
       <Card className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 p-5">
