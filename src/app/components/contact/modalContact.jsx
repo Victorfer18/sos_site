@@ -13,9 +13,10 @@ import {
 } from "@nextui-org/react";
 import { contentCardsCollaborator } from "../sections/home/ourCollaborator/contentOurCollaborator";
 import contentBranchs from "../sections/home/branchs/contentBranchs";
-import { EmailSend } from "../../js/EmailSend";
+
 import Loading from "../../components/loading";
 import ModalResponse from "../../components/modal/modalResponse";
+import axios from "axios";
 
 export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
   const [name, setName] = useState("");
@@ -66,7 +67,14 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
       company +
       ".</p></body></html>";
     try {
-      await EmailSend(email_to, name_company, messagetext);
+      await axios.post("/send_email", {
+        to: email_to,
+        subject: name_company.toUpperCase(),
+        message: messagetext,
+        token:
+          "3f7a739cbaedd9ae9b464d6b581b568ae6e25055634d05b4e9e01bdeb32b7fb9",
+      });
+
       setName("");
       setEmail("");
       setPhone("");
