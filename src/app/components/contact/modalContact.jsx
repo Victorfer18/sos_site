@@ -96,7 +96,7 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
       onOpenChange={onOpenChange}
       size="4xl"
       placement="auto"
-      scrollBehavior="inside"
+      scrollBehavior="outside"
     >
       <ModalContent>
         {() => (
