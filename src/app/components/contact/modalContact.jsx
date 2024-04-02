@@ -106,7 +106,7 @@ export default function ModalContact({ isOpen, onOpen, onOpenChange }) {
             </ModalHeader>
             <ModalResponse
               message={
-                "A sua mensagem foi enviada com sucesso! Em breve estaremos em contato."
+                "A sua mensagem foi enviada com sucesso! Em breve entraremos em contato."
               }
               title={"Sucesso"}
               open={isOpenModalSucces}
