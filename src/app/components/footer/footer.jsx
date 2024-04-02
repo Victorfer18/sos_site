@@ -85,7 +85,9 @@ export default function Footer({ children, isOpen, onOpen, onOpenChange }) {
         <Spacer y={12} />
         <div className="max-w-screen-xl mx-auto py-2">
           <div className="flex justify-center items-center">
-            <p className="text-gray-500 text-xs">© 2023 DDC COMPANY, Inc.</p>
+            <p className="text-gray-500 text-xs">
+              &copy;© 2023 DDC COMPANY, Inc.
+            </p>
           </div>
         </div>
       </footer>
